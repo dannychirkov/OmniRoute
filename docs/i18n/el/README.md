@@ -67,23 +67,23 @@
 
 <br/>
 
-## 📈 Η Πύλη συνεχίζει να μεγαλώνει
+## 📈 Η πύλη συνεχίζει να μεγαλώνει
 
 <div align="center">
 
-|                                               |           v3.8.50           | **v3.8.51** |       `v3.8.55+`       |
-| --------------------------------------------- | :-------------------------: | :---------: | :--------------------: |
-| 🌐 Πάροχοι                                    |             352             |   **358**   |          394           |
-| 🧠 Μοναδικά αναγνωριστικά μοντέλων συνομιλίας |            1320             |  **1374**   |          1491          |
-| 🖼️ Γέφυρα τροπικοτήτων                        |  🆕 όραση + ήχος + βίντεο   |      ✓      |           ✓            |
-| 📡 Δωρεάν κατάλογος Radar                     | 🆕 προαιρετική ενεργοποίηση |      ✓      |           ✓            |
-| ⚖️ Προγραμματισμός με επίγνωση ποσοστώσεων    |       🆕 Quota-Share        |      ✓      |           ✓            |
-| 📊 Τηλεμετρία ποσοστώσεων                     |   🆕 σε πραγματικό χρόνο    |      ✓      |           ✓            |
-| 🧰 Λειτουργία χωρίς γραφική διεπαφή           |              —              |      —      | 🆕 `serve --headless`  |
-| 🛤️ Υποδομή τροχιάς LTS                        |              —              |      —      | 🆕 κανάλια κυκλοφορίας |
-| 🔎 API ανακάλυψης μοντέλων                    |              —              |      —      | 🆕 `/v1/models/query`  |
+|                                            |          v3.8.50          | **v3.8.51** |        `v3.8.55+`        |
+| ------------------------------------------ | :-----------------------: | :---------: | :----------------------: |
+| Πάροχοι 🌐                                 |            352            |   **358**   |           394            |
+| 🧠 Μοναδικό μοντέλο συνομιλίας IDs         |           1320            |  **1374**   |           1491           |
+| 🖼️ Modality Bridge                         | 🆕 vision + ήχος + βίντεο |      ✓      |            ✓             |
+| Δωρεάν κατάλογος 📡 Radar                  |         🆕 opt-in         |      ✓      |            ✓             |
+| ⚖️ Προγραμματισμός με επίγνωση ποσοστώσεων |      🆕 Quota-Share       |      ✓      |            ✓             |
+| 📊 Quota τηλεμετρία                        |          🆕 live          |      ✓      |            ✓             |
+| 🧰 Headless mode                           |             —             |      —      |  🆕 `serve --headless`   |
+| 🛤️ LTS rail infra                          |             —             |      —      | κανάλια απελευθέρωσης 🆕 |
+| 🔎 Ανακάλυψη μοντέλου API                  |             —             |      —      |  🆕 `/v1/models/query`   |
 
-**→ [Οδικός χάρτης](ROADMAP.md) — πάνω στην τροχιά προς το `v3.9.0 LTS`**
+**→ [Οδικός χάρτης](ROADMAP.md) — οδηγώντας τη σιδηροδρομική γραμμή προς `v3.9.0 LTS`**
 
 </div>
 
@@ -599,35 +599,35 @@ Pix copia-e-cola:
 
 </div>
 
-> Πρόσφατες σημαντικές αλλαγές από **v3.8.20 → v3.8.55**. Πλήρες ιστορικό στο [`CHANGELOG.md`](CHANGELOG.md).
+> Πρόσφατα highlights από** v3.8.20 → v3.8.55** . Πλήρες ιστορικό στο [`CHANGELOG.md`](CHANGELOG.md).
 
-- **⚖️ Δρομολόγηση `quota-weighted`** — η 20ή στρατηγική combo παραλείπει τους εξαντλημένους λογαριασμούς και, στη συνέχεια, επιλέγει μεταξύ των υπόλοιπων ανάλογα με το leftover quota ÷ in-flight load, διατηρώντας τις υπάρχουσες συνομιλίες καρφιτσωμένες. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
-- **🧰 Headless λειτουργία** — η εντολή `omniroute serve --headless` (ή `OMNIROUTE_HEADLESS=1`) εκτελεί μόνο τη μηχανή διαμεσολάβησης `/v1/*`, με τον πίνακα ελέγχου και τα υποσυστήματα που αφορούν αποκλειστικά τον πίνακα απενεργοποιημένα. → [Headless Mode](docs/guides/HEADLESS.md)
-- **🔎 Ανακάλυψη μοντέλων** — το `/v1/models` φιλτράρει βάσει δυνατοτήτων, context, τύπου και κειμένου, ενώ το `POST /v1/models/query` επιστρέφει μια σύντομη, ντετερμινιστική λίστα επιλογών με την ίδια ορατότητα ανά κλειδί. → [API Reference](docs/reference/API_REFERENCE.md)
-- **🔑 Έλεγχος δρομολόγησης ανά κλειδί** — καρφιτσώστε ένα API key σε ένα μοντέλο ή combo με το `forcedModel` και προσθέστε ή αφαιρέστε ατομικά τα μοντέλα και τα combo ενός κλειδιού (`/api/keys/{id}/access`) ατομικά και ατομικά. → [API Reference](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
-- **🛡️ Λεπτομερέστεροι έλεγχοι PII** — επιλογή ανά τύπο, έως 20 επικυρωμένα προσαρμοσμένα μοτίβα απόκρυψης και μετρητές εντοπισμού ανά τύπο· η ίδια η απόκρυψη παραμένει προαιρετική. → [Guardrails](docs/security/GUARDRAILS.md)
-- **🌍 67 γλώσσες** — πίνακας ελέγχου, αντίγραφα τεκμηρίωσης και CLI, με το `npm run i18n:add-locale` να προσθέτει μια γλώσσα παντού με μία εντολή. → [i18n Guide](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — εισερχόμενη ανάθεση A2A στον στόλο των agent σας, δεξιότητες Conductor στο Agent Card και ένα πλαίσιο στον πίνακα ελέγχου με φωνητική συνομιλία push-to-talk μέσω Faro. → [A2A Server](docs/frameworks/A2A-SERVER.md)
-- **🛂 Προσαρμοστική αποδοχή και προστασία από υπερφόρτωση** — τα βαριά αιτήματα συνομιλίας μπαίνουν σε ουρά αντί να αποτυγχάνουν με 503, με ατομικά rolling leases RPM ανά σύνδεση. → [Resilience Guide](docs/architecture/RESILIENCE_GUIDE.md)
-- **🗂️ Κανονική σειρά `/v1/models`** — ένα συνεχές μπλοκ ομαδοποιημένο ανά provider για κάθε provider (με τα combo πρώτα), σταθερό σε κάθε πηγή καταλόγου. → [API Reference](docs/reference/API_REFERENCE.md)
-- **🗜️ Ενίσχυση ασφάλειας συμπίεσης** — προεπιλεγμένη προστασία από inflation, πακέτα Caveman για DE / FR / JA και κινεζικά (wényán), φίλτρα RTK για Gradle και .NET. → [Compression](docs/compression/COMPRESSION_ENGINES.md)
-- **💸 Ειλικρινές κόστος σταθερής χρέωσης** — οι provider συνδρομών / coding-plan εμφανίζονται με κόστος **$0** στα αναλυτικά στοιχεία κόστους· ο προϋπολογισμός, το quota και η δρομολόγηση συνεχίζουν να κάνουν εκτιμήσεις. → [API Reference](docs/reference/API_REFERENCE.md)
-- **⚖️ Δρομολόγηση Quota-Share** — κατανέμει δίκαια το quota ενός κοινόχρηστου λογαριασμού μεταξύ pooled keys, με αξιοποίηση της διαθέσιμης χωρητικότητας ώστε τα αδρανή τμήματα να δανείζονται. → [Resilience Guide](docs/architecture/RESILIENCE_GUIDE.md)
-- **🤖 Ρύθμιση CLI/agent με μία εντολή** — 15 καταχωρισμένες εντολές `setup-*`· το `omniroute run` εκκινεί 7 CLI (Claude Code, Codex, Aider, Goose, OpenCode, Qwen Code, Gemini CLI)· το `omniroute configure` υποστηρίζει 11 προορισμούς με διαδραστικό επιλογέα provider+model και αγαπημένα ανά context. → [CLI Integrations](docs/guides/CLI-INTEGRATIONS.md)
-- **🛰️ Απομακρυσμένη λειτουργία** — χειριστείτε ένα απομακρυσμένο OmniRoute με tokens περιορισμένου πεδίου εφαρμογής (`connect` / `contexts` / `tokens`) και έναν βοηθό OAuth `antigravity` για εγκαταστάσεις VPS. → [Remote Mode](docs/guides/REMOTE-MODE.md)
-- **🧭 Εξυπνότερη αυτόματη δρομολόγηση** — combo `auto/<category>:<tier>`, **Fusion** (πίνακας μοντέλων + judge), δρομολόγηση με επίγνωση εργασίας, παρακάμψεις ανά αίτημα για μοντέλο / mode / προϋπολογισμό USD. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
-- **🗜️ Αρθρωτή συμπίεση** — 12 συνδυάσιμοι μηχανισμοί και Compression Studios: LLMLingua-2, Ultra δύο επιπέδων, omniglyph, πύλη πιστότητας ανά βήμα, GCF v3.2, επεξεργαστής μετακίνησης με drag-and-drop. → [Compression](docs/compression/COMPRESSION_ENGINES.md)
-- **🕵️ Διαφανής αποκρυπτογράφηση MITM (TPROXY)** — CLI καταγραφής που αγνοούν τις μεταβλητές περιβάλλοντος proxy, με CA ανά SNI και πρόγραμμα εγκατάστασης trust-store. → [MITM/TPROXY](docs/security/MITM-TPROXY-DECRYPT.md)
-- **💸 Τηλεμετρία κόστους παντού** — κεφαλίδες κόστους/χρήσης `X-OmniRoute-*` σε κάθε endpoint, κεφαλίδα εξοικονόμησης από cache-HIT και όρια δαπανών USD ανά κλειδί. → [API Reference](docs/reference/API_REFERENCE.md)
-- **🧠 Μνήμη υπό τον έλεγχό σας** — απενεργοποιημένη από προεπιλογή, προαιρετική κβαντοποίηση διανυσμάτων int8 και typed decay, `x-omniroute-no-memory` ανά αίτημα. → [Memory](docs/frameworks/MEMORY.md)
-- **🛡️ Ασφάλεια** — προστασία από prompt injection σε κάθε διαδρομή LLM (red-team suite), προαιρετικό guardrail απόκρυψης διαπιστευτηρίων (αποκρύπτει διαρρεύσαντα API keys/secrets και προς τις δύο κατευθύνσεις), δωρεάν αναζήτηση ιστού DuckDuckGo ως έσχατη λύση και προαιρετικό OIDC gate σύνδεσης για τον πίνακα ελέγχου (η σύνδεση με κωδικό πρόσβασης παραμένει πάντα διαθέσιμη). → [Guardrails](docs/security/GUARDRAILS.md)
-- **🖼️ Νέα endpoints** — τα `/v1/ocr` (Mistral OCR) και `/v1/audio/translations` (τύπου Whisper) ολοκληρώνουν την επιφάνεια πολυμέσων. → [API Reference](docs/reference/API_REFERENCE.md)
-- **🎨 Δημιουργία εικόνας / βίντεο / ήχου** — ένα API για πολυμέσα: xAI Grok Imagine και βίντεο Novita AI, ComfyUI, Magnific, Adobe Firefly, Segmind και provider ομιλίας όπως το ElevenLabs. → [API Reference](docs/reference/API_REFERENCE.md)
-- **🌍 Ανάπτυξη και λειτουργία** — `basePath` reverse-proxy, αυτόματος εντοπισμός γλώσσας browser, παρακολούθηση συσκευών ανά κλειδί, trust MITM χωρίς root, τοπικοποίηση zh-TW. → [Environment](docs/reference/ENVIRONMENT.md)
-- **🤝 Περισσότεροι provider και agent** — cloud agent (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) με browser και σύνδεση OAuth, κάρτα πρώτης κατηγορίας για Ollama, Claude Opus 5 και Sonnet 5, επίσημη συνεργασία με Kimi (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… και ανανεωμένος **κατάλογος 394 provider**. → [Providers](docs/reference/PROVIDER_REFERENCE.md)
-- **📡 Διαφάνεια δρομολόγησης** — κάθε απόκριση περιλαμβάνει μια κεφαλίδα `X-OmniRoute-Decision` που αναφέρει τη στρατηγική/provider/καθυστέρηση που την εξυπηρέτησε, μια νέα στρατηγική combo `cache-optimized` και ο παράγοντας `cacheAffinity` του Auto-Combo κατευθύνουν τα επαναλαμβανόμενα αιτήματα πίσω στη σύνδεση που διατηρεί το αποθηκευμένο prefix, ενώ ένα endpoint μόνο για ανάγνωση `/v1/auto-combo/{channel}/candidates` εκθέτει τη ζωντανή ομάδα υποψηφίων ενός καναλιού `auto/*`. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
-- **⚡ Τοπική απόδοση και υποδομή** — τοπικό Redis με ένα κλικ, relay deployers για Cloudflare Workers / Deno Deploy, Bifrost και Mux ως εποπτευόμενες ενσωματωμένες υπηρεσίες. → [Ενσωματωμένες υπηρεσίες](docs/frameworks/EMBEDDED-SERVICES.md)
-- **🧩 Επίσης περιλαμβάνονται** — framework προσθέτων + marketplace, frameworks δεξιοτήτων Omni/Agent/GitHub, ενσωμάτωση με vault του Obsidian (22 εργαλεία MCP), API Batch και Files συμβατά με OpenAI, σημασιολογική cache αποκρίσεων, gamification με πίνακες κατάταξης, ανακάλυψη πρακτόρων ACP (15 ενσωματωμένοι πράκτορες), προγραμματισμένη εξαγωγή αρχείων καταγραφής στο BigQuery, παράλληλη διανομή `auto/chaos` σε πολλαπλά μοντέλα, γέφυρα bot Telegram, διαχειριστής εκδόσεων μέσα στην εφαρμογή και κατατάξεις δωρεάν παρόχων LMArena-ELO. → [Τεκμηρίωση](docs/README.md)
+- **δρομολόγηση ⚖️ `quota-weighted`** — η 20η συνδυαστική στρατηγική παρακάμπτει τους εξαντλημένους λογαριασμούς και, στη συνέχεια, αντλεί από τους υπόλοιπους αναλογικά με το υπόλοιπο όριο ÷ φόρτου κατά την πτήση, διατηρώντας καρφιτσωμένες τις υπάρχουσες συνομιλίες. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
+- **🧰 Headless mode** — `omniroute serve --headless` (ή `OMNIROUTE_HEADLESS=1`) εκτελεί μόνο τη μηχανή μεσολάβησης `/v1/*`, με απενεργοποιημένα τα υποσυστήματα του πίνακα οργάνων και του ταμπλό μόνο. → [Headless Mode](docs/guides/HEADLESS.md)
+- **Ανακάλυψη μοντέλου 🔎** — `/v1/models` φιλτράρει κατά δυνατότητα, πλαίσιο, είδος και κείμενο και `POST /v1/models/query` επιστρέφει μια σύντομη ντετερμινιστική σύντομη λίστα με την ίδια ορατότητα ανά κλειδί. → [API Αναφορά](docs/reference/API_REFERENCE.md)
+- **🔑 Έλεγχος δρομολόγησης ανά κλειδί** — καρφιτσώστε ένα κλειδί API σε ένα μοντέλο ή σύνθετο με `forcedModel` και προσθέστε ή αφαιρέστε τα μοντέλα και τους συνδυασμούς ενός κλειδιού ατομικά (`/api/keys/{id}/access`). → [API Αναφορά](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
+- **🛡️ Λεπτά χειριστήρια PII** — επιλογή ανά τύπο, έως και 20 επικυρωμένα προσαρμοσμένα μοτίβα κάλυψης και μετρητές ανίχνευσης ανά τύπο. Η ίδια η κάλυψη παραμένει ενεργή. → [προστατευτικά κιγκλιδώματα](docs/security/GUARDRAILS.md)
+- **🌍 67 γλώσσες** Πίνακας ελέγχου —, καθρέφτες εγγράφων και CLI, με `npm run i18n:add-locale` να προσθέτει μια γλώσσα παντού με μία εντολή. [Οδηγός](docs/guides/I18N.md) → i18n
+- **🎛️ OmniConductor** — εισερχόμενη αποστολή A2A στον στόλο αντιπροσώπων σας, δεξιότητες μαέστρου στην Κάρτα αντιπροσώπων και πίνακας ταμπλό με φωνητική συνομιλία push-to-talk Faro. Διακομιστής → [A2A](docs/frameworks/A2A-SERVER.md)
+- **🛂 Προσαρμοστική προστασία εισόδου & υπερφόρτωσης** — βαρέων βαρών chat αιτημάτων ουρά αντί για 503ing, με ατομικές κυλιόμενες μισθώσεις RPM ανά σύνδεση. → [Οδηγός ανθεκτικότητας](docs/architecture/RESILIENCE_GUIDE.md)
+- **🗂️ Κανονική παραγγελία `/v1/models`** — ένα συνεχόμενο μπλοκ ομαδοποιημένου παρόχου ανά πάροχο (συνδυασμοί καρφιτσώθηκαν πρώτα), σταθερό σε κάθε πηγή καταλόγου. → [API Αναφορά](docs/reference/API_REFERENCE.md)
+- **🗜️ σκλήρυνση με συμπίεση** — προεπιλεγμένο προστατευτικό φουσκώματος, πακέτα Caveman για DE / FR / JA + κινέζικα (wényán), φίλτρα RTK για Gradle & .NET. [Συμπίεση](docs/compression/COMPRESSION_ENGINES.md) →
+- **💸 Τίμιο κατ' αποκοπή κόστος** Οι πάροχοι συνδρομών/προγραμμάτων κωδικοποίησης — διαβάζουν** $0** στην ανάλυση κόστους? προϋπολογισμός, ποσόστωση και δρομολόγηση συνεχίζουν να υπολογίζουν. → [API Αναφορά](docs/reference/API_REFERENCE.md)
+- **⚖️ Quota-Δρομολόγηση κοινής χρήσης** — μοιράζει το όριο ενός κοινόχρηστου λογαριασμού αρκετά σε ομαδοποιημένα κλειδιά, εξοικονομώντας έτσι την εργασία, έτσι ώστε τα αδρανή κομμάτια να δανείζονται. → [Οδηγός ανθεκτικότητας](docs/architecture/RESILIENCE_GUIDE.md)
+- **🤖 Ρύθμιση CLI/agent με μία εντολή** — 15 καταχωρημένες εντολές `setup-*`. `omniroute run` λανσάρει 7 CLIs (Claude Code, Codex, Aider, Goose, OpenCode, Qwen Code, Gemini CLI); `omniroute configure` υποστηρίζει 11 στόχους με έναν διαδραστικό πάροχο επιλογής μοντέλων + και αγαπημένα ανά πλαίσιο. → [CLI Ενσωματώσεις](docs/guides/CLI-INTEGRATIONS.md)
+- **🛰️ Απομακρυσμένη λειτουργία** — οδηγεί ένα απομακρυσμένο OmniRoute με διακριτικά εμβέλειας (`connect` / `contexts` / `tokens`) + έναν βοηθό `antigravity` OAuth για εγκαταστάσεις VPS. → [Απομακρυσμένη λειτουργία](docs/guides/REMOTE-MODE.md)
+- **🧭 Εξυπνότερη αυτόματη δρομολόγηση** — `auto/<category>:<tier>` συνδυασμοί,** Συγχώνευση** (κριτής πίνακας μοντέλων + ), δρομολόγηση με επίγνωση εργασιών, μοντέλο / λειτουργία / παρακάμψεις προϋπολογισμού USD ανά αίτημα. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
+- **🗜️ Συνδεόμενη συμπίεση** — 12 συνθέσιμες μηχανές + Compression Studios: LLMLingua-2, Ultra δύο επιπέδων, omniglyph, πύλη πιστότητας ανά βήμα, GCF v3.2, επεξεργασία αναδιάταξης μεταφοράς. → [συμπίεση](docs/compression/COMPRESSION_ENGINES.md)
+- **🕵️ Διαφανές MITM αποκρυπτογράφηση (TPROXY)** — καταγράψτε CLIs που αγνοούν τα env vars του διακομιστή μεσολάβησης, με ένα πρόγραμμα εγκατάστασης αξιόπιστου καταστήματος CA + ανά SNI. → [MITM/TPROXY](docs/security/MITM-TPROXY-DECRYPT.md)
+- **💸 Κόστος τηλεμετρίας παντού** Επικεφαλίδες — `X-OmniRoute-*` cost/usage σε κάθε τελικό σημείο, κεφαλίδα αποταμίευσης κρυφής μνήμης HIT, ποσοστώσεις δαπανών USD ανά κλειδί. → [API Αναφορά](docs/reference/API_REFERENCE.md)
+- **🧠 Μνήμη που ελέγχετε** — απενεργοποιημένο από προεπιλογή, συμμετοχή int8 διανυσματικής κβαντοποίησης + πληκτρολογημένη αποσύνθεση, ανά αίτημα `x-omniroute-no-memory`. → [Μνήμη](docs/frameworks/MEMORY.md)
+- **🛡️ Security** Προφυλακτήρας άμεσης έγχυσης — σε κάθε διαδρομή LLM (σουίτα κόκκινης ομάδας), προστατευτικό κιγκλίδωμα κάλυψης διαπιστευτηρίων (διαγραφή διέρρευσε API keys/secrets και προς τις δύο κατευθύνσεις), δωρεάν αναζήτηση στον ιστό τελευταίας λύσης DuckDuckGo και μια προαιρετική πύλη σύνδεσης OIDC για τον πίνακα εργαλείων (η σύνδεση με κωδικό πρόσβασης παραμένει πάντα διαθέσιμη). → [προστατευτικά κιγκλιδώματα](docs/security/GUARDRAILS.md)
+- **🖼️ Νέα τελικά σημεία** — `/v1/ocr` (Mistral OCR) και `/v1/audio/translations` (στυλ Whisper) ολοκληρώνουν την επιφάνεια του μέσου. → [API Αναφορά](docs/reference/API_REFERENCE.md)
+- **🎨 Δημιουργία εικόνας / βίντεο / ήχου** — one API για πολυμέσα: xAI Grok Imagine & Novita AI βίντεο, ComfyUI, Magnific, Adobe Firefly, Segmind και πάροχοι ομιλίας όπως ElevenLabs. → [API Αναφορά](docs/reference/API_REFERENCE.md)
+- **🌍 Deployment & ops** — reverse-proxy `basePath`, αυτόματη ανίχνευση γλώσσας προγράμματος περιήγησης, παρακολούθηση συσκευής ανά κλειδί, αξιοπιστία MITM χωρίς root, τοπική προσαρμογή zh-TW. → [Περιβάλλον](docs/reference/ENVIRONMENT.md)
+- **🤝 More providers & agents** — cloud agents (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) with browser + OAuth login, Ollama first-class card, Claude Opus 5 & Sonnet 5, Kimi official partnership (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… and a refreshed **394-provider catalog**. → [Providers](docs/reference/PROVIDER_REFERENCE.md)
+- **Διαφάνεια δρομολόγησης 📡** — κάθε απάντηση φέρει μια κεφαλίδα `X-OmniRoute-Decision` που ονομάζει το strategy/provider/latency που την εξυπηρέτησε, μια νέα στρατηγική συνδυασμού `cache-optimized` + Auto-Combo συντελεστής `cacheAffinity` αιτήματα επανάληψης διαδρομής πίσω στη σύνδεση που κρατά το προσωρινά αποθηκευμένο πρόθεμα και ένα τελικό σημείο `/v1/auto-combo/{channel}/candidates` μόνο για ανάγνωση εκθέτει τη ζωντανή ομάδα υποψηφίων καναλιών `auto/*`. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
+- **⚡ Τοπικές επιδόσεις & infra** — με ένα κλικ τοπικές Redis, Cloudflare Workers / Deno Deploy προγραμματιστές ρελέ, Bifrost & Mux ως εποπτευόμενες ενσωματωμένες υπηρεσίες. → [Embedded Services](docs/frameworks/EMBEDDED-SERVICES.md)
+- **🧩 Επίσης στο κουτί** — πλαίσιο προσθηκών + marketplace, πλαίσια δεξιοτήτων Omni/Agent/GitHub, ενσωμάτωση Obsidian vault (22 εργαλεία MCP ), Batch & Files APIs συμβατό με OpenAI, κρυφή μνήμη σημασιολογικής απόκρισης, παιχνιδοποίηση με leaderboard, εντοπισμός πρακτόρων ACP (15 ενσωματωμένοι BigQuery), προγραμματισμένη εξαγωγή αρχείων καταγραφής `auto/chaos` a Telegram -fan, bridge, έναν διαχειριστή εκδόσεων εντός εφαρμογής και κατάταξη δωρεάν παρόχων LMARena-ELO. [Έγγραφα](docs/README.md) →
 
 <br/>
 
@@ -944,15 +944,15 @@ claude mcp add --transport http omniroute http://localhost:20128/api/mcp/stream 
 
 <div align="center">
 
-## 🗜️ Εξοικονομήστε 15–95% Tokens — Αυτόματα
+## 🗜️ Αποθήκευση 15–95% Tokens — Αυτόματα
 
 </div>
 
-### 📖 Πώς λειτουργεί — pipeline, αρχιτεκτονική και υπολογισμός εξοικονόμησης
+### 📖 Πώς λειτουργεί — αγωγός, αρχιτεκτονική και μαθηματικά εξοικονόμησης
 
-<img src="./docs/diagrams/compression-pipeline.svg" width="100%" alt="Pipeline συμπίεσης του OmniRoute: ένα ενδεικτικό αίτημα πελάτη 10.000 tokens περνά από 12 συνθέσιμες μηχανές — Session-Dedup, CCR, Lite, RTK, Responses Tool Output, Headroom, Relevance, Caveman, Aggressive, LLMLingua-2, Ultra και OmniGlyph — και μπορεί να φτάσει στον πάροχο με περίπου 1.080 tokens στο τεκμηριωμένο παράδειγμα διαδοχικής εφαρμογής. Το δομημένο περιεχόμενο προστατεύεται από μηχανισμούς διατήρησης και ελέγχους πιστότητας ανά βήμα· οι ρητές λειτουργίες με απώλειες ή πειραματικές λειτουργίες ενδέχεται να μετασχηματίζουν επιλέξιμο περιεχόμενο."/>
+<img src="./docs/diagrams/compression-pipeline.svg" width="100%" alt="OmniRoute compression pipeline: an illustrative 10,000-token client request passes through 12 composable engines — Session-Dedup, CCR, Lite, RTK, Responses Tool Output, Headroom, Relevance, Caveman, Aggressive, LLMLingua-2, Ultra and OmniGlyph — and can reach the provider at about 1,080 tokens in the documented stacked example. Structured content is protected by preservation guards and per-step fidelity gates; explicit lossy or experimental modes may transform eligible content."/>
 
-Ο προεπιλεγμένος συνδυασμός διαδοχικής εφαρμογής εκτελεί `RTK → Caveman`. Όταν και οι δύο εφαρμόζονται στο ίδιο payload εργαλείου/περιβάλλοντος, η εξοικονόμηση πολλαπλασιάζεται:
+Ο προεπιλεγμένος συνδυασμός στοίβαξης εκτελεί `RTK → Caveman`. Όταν και οι δύο ενεργούν στο ίδιο ωφέλιμο φορτίο tool/context, η εξοικονόμηση συνδυάζεται:
 
 ```txt
 combined = 1 − (1 − RTK) × (1 − Caveman_input)
@@ -960,74 +960,74 @@ average  = 1 − (1 − 0.80) × (1 − 0.46) = 89.2%
 range    = 78.4 – 94.6%
 ```
 
-Τα μπλοκ κώδικα, τα URL, τα JSON και τα δομημένα δεδομένα προστατεύονται **πάντα** από τη μηχανή διατήρησης.
+Τα μπλοκ κώδικα, URLs, JSON και τα δομημένα δεδομένα είναι** πάντα προστατευμένο** από τον κινητήρα συντήρησης.
 
-> **Γιατί να χρησιμοποιείτε πολλά tokens όταν αρκούν λίγα;** Κάθε αίτημα περνά **διαφανώς** από το pipeline συμπίεσης του OmniRoute — χωρίς αλλαγές στον πελάτη. Τώρα αποτελείται από μια **στοίβα 12 συνθέσιμων μηχανών** που εκτελούνται με σειρά και συνδυάζονται ανά συνδυασμό δρομολόγησης — βασισμένη σε ιδέες από τα [RTK](https://github.com/rtk-ai/rtk), [Caveman](https://github.com/JuliusBrussee/caveman) (⭐ 90K+), [LLMLingua-2](https://github.com/microsoft/LLMLingua) και [Troglodita](https://github.com/leninejunior/troglodita) (PT-BR).
+> **Γιατί να χρησιμοποιήσετε πολλά διακριτικά όταν λίγα μάρκες κάνουν το κόλπο;** Κάθε αίτημα περνά μέσα από τον αγωγό συμπίεσης του OmniRoute** με διαφάνεια** — δεν αλλάζει ο πελάτης. Τώρα είναι ένα** στοίβα 12 συνθέσιμων κινητήρων** που τρέχουν με τη σειρά και αναμειγνύονται και ταιριάζουν ανά δρομολόγηση combo — που βασίζεται σε ιδέες από [RTK](https://github.com/rtk-ai/rtk), [Caveman](https://github.com/JuliusBrussee/caveman) (⭐ 90K +), [LLMLingua-2](https://github.com/microsoft/LLMLingua) και [Troglodita](https://github.com/leninejunior/troglodita) (PT-BR).
 
-### 🧱 Η στοίβα των 12 μηχανών
+### 🧱 Η στοίβα με 12 κινητήρες
 
-Οι μηχανές εκτελούνται με τη σειρά του pipeline· καθεμία μπορεί να ενεργοποιείται ή να απενεργοποιείται και να ρυθμίζεται ανεξάρτητα ανά συνδυασμό:
-
-<table>
-  <tr><th align="center">#</th><th align="left">Μηχανή</th><th align="left">Λειτουργία</th></tr>
-  <tr><td align="center" nowrap>1</td><td align="left" nowrap><b>Session-Dedup</b></td><td align="left">Αφαιρεί περιεχόμενο που επαναλαμβάνεται μεταξύ διαδοχικών μηνυμάτων (με βάση το περιεχόμενο, μεταξύ διαδοχικών μηνυμάτων)</td></tr>
-  <tr><td align="center" nowrap>2</td><td align="left" nowrap><b>CCR</b></td><td align="left">Αρχειοθετεί μεγάλα μπλοκ πίσω από δείκτες ανάκτησης, τα οποία ανακτώνται κατ’ απαίτηση</td></tr>
-  <tr><td align="center" nowrap>3</td><td align="left" nowrap><b>Lite</b></td><td align="left">Περικοπή κενών και URL εικόνων (βασική λειτουργία με μικρή επιβάρυνση καθυστέρησης)</td></tr>
-  <tr><td align="center" nowrap>4</td><td align="left" nowrap><b>RTK</b></td><td align="left">Έξυπνο φιλτράρισμα, απαλοιφή διπλοτύπων και περικοπή αποτελεσμάτων εργαλείων (με επίγνωση εντολών)</td></tr>
-  <tr><td align="center" nowrap>5</td><td align="left" nowrap><b>Responses Tool Output</b></td><td align="left">Πρώτα χωρίς απώλειες JSON και περιορισμένη διαγνωστική συμπίεση για αποτελέσματα shell/patch/search/build (Responses API)</td></tr>
-  <tr><td align="center" nowrap>6</td><td align="left" nowrap><b>Headroom</b></td><td align="left">Συμπύκνωση πινάκων JSON χωρίς απώλειες (~30%) μέσω ενός ενσωματωμένου codec <b>GCF</b></td></tr>
-  <tr><td align="center" nowrap>7</td><td align="left" nowrap><b>Relevance</b></td><td align="left">Εξαγωγική βαθμολόγηση προτάσεων σε σχέση με το τελευταίο ερώτημα του χρήστη</td></tr>
-  <tr><td align="center" nowrap>8</td><td align="left" nowrap><b>Caveman</b></td><td align="left">Συμπίεση πεζού λόγου βάσει κανόνων (~65–75% στα αποτελέσματα)</td></tr>
-  <tr><td align="center" nowrap>9</td><td align="left" nowrap><b>Aggressive</b></td><td align="left">Σύνοψη και προοδευτική «γήρανση» παλαιότερων μηνυμάτων</td></tr>
-  <tr><td align="center" nowrap>10</td><td align="left" nowrap><b>LLMLingua-2</b></td><td align="left">Σημασιολογική αφαίρεση μέσω ML με MobileBERT ONNX — ασφαλές για κώδικα, ασύγχρονο</td></tr>
-  <tr><td align="center" nowrap>11</td><td align="left" nowrap><b>Ultra</b></td><td align="left">Ευρετική αφαίρεση tokens με προαιρετική βαθμίδα μικρού μοντέλου (SLM)</td></tr>
-  <tr><td align="center" nowrap>12</td><td align="left" nowrap><b>OmniGlyph</b></td><td align="left">Πειραματική κωδικοποίηση του περιβάλλοντος ως εικόνας για μετρημένο Claude Fable 5 μέσω του απευθείας wire της Anthropic· οι μετασχηματιστές GPT 5.6 παραμένουν σε κατάσταση ασφαλούς αποτυχίας εν αναμονή αποδείξεων από τον πάροχο. Τέσσερα προφίλ συμπίεσης (προεπιλεγμένο επιθετικό, ισορροπημένο, ασφαλές για κώδικα, passthrough) (το πιο επιθετικό· απαιτεί ρητή ενεργοποίηση)</td></tr>
-</table>
-
-Τα μπλοκ κώδικα, τα URL και τα δομημένα δεδομένα **διατηρούνται πάντα** byte-perfect. Τα **προκαθορισμένα με ένα κλικ** συνδυάζουν τις μηχανές:
+Οι κινητήρες λειτουργούν με σειρά αγωγών. καθένα από αυτά μπορεί να εναλλάσσεται και να ρυθμίζεται ανεξάρτητα ανά συνδυασμό:
 
 <table>
-  <tr><th align="left">Λειτουργία</th><th align="left">Εξοικονόμηση</th><th align="left">Ιδανική για</th></tr>
-  <tr><td align="left" nowrap>🪶 <b>Lite</b></td><td align="left" nowrap>~15%</td><td align="left">Ασφαλής προεπιλογή που παραμένει πάντα ενεργή</td></tr>
-  <tr><td align="left" nowrap>🪨 <b>Standard (Caveman)</b></td><td align="left" nowrap>~30%</td><td align="left">Καθημερινή ανάπτυξη κώδικα</td></tr>
-  <tr><td align="left" nowrap>⚡ <b>Aggressive</b></td><td align="left" nowrap>~50%</td><td align="left">Μεγάλες συνεδρίες με πολλά εργαλεία</td></tr>
-  <tr><td align="left" nowrap>🔥 <b>Ultra</b></td><td align="left" nowrap>~75%</td><td align="left">Μέγιστη εξοικονόμηση</td></tr>
-  <tr><td align="left" nowrap>🧰 <b>RTK</b></td><td align="left" nowrap>60–90%</td><td align="left">Έξοδος shell/test/build/git</td></tr>
-  <tr><td align="left" nowrap>🔗 <b>Stacked (RTK → Caveman)</b></td><td align="left" nowrap><b>78–95%</b></td><td align="left">Μεικτά prompts και αρχεία καταγραφής εργαλείων</td></tr>
+  <tr><th align="center">#</th><th align="left">Μηχανή</th><th align="left">Τι κάνει</th></tr>
+  <tr><td align="center" nowrap>1</td><td align="left" nowrap><b>Συνεδρία-Αποκοπή</b></td><td align="left">Απορρίπτει περιεχόμενο που επαναλαμβάνεται στις στροφές (διεύθυνση περιεχομένου, διασταυρούμενη στροφή)</td></tr>
+  <tr><td align="center" nowrap>2</td><td align="left" nowrap><b>CCR</b></td><td align="left">Αρχειοθετεί μεγάλα μπλοκ πίσω από δείκτες ανάκτησης, που λαμβάνονται κατόπιν ζήτησης</td></tr>
+  <tr><td align="center" nowrap>3</td><td align="left" nowrap><b>Lite</b></td><td align="left">Κενό διάστημα + εικόνας-Περικοπή διεύθυνσης URL (λανθάνουσα κατάσταση-γραμμή βάσης φωτός)</td></tr>
+  <tr><td align="center" nowrap>4</td><td align="left" nowrap><b>RTK</b></td><td align="left">Έξυπνο φιλτράρισμα αποτελεσμάτων εργαλείων, αφαίρεση και περικοπή (συνειδητοποίηση εντολών)</td></tr>
+  <tr><td align="center" nowrap>5</td><td align="left" nowrap><b>Έξοδος εργαλείου απαντήσεων</b></td><td align="left">Διαγνωστική συμπίεση οριοθετημένης JSON + χωρίς απώλειες για εξόδους shell/patch/search/build (Απαντήσεις API)</td></tr>
+  <tr><td align="center" nowrap>6</td><td align="left" nowrap><b>Χώρος κεφαλής</b></td><td align="left">Συμπύκνωση πινάκων χωρίς απώλειες συστοιχιών JSON (~ 30%) μέσω πωλητή <b>GCF</b> κωδικοποιητής</td></tr>
+  <tr><td align="center" nowrap>7</td><td align="left" nowrap><b>Συνάφεια</b></td><td align="left">Βαθμολογία εξαγωγής προτάσεων σε σχέση με το τελευταίο ερώτημα χρήστη</td></tr>
+  <tr><td align="center" nowrap>8</td><td align="left" nowrap><b>Αγριάνθρωπος</b></td><td align="left">Συμπίεση πρόζας βάσει κανόνων (~ 65–75% στην έξοδο)</td></tr>
+  <tr><td align="center" nowrap>9</td><td align="left" nowrap><b>Επιθετικός</b></td><td align="left">Σύνοψη + προοδευτική γήρανση παλαιών στροφών</td></tr>
+  <tr><td align="center" nowrap>10</td><td align="left" nowrap><b>LLMLingua-2</b></td><td align="left">ML σημασιολογικό κλάδεμα μέσω MobileBERT ONNX — code-safe, async</td></tr>
+  <tr><td align="center" nowrap>11</td><td align="left" nowrap><b>Υπερ</b></td><td align="left">Ευρετικό συμβολικό κλάδεμα με προαιρετική βαθμίδα μικρού μοντέλου (SLM).</td></tr>
+  <tr><td align="center" nowrap>12</td><td align="left" nowrap><b>OmniGlyph</b></td><td align="left">Πειραματική κωδικοποίηση περιβάλλοντος ως εικόνας για το μετρημένο Claude Fable 5 στο άμεσο καλώδιο Anthropic. Οι μετασχηματιστές GPT 5.6 παραμένουν κλειστοί λόγω αστοχίας εν αναμονή των αποδείξεων παρόχου. Τέσσερα προφίλ συμπίεσης (επιθετική προεπιλογή, ισορροπημένη, ασφαλής κωδικοποίηση, διέλευση) (το πιο επιθετικό, συμμετοχή)</td></tr>
 </table>
 
-**Πραγματικό παράδειγμα — λειτουργία Standard:**
+Τα μπλοκ κώδικα, URLs και τα δομημένα δεδομένα είναι** πάντα διατηρημένο** byte-τέλειο.** Προεπιλογές με ένα κλικ** συνδυάστε τους κινητήρες:
 
-> **Πριν (69 tokens):** _"Ο λόγος για τον οποίο το στοιχείο React σας επανασχεδιάζεται πιθανότατα είναι ότι δημιουργείτε μια νέα αναφορά αντικειμένου σε κάθε κύκλο απόδοσης. Όταν περνάτε ένα ενσωματωμένο αντικείμενο ως prop, η ρηχή σύγκριση του React το βλέπει ως διαφορετικό αντικείμενο κάθε φορά, γεγονός που ενεργοποιεί νέο render. Θα συνιστούσα να χρησιμοποιήσετε το useMemo για την απομνημόνευση του αντικειμένου."_
->
-> **Μετά (19 tokens):** _"Νέα αναφορά αντικειμένου σε κάθε render. Inline object prop = νέα αναφορά = νέο render. Τυλίξτε το σε useMemo."_
->
-> **Η ίδια απάντηση. 72% λιγότερα tokens. Μηδενική απώλεια ακρίβειας.** ✅
+<table>
+  <tr><th align="left">Τρόπος</th><th align="left">Οικονομίες</th><th align="left">Το καλύτερο για</th></tr>
+  <tr><td align="left" nowrap>🪶 <b>Lite</b></td><td align="left" nowrap>~15%</td><td align="left">Πάντα ενεργοποιημένη ασφαλής προεπιλογή</td></tr>
+  <tr><td align="left" nowrap>🪨 <b>Standard (Caveman)</b></td><td align="left" nowrap>~30%</td><td align="left">Καθημερινή κωδικοποίηση</td></tr>
+  <tr><td align="left" nowrap>⚡ <b>Επιθετικός</b></td><td align="left" nowrap>~50%</td><td align="left">Μεγάλες συνεδρίες με πολλά εργαλεία</td></tr>
+  <tr><td align="left" nowrap>🔥 <b>Υπερ</b></td><td align="left" nowrap>~75%</td><td align="left">Μέγιστη εξοικονόμηση</td></tr>
+  <tr><td align="left" nowrap>🧰 <b>RTK</b></td><td align="left" nowrap>60–90%</td><td align="left">Έξοδος Shell/test/build/git</td></tr>
+  <tr><td align="left" nowrap>🔗 <b>Στοιβάζονται (RTK → Caveman)</b></td><td align="left" nowrap><b>78–95%</b></td><td align="left">Μικτά μηνύματα καταγραφής εργαλείων +</td></tr>
+</table>
 
-**Παράδειγμα PT-BR — λειτουργία [Troglodita](https://github.com/leninejunior/troglodita):**
+**Πραγματικό παράδειγμα — Standard mode:**
 
-> **Πριν (42 tokens):** _"Το πρόβλημα είναι ότι το component κάνει re-render επειδή δημιουργείται μια νέα αναφορά αντικειμένου σε κάθε κύκλο απόδοσης. Θα συνιστούσα να χρησιμοποιήσετε το useMemo."_
+> **Πριν (69 μάρκες):** _"Ο λόγος για τον οποίο το στοιχείο React εκτελείται εκ νέου είναι πιθανό επειδή δημιουργείτε μια νέα αναφορά αντικειμένου σε κάθε κύκλο απόδοσης. Όταν περνάτε ένα ενσωματωμένο αντικείμενο ως βάση, η ρηχή σύγκριση του React το βλέπει ως διαφορετικό αντικείμενο κάθε φορά, κάτι που ενεργοποιεί μια εκ νέου απόδοση. Θα συνιστούσα να χρησιμοποιήσετε useMemo για να απομνημονεύσετε το αντικείμενο."_
 >
-> **Μετά (12 tokens):** _"Re-render: νέα αναφορά σε κάθε κύκλο (το inline αντικείμενο αναδημιουργείται). Χρησιμοποιήστε `useMemo`."_
+> **Μετά (19 μάρκες):** _"Νέο αντικείμενο αναφέρεται σε κάθε απόδοση. Ενσωματωμένο αντικείμενο prop = νέο ref = εκ νέου απόδοση. Αναδίπλωση σε useMemo."_
 >
-> **Η ίδια απάντηση. ~70% λιγότερα tokens. Η τεχνική ακρίβεια παραμένει ανέπαφη.** ✅
+> **Ίδια απάντηση. 72% λιγότερα μάρκες. Μηδενική απώλεια ακρίβειας.** ✅
+
+**Παράδειγμα PT-BR λειτουργίας — [Troglodita](https://github.com/leninejunior/troglodita) :**
+
+> **Antes (42 μάρκες):** _"O problema é que o componente está re-renderizando porque uma nova referência de objeto está sendo criada em cada ciclo de renderização. Eu recomendaria usar useMemo."_
+>
+> **Depois (12 μάρκες):** _"Re-render: ref nova cada ciclo (objeto inline recriado). Usar `useMemo`."_
+>
+> **Απάντηση. ~ 70% meno tokens. Precisão técnica intacta.** ✅
 
 <br/>
 
-### 🎚️ Πέρα από τις μηχανές — στυλ εξόδου, ο προσαρμοστικός ρυθμιστής και ο έλεγχος ανά αίτημα
+### 🎚️ Πέρα από τα στυλ εξόδου — των κινητήρων, ο προσαρμοστικός επιλογέας και ο έλεγχος ανά αίτημα
 
-Οι 12 παραπάνω μηχανές συρρικνώνουν ό,τι **εισέρχεται**. Τρία ακόμη επίπεδα διαμορφώνουν **το πώς**, **το πότε** και τι **εξέρχεται**:
+Οι 12 παραπάνω κινητήρες συρρικνώνουν αυτό που πηγαίνει** σε** . Τρεις ακόμη στρώσεις σχήμα** πως** ,** όταν** , και τι έρχεται** έξω** :
 
-- **🪄 Στυλ εξόδου** _(καθοδήγηση στον άξονα εξόδου)_ — εισάγουν ντετερμινιστικές οδηγίες ασφαλείς για την cache, οι οποίες διαμορφώνουν την απόκριση· μπορούν να συνδυαστούν, καθεμία με ένταση `lite` / `full` / `ultra`. Η προσθήκη ενός στυλ απαιτεί μία γραμμή στην registry:
-  - **Συνοπτική πεζογραφία** — αφαιρέστε περιττά στοιχεία / άρθρα / επιφυλακτικές διατυπώσεις· διατηρήστε την τεχνική ουσία ακριβή.
-  - **Λιγότερος κώδικας** — YAGNI με τη λογική του «τεμπέλη senior dev»: η μικρότερη λειτουργική αλλαγή, χωρίς μη ζητημένο scaffolding.
-  - **Αλογοουρά (τεμπέλης senior dev)** — ανεβείτε τη σκάλα του YAGNI, διορθώστε τη βασική αιτία, με το μικρότερο λειτουργικό diff.
-  - **Έχω ADHD (πρώτα η ενέργεια)** — η επόμενη ενέργεια προηγείται, τα βήματα είναι αριθμημένα, υπάρχει ένα συγκεκριμένο επόμενο βήμα, χωρίς εισαγωγή.
-  - **Συνοπτικό CJK (文言)** — υπερβολικά συνοπτικό στυλ κλασικών κινεζικών (περιορίζεται βάσει locale στο `zh`).
-- **🎯 Προσαρμοστικός προϋπολογισμός context** _(ο ρυθμιστής)_ — αντί για ένα μοναδικό κατώφλι token ενεργοποίησης/απενεργοποίησης, κλιμακώνει τις φθηνότερες και λιγότερο απωλεστικές μηχανές μόνο όσο χρειάζεται για να **χωρέσει το παράθυρο context του μοντέλου**. Πολιτική: `reserve-output` (προεπιλογή, με επίγνωση του μοντέλου) · `percentage` · `absolute`. Λειτουργία: `floor` (εγγυάται ότι χωράει) · `replace-autotrigger` (υπερισχύει η ρητή επιλογή σας) · `off` (παλαιό κατώφλι).
-- **🎛️ Πού αποφασίζεται η συμπίεση** _(προτεραιότητα, από υψηλή → χαμηλή)_ — κεφαλίδα `x-omniroute-compression` ανά αίτημα › override συνδυασμού routing › ενεργό ονομασμένο profile › adaptive / auto-trigger › προεπιλογή panel › off. Το εφαρμοσμένο σχέδιο επιστρέφεται στην κεφαλίδα απόκρισης `X-OmniRoute-Compression: <mode>; source=<source>`.
+- **Στυλ εξόδου 🪄** _(διεύθυνση άξονα εξόδου)_ — εισάγει ντετερμινιστικές οδηγίες διαμόρφωσης απόκρισης με ασφάλεια στην κρυφή μνήμη. συνδυαστικά, το καθένα σε ένταση `lite` / `full` / `ultra`. Η προσθήκη ενός στυλ είναι μια καταχώρηση μητρώου μίας γραμμής:
+  - **Λογική πρόζα** — πληρωτικό σταγόνας / είδη / αντιστάθμιση. διατηρήστε την τεχνική ουσία ακριβή.
+  - **Λιγότερος κωδικός** — "lazy senior dev" YAGNI: η μικρότερη αλλαγή εργασίας, χωρίς σκαλωσιές που δεν ζητήθηκαν.
+  - **Αλογοουρά (τεμπέλης ανώτερος προγραμματιστής)** — ανεβείτε τη σκάλα YAGNI, διορθώστε τη βασική αιτία, τη μικρότερη διαφορά εργασίας.
+  - **Έχω ADHD (πρώτη δράση)** — οδηγοί επόμενης ενέργειας, βήματα αριθμημένα, ένα συγκεκριμένο επόμενο βήμα, χωρίς προοίμιο.
+  - **Terse CJK (文言)** — κλασικό-κινεζικό στιλ εξαιρετικά λιτό (τοπικά περιορισμένο σε `zh`).
+- **🎯 Προσαρμοστικό πλαίσιο-προϋπολογισμός** _(ο επιλογέας)_ — αντί για ένα όριο συμβολικού on/off, κλιμακώστε τους φθηνότερους κινητήρες χωρίς απώλειες μόνο όσο χρειάζεται για** ταιριάζει στο παράθυρο περιβάλλοντος του μοντέλου** . Πολιτική: `reserve-output` (προεπιλογή, με επίγνωση μοντέλου) · `percentage` · `absolute`. Λειτουργία: `floor` (εγγύηση προσαρμογής) · `replace-autotrigger` (η ρητή επιλογή σας κερδίζει) · `off` (κατώφλι παλαιού τύπου).
+- **🎛️ Όπου αποφασίζεται η συμπίεση** _(προτεραιότητα, υψηλό → χαμηλό)_ — ανά αίτημα επικεφαλίδα `x-omniroute-compression` › παράκαμψη δρομολόγησης-συνδυασμού › ενεργό προφίλ με όνομα › προσαρμοστικό / αυτόματη ενεργοποίηση › προεπιλογή πίνακα › απενεργοποιημένο. Το εφαρμοζόμενο σχέδιο επαναλαμβάνεται στην κεφαλίδα απόκρισης `X-OmniRoute-Compression: <mode>; source=<source>`.
 
-Ενεργοποιήστε το auto-trigger βάσει κατωφλίου token, γυρίστε τον προσαρμοστικό ρυθμιστή, καρφιτσώστε ένα ονομασμένο profile, ορίστε μια εφάπαξ ρύθμιση ανά αίτημα ή αντιστοιχίστε ένα pipeline ανά συνδυασμό routing — ό,τι ταιριάζει στον φόρτο εργασίας. Ένα προαιρετικό offline **eval harness** (`npm run eval:compression`) βαθμολογεί την πιστότητα σε σχέση με την εξοικονόμηση σε ένα σταθερό corpus, πριν προωθήσετε μια αλλαγή.
+Αυτόματη ενεργοποίηση με όριο διακριτικού, γυρίστε τον προσαρμοστικό επιλογέα, καρφιτσώστε ένα προφίλ με όνομα, ορίστε ένα εφάπαξ ανά αίτημα ή εκχωρήστε μια διοχέτευση ανά combo — δρομολόγησης ανάλογα με το φόρτο εργασίας. Συμμετοχή εκτός σύνδεσης** ισοπαλία** (`npm run eval:compression`) βαθμολογεί την πιστότητα έναντι της εξοικονόμησης σε ένα καρφιτσωμένο σώμα πριν προωθήσετε μια αλλαγή.
 
 📖 [`COMPRESSION_GUIDE.md`](docs/compression/COMPRESSION_GUIDE.md) · [`RTK_COMPRESSION.md`](docs/compression/RTK_COMPRESSION.md) · [`COMPRESSION_ENGINES.md`](docs/compression/COMPRESSION_ENGINES.md)
 
@@ -1046,60 +1046,50 @@ npm install -g omniroute
 omniroute
 ```
 
-> 💡 Βλέπετε `npm warn ERESOLVE` ή προειδοποιήσεις peer-dep; [Είναι ακίνδυνες](docs/guides/TROUBLESHOOTING.md#npm-install-warnings-eresolve--peer--deprecated).
-> **Χρησιμοποιείτε npm 11 ή νεότερο;** Το npm ενδέχεται να αποκλείσει τα package lifecycle scripts, εκτός αν επιτραπεί η εκτέλεσή τους. Το `postinstall` του OmniRoute (`node scripts/build/postinstall.mjs`) απαιτείται για την προετοιμασία των εγγενών αρχείων runtime. Επιτρέψτε τα πακέτα που αναφέρονται στην προειδοποίηση του npm κατά την καθολική εγκατάσταση. Για το σύνολο πακέτων που αναφέρει το OmniRoute 3.8.55:
+> 💡 Δείτε προειδοποιήσεις `npm warn ERESOLVE` ή peer-dep; [Είναι ακίνδυνοι](docs/guides/TROUBLESHOOTING.md#npm-install-warnings-eresolve--peer--deprecated).** Χρησιμοποιείτε npm 11 ή μεταγενέστερο;** Το npm μπορεί να αποκλείσει σενάρια κύκλου ζωής πακέτων, εκτός εάν επιτρέπονται. `postinstall` (`node scripts/build/postinstall.mjs`) του OmniRoute απαιτείται για την προετοιμασία των εγγενών αρχείων χρόνου εκτέλεσης. Επιτρέψτε τα πακέτα που ονομάζονται στην προειδοποίηση npm κατά την καθολική εγκατάσταση. Για το σύνολο πακέτων που αναφέρεται από OmniRoute 3.8.55:
 >
-> ```bash
-> npm install -g --allow-scripts=omniroute,keytar,onnxruntime-node,@parcel/watcher,@swc/core,protobufjs,esbuild omniroute
-> ```
+> `bash npm install -g --allow-scripts=omniroute,keytar,onnxruntime-node,@parcel/watcher,@swc/core,protobufjs,esbuild omniroute `
 >
-> Για να επαναχρησιμοποιήσετε αυτή τη λίστα επιτρεπόμενων πακέτων σε μελλοντικές καθολικές εγκαταστάσεις, ρυθμίστε την μία φορά και έπειτα εγκαθιστάτε κανονικά:
+> Για να χρησιμοποιήσετε ξανά αυτήν τη λίστα επιτρεπόμενων για μελλοντικές καθολικές εγκαταστάσεις, διαμορφώστε τη μία φορά και, στη συνέχεια, εγκαταστήστε κανονικά:
 >
-> ```bash
-> npm config set allow-scripts=omniroute,keytar,onnxruntime-node,@parcel/watcher,@swc/core,protobufjs,esbuild --location=user
-> npm install -g omniroute
-> ```
+> `bash npm config set allow-scripts=omniroute,keytar,onnxruntime-node,@parcel/watcher,@swc/core,protobufjs,esbuild --location=user npm install -g omniroute `
 >
-> Η λίστα εξαρτήσεων μπορεί να αλλάξει μεταξύ εκδόσεων· αν το npm αναφέρει διαφορετική λίστα, χρησιμοποιήστε τα ονόματα πακέτων από εκείνη την προειδοποίηση. Η έγκριση ενός πακέτου επιτρέπει την εκτέλεση των script εγκατάστασής του.
-> **Χρησιμοποιείτε το Gemini Web ή άλλο πάροχο web-cookie;** Το πακέτο npm περιλαμβάνει
-> το Playwright, αλλά όχι το δυαδικό αρχείο Chromium. Δείτε τη σημείωση
-> [Ρύθμιση του Playwright Chromium](docs/guides/TROUBLESHOOTING.md#gemini-web-and-playwright-chromium)
-> πριν από το πρώτο αίτημα προς πάροχο web.
+> Η λίστα εξαρτήσεων μπορεί να αλλάζει μεταξύ των εκδόσεων. εάν το npm αναφέρει διαφορετική λίστα, χρησιμοποιήστε τα ονόματα πακέτων από αυτήν την προειδοποίηση. Το να επιτρέπεται σε ένα πακέτο επιτρέπει την εκτέλεση των σεναρίων εγκατάστασης του.** Χρησιμοποιείτε Gemini Web ή άλλο πάροχο web-cookie;** Το πακέτο npm περιλαμβάνει Playwright αλλά όχι το δυαδικό του Chromium. Δείτε τη σημείωση [ρύθμισης Playwright Chromium](docs/guides/TROUBLESHOOTING.md#gemini-web-and-playwright-chromium) πριν υποβάλετε το πρώτο αίτημα παρόχου ιστού.
 
-Πίνακας ελέγχου στο `http://localhost:20128` · API στο `http://localhost:20128/v1`.
+Ταμπλό στο `http://localhost:20128` · API στο `http://localhost:20128/v1`.
 
 **2) Συνδέστε έναν κατάλληλο πάροχο χρησιμοποιώντας τον δικό σας λογαριασμό**
 
-Πίνακας ελέγχου → **Πάροχοι** → επιλέξτε έναν πάροχο του οποίου οι τρέχοντες όροι και το όριο χρήσης ταιριάζουν στην περίπτωσή σας → προσθέστε το API key του ή ολοκληρώστε τη διαδικασία λογαριασμού του. Τα δωρεάν επίπεδα ενδέχεται να απαιτούν εγγραφή, έγκριση ή μέθοδο πληρωμής. Ανατρέξτε στον [Οδηγό δωρεάν επιπέδων](docs/getting-started/FREE-TIERS-GUIDE.md)· η διαθεσιμότητα χωρίς κλειδί δεν είναι εγγυημένη και οι πάροχοι με την ένδειξη `tos: avoid` εξαιρούνται από το `auto` από προεπιλογή.
+Ταμπλό →** Παρόχους** → επιλέξτε έναν πάροχο του οποίου οι τρέχοντες όροι και το όριο ταιριάζουν στην περίπτωση χρήσης σας → προσθέστε το κλειδί API ή ολοκληρώστε τη ροή του λογαριασμού του. Οι δωρεάν βαθμίδες ενδέχεται να απαιτούν εγγραφή, έγκριση ή τρόπο πληρωμής. Διαβάστε τον [Οδηγό Free Tiers](docs/getting-started/FREE-TIERS-GUIDE.md). Η διαθεσιμότητα χωρίς κλειδί δεν είναι εγγυημένη και οι πάροχοι με την ένδειξη `tos: avoid` εξαιρούνται από `auto` από προεπιλογή.
 
-**3) Ρυθμίστε το εργαλείο προγραμματισμού σας**
+**3) Σημαδέψτε το εργαλείο κωδικοποίησης σας**
 
 ```txt
-Βασικό URL: http://localhost:20128/v1
-Κλειδί API:  [αντιγράψτε το από τον Πίνακα ελέγχου → Endpoints]
-Μοντέλο:     auto            (δρομολογεί μεταξύ κατάλληλων συνδέσεων — ή επιλέξτε πάροχο/μοντέλο)
+Base URL: http://localhost:20128/v1
+API Key:  [copy from Dashboard → Endpoints]
+Model:    auto            (routes among eligible connections — or choose provider/model)
 ```
 
-**4) Επαληθεύστε ότι λειτουργεί**
+**4) Βεβαιωθείτε ότι λειτουργεί**
 
 ```bash
 curl http://localhost:20128/v1/models -H "Authorization: Bearer YOUR_KEY"
 ```
 
-Θα πρέπει να δείτε τα συνδεδεμένα μοντέλα σας. 🎉 Αυτό ήταν — ξεκινήστε να γράφετε κώδικα και το OmniRoute αναλαμβάνει αυτόματα το routing και το fallback για εσάς.
+Θα πρέπει να δείτε τα συνδεδεμένα μοντέλα σας στη λίστα. 🎉 Αυτό είναι το — ξεκινά την κωδικοποίηση και OmniRoute πραγματοποιεί αυτόματα δρομολογήσεις και επιστρέφει για εσάς.
 
-Αν το client σας δεν μπορεί να στείλει προσαρμοσμένες κεφαλίδες, το OmniRoute παρέχει επίσης aliases συμβατότητας με token:
+Εάν ο πελάτης σας δεν μπορεί να στείλει προσαρμοσμένες κεφαλίδες, OmniRoute εκθέτει επίσης ψευδώνυμα συμβατότητας με διακριτικό:
 
 ```txt
-Κατάλογος OpenAI:   http://localhost:20128/vscode/YOUR_KEY/
-Μοντέλα OpenAI:     http://localhost:20128/vscode/YOUR_KEY/models
-Συνομιλία OpenAI:    http://localhost:20128/vscode/YOUR_KEY/chat/completions
-Απαντήσεις OpenAI:  http://localhost:20128/vscode/YOUR_KEY/responses
-Συνομιλία Ollama:   http://localhost:20128/vscode/YOUR_KEY/api/chat
-Ετικέτες Ollama:    http://localhost:20128/vscode/YOUR_KEY/api/tags
+OpenAI catalog:   http://localhost:20128/vscode/YOUR_KEY/
+OpenAI models:    http://localhost:20128/vscode/YOUR_KEY/models
+OpenAI chat:      http://localhost:20128/vscode/YOUR_KEY/chat/completions
+OpenAI responses: http://localhost:20128/vscode/YOUR_KEY/responses
+Ollama chat:      http://localhost:20128/vscode/YOUR_KEY/api/chat
+Ollama tags:      http://localhost:20128/vscode/YOUR_KEY/api/tags
 ```
 
-Χρησιμοποιήστε τα μόνο για clients που δεν μπορούν να επισυνάψουν `Authorization: Bearer ...`. Η εξουσιοδότηση μέσω κεφαλίδας παραμένει η προτιμώμενη λειτουργία.
+Χρησιμοποιήστε αυτά μόνο για πελάτες που δεν μπορούν να συνδέσουν `Authorization: Bearer ...`. Το Header auth παραμένει η προτιμώμενη λειτουργία.
 
 <br/>
 
@@ -1833,17 +1823,17 @@ gh release create "v${VERSION}" --title "v${VERSION}" --generate-notes
   <tr><td nowrap><b><a href="https://github.com/steipete/CodexBar">CodexBar</a></b></td><td align="center">22,955</td><td>Εντόπισε την επιφάνεια ποσόστωσης του Grok Build· στη συνέχεια το OmniRoute επαλήθευσε και διόρθωσε ανεξάρτητα τη ζωντανή μορφή wire.</td></tr>
 </table>
 
-## 📄 Άδεια χρήσης
+## Άδεια 📄
 
-Άδεια MIT - δείτε το [LICENSE](LICENSE) για λεπτομέρειες.
+Άδεια MIT - δείτε [LICENSE](LICENSE) για λεπτομέρειες.
 
 ---
 
 <div align="center">
 
-**[⬆ Επιστροφή στην κορυφή](#-omniroute)** · Δημιουργήθηκε με ❤️ για την κοινότητα AI ανοιχτού κώδικα.
+**[⬆ Επιστροφή στην κορυφή](#-omniroute)** · Σχεδιασμένο με ❤️ για την κοινότητα AI ανοιχτού κώδικα.
 
-<sub>Δημιουργήθηκε από τον <a href="https://github.com/diegosouzapw">Diego Souza</a> · OmniRoute v3.8.55 · Node ≥22.22.2 · Άδεια MIT · <a href="https://omniroute.online">omniroute.online</a></sub>
+<sub>Δημιουργήθηκε από <a href="https://github.com/diegosouzapw">Ντιέγκο Σόουζα</a> · OmniRoute v3.8.55 · Κόμβος ≥ 22.22.2 · άδεια MIT · <a href="https://omniroute.online">omniroute.online</a></sub>
 
 </div>
-<!-- Το GitHub Discussions είναι ενεργοποιημένο για ερωτήσεις και απαντήσεις της κοινότητας -->
+<!-- GitHub Discussions enabled for community Q&A -->

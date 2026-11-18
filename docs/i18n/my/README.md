@@ -67,23 +67,23 @@ OMNIROUTE က သင့်အား ငွေချွေတာပြီး အ�
 
 <br/>
 
-## 📈 Gateway သည် ဆက်လက်တိုးတက်နေသည်
+## 📈 The Gateway သည် ဆက်လက်ကြီးထွားလာသည်။
 
 <div align="center">
 
-|                                        |           v3.8.50           | **v3.8.51** |         `v3.8.55+`         |
-| -------------------------------------- | :-------------------------: | :---------: | :------------------------: |
-| 🌐 Provider များ                       |             352             |   **358**   |            394             |
-| 🧠 ထူးခြားသော chat မော်ဒယ် ID များ     |            1320             |  **1374**   |            1491            |
-| 🖼️ Modality Bridge                     | 🆕 ရုပ်ပုံ + အသံ + ဗီဒီယို  |      ✓      |             ✓              |
-| 📡 Radar အခမဲ့ catalog                 | 🆕 ရွေးချယ်ဝင်ရောက်နိုင်သည် |      ✓      |             ✓              |
-| ⚖️ Quota ကိုသိရှိသော အချိန်ဇယားချခြင်း |       🆕 Quota-Share        |      ✓      |             ✓              |
-| 📊 Quota telemetry                     |        🆕 တိုက်ရိုက်        |      ✓      |             ✓              |
-| 🧰 Headless မုဒ်                       |              —              |      —      |   🆕 `serve --headless`    |
-| 🛤️ LTS rail အခြေခံအဆောက်အအုံ           |              —              |      —      | 🆕 ဖြန့်ချိမှု ချန်နယ်များ |
-| 🔎 မော်ဒယ်ရှာဖွေမှု API                |              —              |      —      |   🆕 `/v1/models/query`    |
+|                                 |         v3.8.50          | **v3.8.51** |      `v3.8.55+`       |
+| ------------------------------- | :----------------------: | :---------: | :-------------------: |
+| 🌐 ပံ့ပိုးပေးသူများ             |           352            |   **358**   |          394          |
+| 🧠 သီးသန့် ချတ်မော်ဒယ် IDs      |           1320           |  **1374**   |         1491          |
+| 🖼️ Modality တံတား               | 🆕 အမြင် + အသံ + ဗီဒီယို |      ✓      |           ✓           |
+| 📡 ရေဒါအခမဲ့ကက်တလောက်           |      🆕 ရွေးချယ်မှု      |      ✓      |           ✓           |
+| ⚖️ Quota-aware အစီအစဉ်ဆွဲခြင်း။ |      🆕 Quota-Share      |      ✓      |           ✓           |
+| 📊 Quota telemetry              |      🆕 တိုက်ရိုက်       |      ✓      |           ✓           |
+| 🧰 Headless မုဒ်                |            —             |      —      | 🆕 `serve --headless` |
+| 🛤️ LTS မီးရထားအင်ဖရာ            |            —             |      —      |    🆕 ချန်နယ်များ     |
+| 🔎 မော်ဒယ်ရှာဖွေမှု API         |            —             |      —      | 🆕 `/v1/models/query` |
 
-**→ [Roadmap](ROADMAP.md) — `v3.9.0 LTS` သို့ rail ပေါ်မှ ဆက်လက်သွားနေသည်**
+**→ [လမ်းပြမြေပုံ](ROADMAP.md) — ရထားလမ်းမှ `v3.9.0 LTS` စီးနင်းခြင်း။**
 
 </div>
 
@@ -588,39 +588,39 @@ Radar သည် opt-in ဖြစ်ပြီး GET-only ဖြစ်ပါသ�
 
 <div align="center">
 
-## ✨ အသစ်ထွက်ရှိထားသည်များ
+## ✨ ဘာအသစ်လဲ။
 
 </div>
 
-> **v3.8.20 → v3.8.55** မှ မကြာသေးမီက ထည့်သွင်းထားသော အချက်များ။ မှတ်တမ်းအပြည့်အစုံကို [`CHANGELOG.md`](CHANGELOG.md) တွင် ကြည့်ရှုနိုင်သည်။
+> မကြာသေးမီကမှ ပေါ်လွင်လာသည်။** v3.8.20 → v3.8.55** . [`CHANGELOG.md`](CHANGELOG.md) တွင်သမိုင်းအပြည့်အစုံ။
 
-- **⚖️ `quota-weighted` လမ်းကြောင်းရွေးချယ်မှု** — ၂၀ ခုမြောက် combo မဟာဗျူဟာသည် quota ကုန်ဆုံးနေသော account များကို ကျော်လွှားပြီး ကျန်ရှိသော quota ÷ လုပ်ဆောင်နေဆဲ load အချိုးအစားအရ ကျန် account များထဲမှ ရွေးချယ်သည်။ ရှိပြီးသား conversation များကို သက်ဆိုင်ရာ account တွင် ဆက်လက်ချိတ်ဆက်ထားသည်။ → [Auto-Combo](docs/routing/AUTO-COMBO.md)
-- **🧰 Headless mode** — `omniroute serve --headless` (သို့မဟုတ် `OMNIROUTE_HEADLESS=1`) သည် `/v1/*` proxy engine တစ်ခုတည်းကိုသာ လည်ပတ်စေပြီး dashboard နှင့် dashboard အတွက်သာ သီးသန့် subsystem များကို ပိတ်ထားသည်။ → [Headless Mode](docs/guides/HEADLESS.md)
-- **🔎 Model ရှာဖွေခြင်း** — `/v1/models` သည် capability၊ context၊ kind နှင့် စာသားအလိုက် စစ်ထုတ်ပေးပြီး `POST /v1/models/query` သည် key တစ်ခုချင်းစီအလိုက် တူညီသော မြင်နိုင်ခွင့်များဖြင့် တိုတောင်းပြီး deterministic ဖြစ်သော shortlist ကို ပြန်ပေးသည်။ → [API Reference](docs/reference/API_REFERENCE.md)
-- **🔑 Key တစ်ခုချင်းစီအလိုက် routing ထိန်းချုပ်မှု** — API key တစ်ခုကို `forcedModel` ဖြင့် model တစ်ခု သို့မဟုတ် combo တစ်ခုထံ ချိတ်ဆက်ထားနိုင်ပြီး key တစ်ခု၏ model များနှင့် combo များကို atomically ထည့်ခြင်း သို့မဟုတ် ဖယ်ရှားခြင်း ပြုလုပ်နိုင်သည် (`/api/keys/{id}/access`)။ → [API Reference](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
-- **🛡️ ပိုမိုအသေးစိတ်သော PII ထိန်းချုပ်မှုများ** — အမျိုးအစားအလိုက် ရွေးချယ်နိုင်မှု၊ validation ပြုလုပ်ထားသော custom masking pattern ၂၀ ခုအထိနှင့် အမျိုးအစားအလိုက် detection counter များ ပါဝင်သည်။ masking ကိုမူ opt-in အဖြစ်သာ ဆက်လက်ထားရှိသည်။ → [Guardrails](docs/security/GUARDRAILS.md)
-- **🌍 ဘာသာစကား ၆၇ မျိုး** — dashboard၊ docs mirror များနှင့် CLI တို့တွင် အသုံးပြုနိုင်ပြီး `npm run i18n:add-locale` ဖြင့် command တစ်ခုတည်းသုံးကာ နေရာတိုင်းတွင် ဘာသာစကားတစ်ခု ထည့်နိုင်သည်။ → [i18n Guide](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — သင့် agent fleet ထံသို့ inbound A2A delegation၊ Agent Card ပေါ်ရှိ Conductor skill များနှင့် Faro push-to-talk voice chat ပါဝင်သော dashboard panel တို့ကို ပံ့ပိုးသည်။ → [A2A Server](docs/frameworks/A2A-SERVER.md)
-- **🛂 Adaptive admission နှင့် overload ကာကွယ်မှု** — အရင်းအမြစ်များစွာလိုအပ်သော chat request များသည် 503 ပြန်ပေးမည့်အစား queue ထဲသို့ ဝင်သွားပြီး connection တစ်ခုချင်းစီအတွက် atomic RPM rolling lease များကို အသုံးပြုသည်။ → [Resilience Guide](docs/architecture/RESILIENCE_GUIDE.md)
-- **🗂️ Canonical `/v1/models` အစီအစဉ်** — provider တစ်ခုစီအတွက် provider အလိုက် စုစည်းထားသော ဆက်တိုက် block တစ်ခုတည်းရှိပြီး combo များကို အစတွင် ဦးစားပေးထားသည်။ catalog source တိုင်းတွင် တည်ငြိမ်စွာ တူညီသည်။ → [API Reference](docs/reference/API_REFERENCE.md)
-- **🗜️ Compression ပိုမိုခိုင်မာလာခြင်း** — inflation guard ကို ပုံမှန်အားဖြင့် ဖွင့်ထားပြီး DE / FR / JA နှင့် တရုတ်ဘာသာ (wényán) အတွက် Caveman pack များ၊ Gradle နှင့် .NET အတွက် RTK filter များ ပါဝင်သည်။ → [Compression](docs/compression/COMPRESSION_ENGINES.md)
-- **💸 ရိုးရှင်းပြီး မှန်ကန်သော flat-rate ကုန်ကျစရိတ်** — subscription / coding-plan provider များကို cost analytics တွင် **$0** အဖြစ် ဖော်ပြပြီး budget၊ quota နှင့် routing တို့အတွက် ခန့်မှန်းချက်များကို ဆက်လက်ပြုလုပ်သည်။ → [API Reference](docs/reference/API_REFERENCE.md)
-- **⚖️ Quota-Share routing** — shared account တစ်ခု၏ quota ကို pooled key များအကြား မျှတစွာ ခွဲဝေပေးပြီး idle ဖြစ်နေသော အပိုင်းများကို ချေးငှားပေးနိုင်သဖြင့် အရင်းအမြစ်အသုံးချမှုကို ထိရောက်စေသည်။ → [Resilience Guide](docs/architecture/RESILIENCE_GUIDE.md)
-- **🤖 Command တစ်ခုတည်းဖြင့် CLI/agent စတင်ပြင်ဆင်ခြင်း** — `setup-*` command ၁၅ ခုကို register လုပ်ထားသည်။ `omniroute run` သည် CLI ၇ ခု (Claude Code၊ Codex၊ Aider၊ Goose၊ OpenCode၊ Qwen Code၊ Gemini CLI) ကို စတင်ပေးသည်။ `omniroute configure` သည် interactive provider+model picker နှင့် context တစ်ခုချင်းစီအလိုက် favorites များဖြင့် target ၁၁ ခုကို ပံ့ပိုးသည်။ → [CLI Integrations](docs/guides/CLI-INTEGRATIONS.md)
-- **🛰️ Remote mode** — scoped token များ (`connect` / `contexts` / `tokens`) ဖြင့် အဝေးရှိ OmniRoute ကို ထိန်းချုပ်နိုင်ပြီး VPS install များအတွက် `antigravity` OAuth helper ပါဝင်သည်။ → [Remote Mode](docs/guides/REMOTE-MODE.md)
-- **🧭 ပိုမိုထက်မြက်သော auto-routing** — `auto/<category>:<tier>` combo များ၊ **Fusion** (model panel + judge)၊ task-aware routing နှင့် request တစ်ခုချင်းစီအလိုက် model / mode / USD-budget override များ ပါဝင်သည်။ → [Auto-Combo](docs/routing/AUTO-COMBO.md)
-- **🗜️ Pluggable compression** — ပေါင်းစပ်အသုံးပြုနိုင်သော engine ၁၂ ခုနှင့် Compression Studios ပါဝင်ပြီး LLMLingua-2၊ two-tier Ultra၊ omniglyph၊ step တစ်ခုချင်းစီအလိုက် fidelity gate၊ GCF v3.2 နှင့် drag-reorder editor တို့ကို ပံ့ပိုးသည်။ → [Compression](docs/compression/COMPRESSION_ENGINES.md)
-- **🕵️ ပွင့်လင်းမြင်သာသော MITM decrypt (TPROXY)** — proxy environment variable များကို လျစ်လျူရှုသော capture CLI များအတွက် per-SNI CA နှင့် trust-store installer ပါဝင်သည်။ → [MITM/TPROXY](docs/security/MITM-TPROXY-DECRYPT.md)
-- **💸 နေရာတိုင်းတွင် cost telemetry** — endpoint တိုင်းတွင် `X-OmniRoute-*` cost/usage header များ၊ cache-HIT savings header နှင့် key တစ်ခုချင်းစီအလိုက် USD spend quota များ ပါဝင်သည်။ → [API Reference](docs/reference/API_REFERENCE.md)
-- **🧠 သင်ကိုယ်တိုင် ထိန်းချုပ်နိုင်သော Memory** — ပုံမှန်အားဖြင့် ပိတ်ထားပြီး opt-in int8 vector quantization နှင့် typed decay၊ request တစ်ခုချင်းစီအလိုက် `x-omniroute-no-memory` တို့ကို ပံ့ပိုးသည်။ → [Memory](docs/frameworks/MEMORY.md)
-- **🛡️ လုံခြုံရေး** — LLM route တိုင်းတွင် prompt-injection guard (red-team suite)၊ opt-in credential-masking guardrail (လမ်းကြောင်းနှစ်ဖက်စလုံးတွင် ပေါက်ကြားလာသော API key / secret များကို ဖုံးကွယ်ပေးသည်)၊ အခမဲ့ DuckDuckGo နောက်ဆုံးအရေးပေါ် web search နှင့် dashboard အတွက် optional OIDC login gate ပါဝင်သည်။ password login ကိုမူ အမြဲတမ်း အသုံးပြုနိုင်သည်။ → [Guardrails](docs/security/GUARDRAILS.md)
-- **🖼️ Endpoint အသစ်များ** — `/v1/ocr` (Mistral OCR) နှင့် `/v1/audio/translations` (Whisper-style) တို့ဖြင့် media လုပ်ဆောင်ချက်များကို ပိုမိုပြည့်စုံစေသည်။ → [API Reference](docs/reference/API_REFERENCE.md)
-- **🎨 Image / video / audio generation** — media အတွက် API တစ်ခုတည်းဖြင့် xAI Grok Imagine နှင့် Novita AI video၊ ComfyUI၊ Magnific၊ Adobe Firefly၊ Segmind နှင့် ElevenLabs ကဲ့သို့သော speech provider များကို အသုံးပြုနိုင်သည်။ → [API Reference](docs/reference/API_REFERENCE.md)
-- **🌍 Deployment နှင့် ops** — reverse-proxy `basePath`၊ browser-language auto-detect၊ key တစ်ခုချင်းစီအလိုက် device tracking၊ root-less MITM trust နှင့် zh-TW localization တို့ ပါဝင်သည်။ → [Environment](docs/reference/ENVIRONMENT.md)
-- **🤝 Provider နှင့် agent များ ပိုမိုများပြားလာခြင်း** — cloud agent များ (Codex Cloud၊ Cursor၊ Devin၊ Jules)၊ browser + OAuth login ပါဝင်သော Grok Build (xAI)၊ first-class card ဖြစ်သော Ollama၊ Claude Opus 5 နှင့် Sonnet 5၊ Kimi official partnership (Code/Web/Moonshot)၊ Zed၊ Requesty၊ SenseNova၊ Yuanbao၊ Agnes AI… နှင့် ပြန်လည်မွမ်းမံထားသော **provider ၃၉၄ ခုပါ catalog** တို့ ပါဝင်သည်။ → [Providers](docs/reference/PROVIDER_REFERENCE.md)
-- **📡 Routing ပွင့်လင်းမြင်သာမှု** — response တိုင်းတွင် ၎င်းကို ဆောင်ရွက်ပေးခဲ့သော strategy/provider/latency ကို ဖော်ပြသည့် `X-OmniRoute-Decision` header ပါရှိသည်။ `cache-optimized` combo strategy အသစ်နှင့် Auto-Combo `cacheAffinity` factor သည် ထပ်ခါတလဲလဲ request များကို cached prefix ကို ကိုင်ထားသော connection ထံသို့ ပြန်လည်လမ်းကြောင်းပေးသည်။ ထို့အပြင် read-only `/v1/auto-combo/{channel}/candidates` endpoint သည် `auto/*` channel တစ်ခု၏ လက်ရှိ candidate pool ကို ဖော်ပြပေးသည်။ → [Auto-Combo](docs/routing/AUTO-COMBO.md)
-- **⚡ ဒေသတွင်း စွမ်းဆောင်ရည်နှင့် အခြေခံအဆောက်အအုံ** — တစ်ချက်နှိပ်ရုံဖြင့် ဒေသတွင်း Redis၊ Cloudflare Workers / Deno Deploy relay deployers၊ စောင့်ကြည့်စီမံထားသော embedded services အဖြစ် Bifrost နှင့် Mux တို့ကို အသုံးပြုနိုင်သည်။ → [Embedded Services](docs/frameworks/EMBEDDED-SERVICES.md)
-- **🧩 ထည့်သွင်းပါဝင်သည့် အခြားအရာများ** — plugin framework နှင့် marketplace၊ Omni/Agent/GitHub skills frameworks၊ Obsidian vault integration (MCP tools ၂၂ ခု)၊ OpenAI-compatible Batch နှင့် Files APIs၊ semantic response cache၊ leaderboard များပါဝင်သော gamification၊ ACP agent discovery (built-in agents ၁၅ ခု)၊ BigQuery သို့ အချိန်ဇယားဖြင့် log export ပြုလုပ်ခြင်း၊ `auto/chaos` parallel multi-model fan-out၊ Telegram bot bridge၊ အက်ပ်အတွင်း version manager နှင့် LMArena-ELO အခမဲ့ provider rankings တို့ ပါဝင်သည်။ → [Docs](docs/README.md)
+- **⚖️ `quota-weighted` လမ်းကြောင်း** — 20th ပေါင်းစပ်နည်းဗျူဟာသည် ကုန်ဆုံးသွားသောအကောင့်များကို ကျော်သွားသည်၊ ထို့နောက် ကျန်အထဲမှ ကျန်ရှိသော quota ÷ in-flight load သို့ အချိုးအစားဆွဲကာ၊ ရှိပြီးသား စကားဝိုင်းများကို ပင်တွဲထားသည်။ → [Auto-Combo](docs/routing/AUTO-COMBO.md)
+- **🧰 Headless မုဒ်** — `omniroute serve --headless` (သို့မဟုတ် `OMNIROUTE_HEADLESS=1`) သည် ဒက်ရှ်ဘုတ်နှင့် ဒက်ရှ်ဘုတ်-သီးသန့်ခွဲစနစ်များကို ပိတ်ထားခြင်းဖြင့် `/v1/*` ပရောက်စီအင်ဂျင်ကိုသာ လုပ်ဆောင်သည်။ → [Headless မုဒ်](docs/guides/HEADLESS.md)
+- **🔎 မော်ဒယ်ရှာဖွေမှု** — `/v1/models` လုပ်ဆောင်နိုင်စွမ်း၊ အကြောင်းအရာ၊ အမျိုးအစားနှင့် စာသားဖြင့် စစ်ထုတ်ပြီး `POST /v1/models/query` တူညီသောသော့တစ်ခုမြင်နိုင်စွမ်းဖြင့် တိုတောင်းသော အဆုံးအဖြတ်ဆန်သောစာရင်းကို ပြန်ပေးသည်။ → [API အကိုးအကား](docs/reference/API_REFERENCE.md)
+- **🔑 Per-key လမ်းကြောင်းထိန်းချုပ်မှု** — API သော့ကို မော်ဒယ်တစ်ခု သို့မဟုတ် `forcedModel` ဖြင့် ပေါင်းစပ်ပြီး ကီးတစ်ခု၏ မော်ဒယ်များနှင့် ပေါင်းစပ်မှုများကို အက်တမ်အလိုက် (`/api/keys/{id}/access`) ပေါင်းထည့် သို့မဟုတ် ဖယ်ရှားပါ။ → [API အကိုးအကား](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
+- **🛡️ Finer PII ထိန်းချုပ်မှုများ** — အမျိုးအစားတစ်ခုစီရွေးချယ်မှု၊ အတည်ပြုထားသော စိတ်ကြိုက်မျက်နှာဖုံးပုံစံ 20 အထိနှင့် အမျိုးအစားအလိုက် ထောက်လှမ်းမှုကောင်တာများ။ မျက်နှာဖုံးစွပ်ခြင်းသည် ကိုယ်တိုင်ရွေးချယ်ဝင်ရောက်မှု ရှိနေမည်ဖြစ်သည်။ → [Guardrails](docs/security/GUARDRAILS.md)
+- **🌍 67 ဘာသာစကားများ** — ဒက်ရှ်ဘုတ်၊ docs mirrors နှင့် CLI၊ `npm run i18n:add-locale` သည် command တစ်ခုတည်းတွင် နေရာတိုင်းတွင် ဘာသာစကားတစ်ခုကို ထည့်သွင်းထားသည်။ → [i18n လမ်းညွှန်](docs/guides/I18N.md)
+- **🎛️ OmniConductor** — inbound A2A ကိုယ်စားလှယ်အဖွဲ့သည် သင်၏ အေးဂျင့်အဖွဲ့ထံသို့၊ အေးဂျင့်ကတ်ရှိ စပယ်ယာကျွမ်းကျင်မှု၊ နှင့် Faro မှ စကားပြောရန် အသံချတ်ပါသော ဒက်ရှ်ဘုတ်ဘောင်တစ်ခု။ → [A2A ဆာဗာ](docs/frameworks/A2A-SERVER.md)
+- **🛂 အလိုက်သင့် ဝင်ခွင့်နှင့် ဝန်ပိုခြင်း အကာအကွယ်** — ဟဲဗီးဝိတ်ချတ်သည် 503ing အစား အက်တမ် RPM ချိတ်ဆက်မှုတစ်ခုအတွက် အငှားချထားမှုဖြင့် တန်းစီရန် တောင်းဆိုသည်။ → [ခံနိုင်ရည်ရှိမှုလမ်းညွှန်](docs/architecture/RESILIENCE_GUIDE.md)
+- **🗂️ Canonical `/v1/models` အော်ဒါမှာခြင်း။** — ပံ့ပိုးသူ တစ်ဦးလျှင် ဆက်စပ်နေသော ပံ့ပိုးသူ-အုပ်စုလိုက် ဘလောက်တစ်ခု (combos ကို ဦးစွာပင်ထိုးထားသည်)၊ ကတ်တလောက် အရင်းအမြစ်တိုင်းတွင် တည်ငြိမ်သည်။ → [API အကိုးအကား](docs/reference/API_REFERENCE.md)
+- **🗜️ Compression တင်းမာခြင်း။** — default-on ငွေကြေးဖောင်းပွမှုအစောင့်အကြပ်၊ DE / FR / JA + Chinese (wényán), Gradle & အတွက် RTK စစ်ထုတ်မှုများ။NET→ [Compression](docs/compression/COMPRESSION_ENGINES.md)
+- **💸 ရိုးသားသောနှုန်းထား ကုန်ကျစရိတ်** — စာရင်းသွင်းမှု / coding-plan ပံ့ပိုးပေးသူများဖတ်ပါ။** $0** ကုန်ကျစရိတ်ခွဲခြမ်းစိတ်ဖြာမှု၌ ဘတ်ဂျက်၊ ခွဲတမ်းနှင့် လမ်းကြောင်းကို ဆက်လက် ခန့်မှန်းသည်။ → [API အကိုးအကား](docs/reference/API_REFERENCE.md)
+- **⚖️ Quota-Share လမ်းကြောင်း** — မျှဝေထားသောအကောင့်၏ခွဲတမ်းကို ပေါင်းစပ်ထားသောသော့များဖြင့် မျှမျှတတခွဲကာ အလုပ်အားထိန်းသိမ်းသောကြောင့် idle ချပ်များကို ထုတ်ချေးပါသည်။ → [ခံနိုင်ရည်ရှိမှုလမ်းညွှန်](docs/architecture/RESILIENCE_GUIDE.md)
+- **🤖 One-command CLI/agent စနစ်ထည့်သွင်းခြင်း။** — 15 မှတ်ပုံတင်ထားသော `setup-*` အမိန့်များ; `omniroute run` သည် 7 CLIs (Claude Code, Codex, Aider, Goose, OpenCode, Qwen Code, Gemini CLI); `omniroute configure` အပြန်အလှန်အကျိုးပြုသည့်ပံ့ပိုးပေးသူ+ မော်ဒယ်ရွေးချယ်သူနှင့် အကြောင်းအရာအလိုက် စိတ်ကြိုက်ရွေးချယ်မှုများဖြင့် ပစ်မှတ် 11 ခုကို ပံ့ပိုးပေးသည်။ → [CLI ပေါင်းစည်းမှုများ](docs/guides/CLI-INTEGRATIONS.md)
+- **🛰️ အဝေးထိန်းမုဒ်** — VPS ထည့်သွင်းမှုအတွက် `antigravity` ကင်များ (`connect` / `contexts` / `tokens`) ပါသော အဝေး OAuth OmniRoute + ပါ။ → [အဝေးထိန်းမုဒ်](docs/guides/REMOTE-MODE.md)
+- **🧭 ထက်မြက်သော အလိုအလျောက်လမ်းကြောင်းပေးခြင်း** — `auto/<category>:<tier>` combos၊** ပေါင်းစပ်** (မော်ဒယ်ဘောင် + တရားသူကြီး)၊ အလုပ်-သတိထားလမ်းပြခြင်း၊ တောင်းဆိုချက်တိုင်း မော်ဒယ်/မုဒ်/ USD-ဘတ်ဂျတ်ကို အစားထိုးသည်။ → [Auto-Combo](docs/routing/AUTO-COMBO.md)
+- **🗜️ Pluggable compression** — 12 composable engines + Compression Studios- LLMLingua-2၊ two-tier Ultra၊ omniglyph၊ per-step fidelity gate၊ GCF v3.2၊ drag-reorder editor။ → [Compression](docs/compression/COMPRESSION_ENGINES.md)
+- **🕵️ Transparent MITM ကုဒ်ဝှက်ခြင်း (TPROXY)** per-SNI CA + trust-store installer ဖြင့် proxy env vars ကို လျစ်လျူရှုသော — CLIs ဖမ်းယူပါ။ → [MITM/TPROXY](docs/security/MITM-TPROXY-DECRYPT.md)
+- **💸 ကုန်ကျစရိတ် telemetry နေရာတိုင်း** — `X-OmniRoute-*` cost/usage ခေါင်းစီးများ၊ အဆုံးမှတ်တိုင်းရှိ cache-HIT စုဆောင်းမှုခေါင်းစီး၊ per-key USD ခွဲတမ်းများ။ → [API အကိုးအကား](docs/reference/API_REFERENCE.md)
+- **🧠 Memory သည် သင်ထိန်းချုပ်သည်။** — မူရင်းအားဖြင့် ပိတ်သည်၊ int8 vector quantization + တွင် ရိုက်ထည့်ထားသော ပျက်စီးယိုယွင်းမှု၊ per-request `x-omniroute-no-memory` ရွေးချယ်ပါ။ → [မှတ်ဉာဏ်](docs/frameworks/MEMORY.md)
+- **🛡️ လုံခြုံရေး** LLM လမ်းကြောင်းတိုင်းရှိ — အပေးအယူစနစ် (အနီ-အဖွဲ့အစုံ)၊ အထောက်အထား-မျက်နှာဖုံးအုပ်ထားသော အကာအကွယ်ကို ရွေးချယ်ပါ (လမ်းကြောင်းနှစ်ခုလုံးတွင် API keys/secrets ပေါက်ကြားသွားသည်)၊ အခမဲ့ DuckDuckGo နောက်ဆုံးရှာဖွေမှု ဝဘ်ရှာဖွေမှု၊ နှင့် ဒက်ရှ်ဘုတ်အတွက် ရွေးချယ်နိုင်သော OIDC အကောင့်ဝင်ဂိတ်တစ်ခု (စကားဝှက်ဝင်ရောက်မှု အမြဲရှိနေသည်)။ → [Guardrails](docs/security/GUARDRAILS.md)
+- **🖼️ New အဆုံးမှတ်များ** — `/v1/ocr` (Mistral OCR) နှင့် `/v1/audio/translations` ( တိတ်တိတ်လေး စတိုင် ) မီဒီယာ မျက်နှာပြင်ကို လှည့်ပတ်သည်။ → [API အကိုးအကား](docs/reference/API_REFERENCE.md)
+- **🎨 ရုပ်ပုံ / ဗီဒီယို / အသံမျိုးဆက်** မီဒီယာအတွက် — one API Grok xAI & Novita AI ဗီဒီယို၊ ComfyUI၊ Magnific၊ Adobe Firefly၊ Segmind နှင့် ElevenLabs ကဲ့သို့သော စကားပြောဝန်ဆောင်မှုပေးသူများ။ → [API အကိုးအကား](docs/reference/API_REFERENCE.md)
+- **🌍 ဖြန့်ကျက်ခြင်းနှင့် လုပ်ဆောင်မှုများ** — ပြောင်းပြန်-ပရောက်စီ `basePath`၊ ဘရောက်ဆာ-ဘာသာစကား အလိုအလျောက်ရှာဖွေခြင်း၊ သော့တစ်ခုစီကိရိယာ ခြေရာခံခြင်း၊ root-less MITM ယုံကြည်မှု၊ zh-TW နယ်မြေသတ်မှတ်ခြင်း။ → [ပတ်ဝန်းကျင်](docs/reference/ENVIRONMENT.md)
+- **🤝 ဝန်ဆောင်မှုပေးသူများနှင့် အေးဂျင့်များ** — cloud အေးဂျင့်များ (Codex Cloud၊ Cursor, Devin, Jules), Grok Build (xAI) browser + OAuth အကောင့်ဝင်ခြင်း၊ Ollama ပထမတန်းစားကတ်၊ Claude Opus 5 & Sonnet 5၊ Kimi တရားဝင်ပါတနာ (Code/Web/Moonshot), Zed, Requesty, SenseNova, Agan နှင့် AI ကို ပြန်လည်စတင်ခြင်း** 394- ပံ့ပိုးပေးသူ ကတ်တလောက်** . → [ဝန်ဆောင်မှုပေးသူများ](docs/reference/PROVIDER_REFERENCE.md)
+- **📡 Routing ပွင့်လင်းမြင်သာမှု** — တုံ့ပြန်မှုတိုင်းတွင် ၎င်းကိုအသုံးပြုသော strategy/provider/latency အမည်ပေးထားသည့် `X-OmniRoute-Decision` ခေါင်းစီးတစ်ခု၊ `cache-optimized` ပေါင်းစပ်ဗျူဟာအသစ် + Auto-Combo `cacheAffinity` အချက်ပြလမ်းကြောင်းသည် ကက်ရှ်ရှေ့ဆက်ကိုကိုင်ဆောင်ထားသည့် ချိတ်ဆက်မှုဆီသို့ ပြန်၍တောင်းဆိုမှုများရှိပြီး၊ ဖတ်ရန်သီးသန့် `/v1/auto-combo/{channel}/candidates` အဆုံးအမှတ်သည် `auto/*` ချန်နယ်၏ တိုက်ရိုက်ကိုယ်စားလှယ်လောင်းအုပ်စုကို ဖော်ထုတ်သည်။ → [အော်တို-ပေါင်းစပ်](docs/routing/AUTO-COMBO.md)
+- **⚡ ဒေသဆိုင်ရာစွမ်းဆောင်ရည်နှင့် အင်ဖရာ** — တစ်ချက်နှိပ်ရုံဖြင့် ဒေသတွင်း Redis၊ Cloudflare အလုပ်သမားများ / Deno Deploy relay deployers၊ Bifrost & Mux သည် ကြီးကြပ်ထားသော ထည့်သွင်းထားသော ဝန်ဆောင်မှုများအဖြစ်။ → [Embedded ဝန်ဆောင်မှုများ](docs/frameworks/EMBEDDED-SERVICES.md)
+- **🧩 ကိုလည်း box ထဲမှာ** — ပလပ်အင်ဘောင် + စျေးကွက်၊ Omni/Agent/GitHub ကျွမ်းကျင်မှုဘောင်များ၊ Obsidian vault ပေါင်းစည်းခြင်း (22 MCP ကိရိယာများ)၊ OpenAI-သဟဇာတ Batch & Files APIs၊ semantic response cache၊ gamification with leaderboards၊ ACP အေးဂျင့်ရှာဖွေတွေ့ရှိမှု ( built-in အေးဂျင့် 15 ခု)၊ BigQuery သို့ မှတ်တမ်းတင်ပို့ရန် စီစဉ်ထားသော၊ `auto/chaos` fanqk ဗားရှင်းတစ်ခု၊ ပေါင်းကူးဗားရှင်းတစ်ခု၊ Telegram fanqkout၊ ပေါင်းကူးဗားရှင်းတစ်ခု၊ မန်နေဂျာနှင့် LMArena-ELO အခမဲ့ဝန်ဆောင်မှုပေးသူ အဆင့်များ။ → [Docs](docs/README.md)
 
 <br/>
 
@@ -938,15 +938,15 @@ claude mcp add --transport http omniroute http://localhost:20128/api/mcp/stream 
 
 <div align="center">
 
-## 🗜️ တိုကင် 15–95% ချွေတာခြင်း — အလိုအလျောက်
+## 🗜️ 15–95% တိုကင် — အလိုအလျောက် သိမ်းဆည်းပါ။
 
 </div>
 
-### 📖 အလုပ်လုပ်ပုံ — pipeline၊ architecture နှင့် ချွေတာမှုတွက်ချက်ပုံ
+### 📖 — ပိုက်လိုင်း၊ ဗိသုကာပညာနှင့် ငွေစုသင်္ချာတို့ မည်သို့အလုပ်လုပ်သနည်း။
 
-<img src="./docs/diagrams/compression-pipeline.svg" width="100%" alt="OmniRoute compression pipeline: 10,000-token client request တစ်ခုသည် ပေါင်းစပ်အသုံးပြုနိုင်သော engine 12 ခု — Session-Dedup၊ CCR၊ Lite၊ RTK၊ Responses Tool Output၊ Headroom၊ Relevance၊ Caveman၊ Aggressive၊ LLMLingua-2၊ Ultra နှင့် OmniGlyph — ကို ဖြတ်သန်းပြီး၊ မှတ်တမ်းတင်ထားသော stacked ဥပမာတွင် provider ထံသို့ တိုကင် 1,080 ခန့်ဖြင့် ရောက်ရှိနိုင်သည်။ Structured content ကို preservation guards နှင့် အဆင့်တစ်ဆင့်ချင်း fidelity gates များဖြင့် ကာကွယ်ထားသည်။ အရှုံးခံနိုင်သော သို့မဟုတ် စမ်းသပ်ဆဲ mode များကို အတိအလင်း အသုံးပြုပါက သတ်မှတ်ချက်နှင့်ကိုက်ညီသော content ကို ပြောင်းလဲနိုင်သည်။"/>
+<img src="./docs/diagrams/compression-pipeline.svg" width="100%" alt="OmniRoute compression pipeline: an illustrative 10,000-token client request passes through 12 composable engines — Session-Dedup, CCR, Lite, RTK, Responses Tool Output, Headroom, Relevance, Caveman, Aggressive, LLMLingua-2, Ultra and OmniGlyph — and can reach the provider at about 1,080 tokens in the documented stacked example. Structured content is protected by preservation guards and per-step fidelity gates; explicit lossy or experimental modes may transform eligible content."/>
 
-ပုံမှန် stacked combo သည် `RTK → Caveman` ကို လုပ်ဆောင်သည်။ နှစ်ခုစလုံးသည် တူညီသော tool/context payload ပေါ်တွင် လုပ်ဆောင်သောအခါ ချွေတာမှုများ ပေါင်းစပ်တိုးပွားသည်-
+ပုံသေ အစုလိုက်ဖွဲ့ထားသော ပေါင်းစပ်သည် `RTK → Caveman` လုပ်ဆောင်သည်။ နှစ်ခုလုံးသည် တူညီသော tool/context payload တွင်လုပ်ဆောင်သောအခါ၊ စုဆောင်းငွေများ-
 
 ```txt
 combined = 1 − (1 − RTK) × (1 − Caveman_input)
@@ -954,74 +954,74 @@ average  = 1 − (1 − 0.80) × (1 − 0.46) = 89.2%
 range    = 78.4 – 94.6%
 ```
 
-Code blocks၊ URLs၊ JSON နှင့် structured data များကို preservation engine က **အမြဲတမ်း ကာကွယ်ထားသည်**။
+ကုဒ်တုံးများ၊ URLs၊ JSON နှင့် ဖွဲ့စည်းတည်ဆောက်ထားသော ဒေတာများ** အမြဲကာကွယ်ပေးတယ်။** ထိန်းသိမ်းခြင်းအင်ဂျင်ဖြင့်။
 
-> **တိုကင်အများကြီးသုံးစရာမလိုဘဲ တိုကင်အနည်းငယ်နဲ့ အလုပ်ဖြစ်နိုင်တဲ့အခါ ဘာကြောင့် အများကြီးသုံးမလဲ?** Request တိုင်းသည် client ပြောင်းလဲရန်မလိုဘဲ OmniRoute ၏ compression pipeline ကို **ပွင့်လင်းမြင်သာစွာ** ဖြတ်သန်းသည်။ ယခုအခါ ၎င်းသည် အစဉ်လိုက်လုပ်ဆောင်ပြီး routing combo တစ်ခုချင်းစီအလိုက် ရောစပ်ရွေးချယ်အသုံးပြုနိုင်သော **ပေါင်းစပ်အသုံးပြုနိုင်သည့် engine 12 ခု၏ stack** ဖြစ်သည်။ [RTK](https://github.com/rtk-ai/rtk)၊ [Caveman](https://github.com/JuliusBrussee/caveman) (⭐ 90K+)၊ [LLMLingua-2](https://github.com/microsoft/LLMLingua) နှင့် [Troglodita](https://github.com/leninejunior/troglodita) (PT-BR) တို့၏ အယူအဆများကို အခြေခံတည်ဆောက်ထားသည်။
+> **တိုကင်အနည်းငယ်သာ လှည့်စားသောအခါတွင် တိုကင်များစွာကို အဘယ်ကြောင့် အသုံးပြုသနည်း။** တောင်းဆိုမှုတိုင်းသည် OmniRoute's compression pipeline ကိုဖြတ်သန်းသည်။** ပွင့်လင်းမြင်သာစွာ** — client အပြောင်းအလဲမရှိပါ။ အခုဟာက တစ်ခု** ပေါင်းစပ်နိုင်သော အင်ဂျင် ၁၂ လုံးပါရှိသည်။** အစီအစဥ်အတိုင်းလည်ပတ်ပြီး routing combo — အလိုက် ပေါင်းစပ်ထားသော [RTK](https://github.com/rtk-ai/rtk) ၊ [Caveman](https://github.com/JuliusBrussee/caveman) (⭐ 90K +), [LLMLingua-2](https://github.com/microsoft/LLMLingua), နှင့် [Troglodita](https://github.com/leninejunior/troglodita) (PT-BR) တို့မှ စိတ်ကူးများတည်ဆောက်မှုတွင် ပေါင်းစပ်ပြီး ကိုက်ညီမှုရှိသည်။
 
-### 🧱 Engine 12 ခု၏ stack
+### 🧱 အင်ဂျင် ၁၂ လုံး
 
-Engine များသည် pipeline အစီအစဉ်အတိုင်း လုပ်ဆောင်ပြီး တစ်ခုချင်းစီကို သီးခြားဖွင့်/ပိတ်နိုင်သကဲ့သို့ combo တစ်ခုချင်းစီအလိုက် ပြင်ဆင်သတ်မှတ်နိုင်သည်-
-
-<table>
-  <tr><th align="center">#</th><th align="left">Engine</th><th align="left">လုပ်ဆောင်ချက်</th></tr>
-  <tr><td align="center" nowrap>1</td><td align="left" nowrap><b>Session-Dedup</b></td><td align="left">Turn များအကြား ထပ်ခါတလဲလဲဖြစ်နေသော content ကို ဖယ်ရှားသည် (content-addressed၊ cross-turn)</td></tr>
-  <tr><td align="center" nowrap>2</td><td align="left" nowrap><b>CCR</b></td><td align="left">ကြီးမားသော block များကို retrieve marker များနောက်တွင် သိမ်းဆည်းပြီး လိုအပ်သည့်အခါမှ ရယူသည်</td></tr>
-  <tr><td align="center" nowrap>3</td><td align="left" nowrap><b>Lite</b></td><td align="left">Whitespace နှင့် image-URL ဖြတ်တောက်ခြင်း (latency-light baseline)</td></tr>
-  <tr><td align="center" nowrap>4</td><td align="left" nowrap><b>RTK</b></td><td align="left">ထက်မြက်သော tool-result filtering၊ dedup နှင့် truncation (command-aware)</td></tr>
-  <tr><td align="center" nowrap>5</td><td align="left" nowrap><b>Responses Tool Output</b></td><td align="left">Shell/patch/search/build output များအတွက် lossless-first JSON နှင့် ကန့်သတ်ထားသော diagnostic compression (Responses API)</td></tr>
-  <tr><td align="center" nowrap>6</td><td align="left" nowrap><b>Headroom</b></td><td align="left">Vendored <b>GCF</b> codec မှတစ်ဆင့် JSON array များကို lossless tabular compaction ပြုလုပ်ခြင်း (~30%)</td></tr>
-  <tr><td align="center" nowrap>7</td><td align="left" nowrap><b>Relevance</b></td><td align="left">နောက်ဆုံး user query နှင့် နှိုင်းယှဉ်၍ sentence scoring ပြုလုပ်ကာ extract လုပ်သည်</td></tr>
-  <tr><td align="center" nowrap>8</td><td align="left" nowrap><b>Caveman</b></td><td align="left">စည်းမျဉ်းအခြေပြု prose compression (output ပေါ်တွင် ~65–75%)</td></tr>
-  <tr><td align="center" nowrap>9</td><td align="left" nowrap><b>Aggressive</b></td><td align="left">အဟောင်း turn များကို summarization နှင့် progressive aging ပြုလုပ်သည်</td></tr>
-  <tr><td align="center" nowrap>10</td><td align="left" nowrap><b>LLMLingua-2</b></td><td align="left">MobileBERT ONNX မှတစ်ဆင့် ML semantic pruning ပြုလုပ်သည် — code-safe၊ async</td></tr>
-  <tr><td align="center" nowrap>11</td><td align="left" nowrap><b>Ultra</b></td><td align="left">ရွေးချယ်အသုံးပြုနိုင်သော small-model (SLM) tier ပါဝင်သည့် heuristic token pruning</td></tr>
-  <tr><td align="center" nowrap>12</td><td align="left" nowrap><b>OmniGlyph</b></td><td align="left">Direct Anthropic wire ပေါ်တွင် တိုင်းတာထားသော Claude Fable 5 အတွက် context-as-image encoding ကို စမ်းသပ်အသုံးပြုခြင်း၊ GPT 5.6 transformers များသည် provider receipts ရရှိသည်အထိ fail-closed အဖြစ် ဆက်လက်ထားရှိသည်။ Compression profile လေးမျိုး (aggressive default၊ balanced၊ coding-safe၊ passthrough) (အပြင်းထန်ဆုံး၊ opt-in)</td></tr>
-</table>
-
-Code blocks၊ URLs နှင့် structured data များကို **byte-perfect အတိုင်း အမြဲထိန်းသိမ်းထားသည်**။ **တစ်ချက်နှိပ် preset များ**သည် engine များကို ပေါင်းစပ်အသုံးပြုသည်-
+အင်ဂျင်များသည် ပိုက်လိုင်းအစီအစဥ်အတိုင်းလည်ပတ်သည်။ တစ်ခုချင်းစီသည် သီးခြားပြောင်း၍ရနိုင်ပြီး ပေါင်းစပ်မှုတစ်ခုစီတွင် ပြင်ဆင်သတ်မှတ်နိုင်သည်-
 
 <table>
-  <tr><th align="left">Mode</th><th align="left">ချွေတာမှု</th><th align="left">အသင့်တော်ဆုံး</th></tr>
-  <tr><td align="left" nowrap>🪶 <b>Lite</b></td><td align="left" nowrap>~15%</td><td align="left">အမြဲဖွင့်ထားနိုင်သော လုံခြုံသည့် ပုံမှန်ရွေးချယ်မှု</td></tr>
-  <tr><td align="left" nowrap>🪨 <b>Standard (Caveman)</b></td><td align="left" nowrap>~30%</td><td align="left">နေ့စဉ် coding</td></tr>
-  <tr><td align="left" nowrap>⚡ <b>Aggressive</b></td><td align="left" nowrap>~50%</td><td align="left">Tool အသုံးများသော session ရှည်များ</td></tr>
-  <tr><td align="left" nowrap>🔥 <b>Ultra</b></td><td align="left" nowrap>~75%</td><td align="left">အများဆုံး ချွေတာမှု</td></tr>
-  <tr><td align="left" nowrap>🧰 <b>RTK</b></td><td align="left" nowrap>60–90%</td><td align="left">Shell/test/build/git output</td></tr>
-  <tr><td align="left" nowrap>🔗 <b>Stacked (RTK → Caveman)</b></td><td align="left" nowrap><b>78–95%</b></td><td align="left">ရောနှောထားသော prompt များ + tool log များ</td></tr>
+  <tr><th align="center">#</th><th align="left">အင်ဂျင်</th><th align="left">အဲဒါက ဘာလဲ။</th></tr>
+  <tr><td align="center" nowrap>1</td><td align="left" nowrap><b>Session-Dedup</b></td><td align="left">အလှည့်များတွင် ထပ်ခါတလဲလဲ အကြောင်းအရာကို ချပေးသည် (အကြောင်းအရာ-လိပ်စာ၊ အလှည့်)</td></tr>
+  <tr><td align="center" nowrap>2</td><td align="left" nowrap><b>CCR</b></td><td align="left">ဝယ်လိုအားအရ ရယူထားသော အမှတ်အသားများကို ထုတ်ယူခြင်းနောက်ကွယ်ရှိ ကြီးမားသော တုံးများကို သိမ်းဆည်းပါ။</td></tr>
+  <tr><td align="center" nowrap>3</td><td align="left" nowrap><b>ပေါ့ပျက်ပျက်</b></td><td align="left">နေရာလွတ် + ပုံ-URL ချုံ့ခြင်း (latency-light baseline)</td></tr>
+  <tr><td align="center" nowrap>4</td><td align="left" nowrap><b>RTK</b></td><td align="left">စမတ်ကိရိယာ-ရလဒ် စစ်ထုတ်ခြင်း၊ ဖျက်ခြင်းနှင့် ဖြတ်တောက်ခြင်း (အမိန့်ပေး-အသိပေးမှု)</td></tr>
+  <tr><td align="center" nowrap>5</td><td align="left" nowrap><b>တုံ့ပြန်မှု Tool Output</b></td><td align="left">ဆုံးရှုံးမှုမရှိသော-ပထမ JSON + shell/patch/search/build ရလဒ်များအတွက် ဆန်းစစ်ချက်ချုံ့မှုကို ကန့်သတ်ထားသည် ( API တုံ့ပြန်မှုများ)</td></tr>
+  <tr><td align="center" nowrap>6</td><td align="left" nowrap><b>ခေါင်းခန်း</b></td><td align="left">ရောင်းချသူမှတစ်ဆင့် JSON arrays များ၏ဆုံးရှုံးမှုမရှိသောဇယားကွက်များစုစည်းမှု (~ 30%) <b>GCF</b> codec</td></tr>
+  <tr><td align="center" nowrap>7</td><td align="left" nowrap><b>ဆက်စပ်မှု</b></td><td align="left">နောက်ဆုံးအသုံးပြုသူမေးမြန်းချက်အပေါ် ကောက်နှုတ်သောဝါကျအမှတ်ပေးသည်။</td></tr>
+  <tr><td align="center" nowrap>8</td><td align="left" nowrap><b>ဂူသမား</b></td><td align="left">စည်းမျဉ်းအခြေခံ စကားပြေချုံ့မှု (~ 65–75% အထွက်တွင်)</td></tr>
+  <tr><td align="center" nowrap>9</td><td align="left" nowrap><b>ရန်လိုသည်။</b></td><td align="left">အကျဉ်းချုပ် + အိုမင်းခြင်း၏ အလှည့်အပြောင်း</td></tr>
+  <tr><td align="center" nowrap>10</td><td align="left" nowrap><b>LLMLingua-2</b></td><td align="left">ML semantic pruning အားဖြင့် MobileBERT ONNX — code-safe, async</td></tr>
+  <tr><td align="center" nowrap>11</td><td align="left" nowrap><b>Ultra</b></td><td align="left">ရွေးချယ်နိုင်သော ပုံစံငယ် (SLM) အဆင့်ဖြင့် တံစဉ်းဖြတ်ခြင်း</td></tr>
+  <tr><td align="center" nowrap>12</td><td align="left" nowrap><b>OmniGlyph</b></td><td align="left">တိုက်ရိုက် Anthropic ဝါယာရှိ တိုင်းတာထားသော Claude Fable 5 အတွက် စမ်းသပ်ဆက်စပ်ပုံ-ပုံ-ကုဒ်ကုဒ်၊ GPT 5.6 ထရန်စဖော်မာများသည် ပျက်ကွက်-ပိတ်ပြီး ဆိုင်းငံ့နေသော ဝန်ဆောင်မှုပေးသည့် ပြေစာများ ရှိနေပါသည်။ ဖိသိပ်မှု ပရိုဖိုင်လေးခု (ပြင်းထန်သော ပုံသေ၊ ဟန်ချက်ညီသော၊ ကုဒ်ရေးခြင်း-ဘေးကင်းသော၊ ဖြတ်သန်းမှု) (ပြင်းထန်သော၊ ရွေးချယ်မှု)</td></tr>
 </table>
 
-**လက်တွေ့ဥပမာ — Standard mode:**
+Code blocks, URLs နဲ့ structured data တွေဖြစ်ပါတယ်။** အမြဲထိန်းသိမ်းထားသည်။** byte-perfect** တစ်ချက်နှိပ်၍ ကြိုတင်သတ်မှတ်မှုများ** အင်ဂျင်များပေါင်းစပ်:
 
-> **မလုပ်ဆောင်မီ (တိုကင် 69 ခု):** _"သင့် React component က ပြန်လည် render ဖြစ်နေသည့်အကြောင်းရင်းမှာ render cycle တစ်ခုချင်းစီတွင် object reference အသစ်တစ်ခု ဖန်တီးနေခြင်း ဖြစ်နိုင်ချေများသည်။ Inline object တစ်ခုကို prop အဖြစ်ပေးသောအခါ React ၏ shallow comparison က ၎င်းကို အကြိမ်တိုင်း မတူညီသော object တစ်ခုအဖြစ် မြင်သောကြောင့် re-render ဖြစ်စေသည်။ Object ကို memoize ပြုလုပ်ရန် useMemo အသုံးပြုရန် အကြံပြုပါသည်။"_
->
-> **လုပ်ဆောင်ပြီး (တိုကင် 19 ခု):** _"Render တစ်ကြိမ်စီတွင် object ref အသစ်။ Inline object prop = ref အသစ် = re-render။ useMemo ဖြင့် wrap လုပ်ပါ။"_
->
-> **အဖြေတူညီသည်။ တိုကင် 72% လျော့နည်းသည်။ တိကျမှုပျောက်ဆုံးမှု သုည။** ✅
+<table>
+  <tr><th align="left">မုဒ်</th><th align="left">စုဆောင်းငွေ</th><th align="left">အကောင်းဆုံး</th></tr>
+  <tr><td align="left" nowrap>🪶 <b>ပေါ့ပျက်ပျက်</b></td><td align="left" nowrap>~15%</td><td align="left">အမြဲတမ်း- လုံခြုံသော ပုံသေဖြစ်သည်။</td></tr>
+  <tr><td align="left" nowrap>🪨 <b>စံ (Caveman)</b></td><td align="left" nowrap>~30%</td><td align="left">နေ့စဉ် coding</td></tr>
+  <tr><td align="left" nowrap>⚡ <b>ရန်လိုသည်။</b></td><td align="left" nowrap>~50%</td><td align="left">ရှည်လျားသော ကိရိယာ-လေးလံသော ဆက်ရှင်များ</td></tr>
+  <tr><td align="left" nowrap>🔥 <b>Ultra</b></td><td align="left" nowrap>~75%</td><td align="left">အများဆုံး စုဆောင်းငွေ</td></tr>
+  <tr><td align="left" nowrap>🧰 <b>RTK</b></td><td align="left" nowrap>60–90%</td><td align="left">Shell/test/build/git အထွက်</td></tr>
+  <tr><td align="left" nowrap>🔗 <b>စုထားသည် (RTK → Caveman)</b></td><td align="left" nowrap><b>78–95%</b></td><td align="left">ရောနှောထားသော + တူးလ်မှတ်တမ်းများကို အချက်ပြသည်။</td></tr>
+</table>
 
-**PT-BR ဥပမာ — [Troglodita](https://github.com/leninejunior/troglodita) mode:**
+**အစစ်အမှန် ဥပမာ — စံမုဒ်-**
 
-> **အရင် (တိုကင် ၄၂ ခု):** _"ပြဿနာက component ဟာ render cycle တိုင်းမှာ object reference အသစ်တစ်ခု ဖန်တီးနေတဲ့အတွက် ပြန်လည် render လုပ်နေခြင်း ဖြစ်ပါတယ်။ `useMemo` ကို အသုံးပြုဖို့ အကြံပြုပါတယ်။"_
+> **ရှေ့မှာ (၆၉ တိုကင်)** _"သင့် React အစိတ်အပိုင်းကို ပြန်လည်တင်ဆက်ရခြင်းအကြောင်းရင်းမှာ သင်သည် render စက်ဝန်းတစ်ခုစီတွင် အရာဝတ္ထုအသစ်တစ်ခုကို အကိုးအကားဖန်တီးနေခြင်းကြောင့် ဖြစ်နိုင်ပါသည်။ သင် inline အရာဝတ္ထုကို prop တစ်ခုအဖြစ် ကျော်သွားသောအခါ၊ React၏ နှိုင်းယှဥ်မှုသည် အချိန်တိုင်းတွင် မတူညီသည့်အရာတစ်ခုအဖြစ်မြင်ရပြီး၊ ပြန်လည်တင်ဆက်မှုကို အစပျိုးစေပါသည်။ အရာဝတ္ထုကို အလွတ်ကျက်စေရန် useMemo အသုံးပြုရန် အကြံပြုလိုပါသည်။"
 >
-> **နောက် (တိုကင် ၁၂ ခု):** _"ပြန်လည် render: cycle တိုင်း ref အသစ် (inline object ပြန်လည်ဖန်တီးထားသည်)။ `useMemo` အသုံးပြုပါ။"_
+> **(19 တိုကင်ပြီးနောက်)** _"ပြန်ဆိုချက်တစ်ခုစီကို ကိုးကားသည့်အရာဝတ္ထုအသစ်။ အရာဝတ္ထုတစ်ခုစီတွင် prop = အသစ် ref = ပြန်လည်တင်ဆက်သည်။ useMemo ဖြင့် ခြုံထားသည်။ _
 >
-> **တူညီသောအဖြေ။ တိုကင် ၇၀% ခန့် လျော့နည်းသည်။ နည်းပညာပိုင်းဆိုင်ရာ တိကျမှု မပြောင်းလဲပါ။** ✅
+> **တူညီသောအဖြေ။ တိုကင် 72% ပိုနည်းသည်။ သုည တိကျမှု ဆုံးရှုံးမှု။** ✅
+
+**PT-BR ဥပမာ — [Troglodita](https://github.com/leninejunior/troglodita) မုဒ်-**
+
+> **Antes (တိုကင် ၄၂ ခု)။** _"O problema é que o componente está re-renderizando porque uma nova referência de objeto está sendo criada em cada ciclo de renderização. Eu recomendaria usar useMemo."_
+>
+> **Depois (တိုကင် ၁၂ ခု)** _"ပြန်လည်တင်ဆက်ခြင်း- ref nova cada ciclo (objeto inline recriado)။ Usar `useMemo`."_
+>
+> **Mesma resposta ~ 70% မီနိုတိုကင်များ Precisão técnica နဂိုအတိုင်း** ✅
 
 <br/>
 
-### 🎚️ အင်ဂျင်များအပြင် — output styles၊ adaptive dial နှင့် request တစ်ခုချင်းစီ ထိန်းချုပ်မှု
+### 🎚️ အင်ဂျင်များအပြင် — အထွက်စတိုင်များ၊ လိုက်လျောညီထွေရှိသော ဒိုင်ခွက်နှင့် တောင်းဆိုချက်တိုင်း ထိန်းချုပ်မှု
 
-အထက်ပါ အင်ဂျင် ၁၂ ခုက **ဝင်လာသည့်အရာ** ကို ချုံ့ပေးသည်။ ထပ်ဆင့်အလွှာ ၃ ခုက **မည်သို့**၊ **မည်သည့်အချိန်တွင်** နှင့် မည်သည့်အရာ **ထွက်လာမည်** ကို ပုံဖော်ပေးသည်-
+အပေါ်က အင်ဂျင် 12 လုံးက လျော့သွားသည်** ၌** . နောက်ထပ်အလွှာသုံးလွှာ** ဘယ်လိုလဲ** ၊** ဘယ်တော့လဲ** , နှင့်အဘယ်သို့ကြွလာ** ထွက်** :
 
-- **🪄 Output Styles** _(output-axis steering)_ — တိကျစွာ ထပ်တလဲလဲရနိုင်ပြီး cache-safe ဖြစ်သော response ပုံဖော်ညွှန်ကြားချက်များကို ထည့်သွင်းပေးသည်။ ပေါင်းစပ်အသုံးပြုနိုင်ပြီး တစ်ခုချင်းစီကို `lite` / `full` / `ultra` ပြင်းအားများဖြင့် သတ်မှတ်နိုင်သည်။ Style ထည့်သွင်းရန် registry entry တစ်ကြောင်းသာ လိုအပ်သည်-
-  - **Terse prose** — ဖြည့်စွက်စကားလုံးများ / articles / မသေချာမှုဖော်ပြချက်များကို ဖယ်ရှားပြီး နည်းပညာဆိုင်ရာ အကြောင်းအရာကို တိကျစွာ ထိန်းသိမ်းပါ။
-  - **Less code** — "ပျင်းရိသော senior dev" YAGNI: အလုပ်လုပ်နိုင်သည့် အပြောင်းအလဲအသေးဆုံးကိုသာ ပြုလုပ်ပြီး မတောင်းဆိုထားသော scaffolding မထည့်ပါနှင့်။
-  - **Ponytail (lazy senior dev)** — YAGNI အဆင့်များအတိုင်း တက်လှမ်းကာ အခြေခံအကြောင်းရင်းကို ဖြေရှင်းပြီး အလုပ်လုပ်နိုင်သည့် diff အသေးဆုံးကို ပြုလုပ်ပါ။
-  - **I have ADHD (action-first)** — နောက်တစ်ဆင့် လုပ်ဆောင်ချက်ကို ဦးစွာဖော်ပြပြီး အဆင့်များကို နံပါတ်တပ်ပါ။ လက်တွေ့လုပ်ဆောင်နိုင်သော နောက်တစ်ဆင့်တစ်ခုသာ ထားရှိပြီး အကြိုရှင်းလင်းချက် မထည့်ပါနှင့်။
-  - **Terse CJK (文言)** — ရှေးဟောင်းတရုတ်ဘာသာစကားပုံစံ အလွန်တိုတောင်းသော style (`zh` locale အတွက်သာ သတ်မှတ်ထားသည်)။
-- **🎯 Adaptive context-budget** _(dial)_ — ဖွင့်/ပိတ်နိုင်သော token threshold တစ်ခုတည်းအစား context window အတွင်း **အံဝင်ရန်** လိုအပ်သလောက်သာ ကုန်ကျစရိတ်အနည်းဆုံးနှင့် အချက်အလက်ဆုံးရှုံးမှုအနည်းဆုံး အင်ဂျင်များကို အဆင့်မြှင့်အသုံးပြုသည်။ Policy: `reserve-output` (ပုံမှန်၊ model-aware) · `percentage` · `absolute`။ Mode: `floor` (အံဝင်မှုကို အာမခံသည်) · `replace-autotrigger` (သင်ကိုယ်တိုင် ရွေးချယ်ထားမှုက အနိုင်ရသည်) · `off` (ယခင် threshold)။
-- **🎛️ Compression ကို ဆုံးဖြတ်သည့်နေရာ** _(ဦးစားပေးအဆင့်၊ မြင့်မှနိမ့်သို့)_ — request တစ်ခုချင်းစီ၏ `x-omniroute-compression` header › routing-combo override › လက်ရှိ active named profile › adaptive / auto-trigger › panel default › off။ အသုံးပြုထားသော plan ကို `X-OmniRoute-Compression: <mode>; source=<source>` response header တွင် ပြန်လည်ဖော်ပြပေးသည်။
+- **🪄 အထွက်ပုံစံများ** _(အထွက်ဝင်ရိုးစတီယာရင်)_ — အဆုံးအဖြတ်ပေးသော၊ ကက်ရှ်-ဘေးကင်းသော တုံ့ပြန်မှုပုံသဏ္ဍာန် ညွှန်ကြားချက်များကို ထိုးသွင်းခြင်း၊ တစ်ခုချင်းစီကို `lite` / `full` / `ultra` ပြင်းထန်မှုတွင် ပေါင်းစပ်နိုင်သည်။ စတိုင်တစ်ခုထည့်ခြင်းသည် တစ်ကြောင်းတည်းစာရင်းသွင်းခြင်းဖြစ်သည်-
+  - **Terse စကားပြေ** — drop filler / articles / hedging; နည်းပညာဆိုင်ရာ ပစ္စည်းများကို အတိအကျ ထိန်းသိမ်းပါ။
+  - **ကုဒ်နည်းတယ်။** — "lazy senior dev" YAGNI: အသေးငယ်ဆုံးသော လုပ်ဆောင်မှုပြောင်းလဲမှု၊ တောင်းဆိုထားသည့် ငြမ်းမရှိပါ။
+  - **Ponytail (ပျင်းရိသော အကြီးတန်း dev)** — YAGNI လှေကားကိုတက်ပါ၊ မူလအကြောင်းအရင်းကိုဖြေရှင်းပါ၊ အသေးဆုံးအလုပ်လုပ်ပုံကွဲပြားသည်။
+  - **ငါ့မှာ ADHD (လုပ်ဆောင်ချက်-ပထမ)** — နောက်လုပ်ဆောင်ချက်က ဦးဆောင်သည်၊ နံပါတ်တပ်ထားသော ခြေလှမ်းများ၊ ခိုင်မာသော နောက်ထပ်ခြေလှမ်းတစ်ခု၊ အကြိုအပို့မရှိပါ။
+  - **Terse CJK (文言)** — ဂန္ထဝင်-တရုတ် အစွန်းရောက်စတိုင် ( `zh` တွင် ကန့်သတ်ထားသည်။
+- **🎯 Adaptive context-budget** _(the dial)_ — instead of one on/off token threshold, escalate the cheapest, most-lossless engines only as far as needed to **fit the model's context window**. Policy: `reserve-output` (default, model-aware) · `percentage` · `absolute`. Mode: `floor` (guarantee fit) · `replace-autotrigger` (your explicit choice wins) · `off` (legacy threshold).
+- **🎛️ ဘယ်မှာ compression ဆုံးဖြတ်သည်** _(ရှေ့တန်း၊ မြင့်မားသော → နိမ့်)_ — per-request `x-omniroute-compression` ခေါင်းစီး › လမ်းကြောင်း-တွဲဖက်ကို ထပ်ရေးခြင်း › အသက်ဝင်နေသော ပရိုဖိုင် › adaptive / အလိုအလျောက် အစပျိုးခြင်း › panel default › ပိတ်သည်။ အသုံးပြုထားသော အစီအစဉ်သည် `X-OmniRoute-Compression: <mode>; source=<source>` တုံ့ပြန်မှု ခေါင်းစီးတွင် ပဲ့တင်ထပ်သည်။
 
-Token threshold ဖြင့် auto-trigger လုပ်ပါ၊ adaptive dial ကို ဖွင့်ပါ၊ named profile တစ်ခုကို သတ်မှတ်ပါ၊ request တစ်ခုအတွက်သာ တစ်ကြိမ်သုံး သတ်မှတ်ပါ၊ သို့မဟုတ် routing combo တစ်ခုချင်းစီအတွက် pipeline သတ်မှတ်ပါ — workload နှင့် ကိုက်ညီသည့်နည်းကို ရွေးချယ်နိုင်သည်။ ရွေးချယ်အသုံးပြုနိုင်သော offline **eval harness** (`npm run eval:compression`) သည် ပြောင်းလဲမှုတစ်ခုကို တရားဝင်အသုံးမပြုမီ သတ်မှတ်ထားသော corpus ပေါ်တွင် fidelity နှင့် savings ကို အမှတ်ပေးအကဲဖြတ်သည်။
+တိုကင်အဆင့်သတ်မှတ်၍ အလိုအလျောက်အစပျိုးခြင်း၊ လိုက်လျောညီထွေရှိသော ဒိုင်ခွက်ပေါ်လှန်ပါ၊ အမည်ပေးထားသော ပရိုဖိုင်ကို ပင်ထိုးပါ၊ တောင်းဆိုမှုတစ်ခုအတွက် တစ်ကြိမ်သတ်မှတ်ပါ၊ သို့မဟုတ် အလုပ်တာဝန်နှင့်ကိုက်ညီသည့် လမ်းကြောင်းပြပေါင်းစပ် — အတွက် ပိုက်လိုင်းတစ်ခုသတ်မှတ်ပါ။ အော့ဖ်လိုင်းရွေးချယ်မှုတစ်ခု** eval ကြိုးကြိုး** (`npm run eval:compression`) ပြောင်းလဲမှုတစ်ခုကို သင်မမြှင့်တင်မီ ပင်ချိတ်ထားသော ကော်ပိုဆက်တစ်ခုပေါ်တွင် စုဆောင်းငွေကို သစ္စာစောင့်သိမှုနှင့် အမှတ်ပေးသည်။
 
 📖 [`COMPRESSION_GUIDE.md`](docs/compression/COMPRESSION_GUIDE.md) · [`RTK_COMPRESSION.md`](docs/compression/RTK_COMPRESSION.md) · [`COMPRESSION_ENGINES.md`](docs/compression/COMPRESSION_ENGINES.md)
 
@@ -1029,44 +1029,34 @@ Token threshold ဖြင့် auto-trigger လုပ်ပါ၊ adaptive dial
 
 <div align="center">
 
-# ⚡ အမြန်စတင်ခြင်း
+# ⚡ အမြန်စတင်ပါ။
 
 </div>
 
-**1) ထည့်သွင်းပြီး run လုပ်ပါ**
+**1) Install လုပ်ပြီး run လိုက်ပါ။**
 
 ```bash
 npm install -g omniroute
 omniroute
 ```
 
-> 💡 `npm warn ERESOLVE` သို့မဟုတ် peer-dep warnings တွေ့ပါသလား။ [၎င်းတို့သည် အန္တရာယ်မရှိပါ](docs/guides/TROUBLESHOOTING.md#npm-install-warnings-eresolve--peer--deprecated)။
-> **npm 11 သို့မဟုတ် နောက်ပိုင်းကို အသုံးပြုနေပါသလား။** ခွင့်ပြုထားခြင်းမရှိပါက npm သည် package lifecycle scripts များကို ပိတ်ဆို့နိုင်သည်။ OmniRoute ၏ `postinstall` (`node scripts/build/postinstall.mjs`) သည် ၎င်း၏ native runtime files များကို ပြင်ဆင်ရန် လိုအပ်သည်။ Global အနေဖြင့် ထည့်သွင်းသည့်အခါ npm warning တွင် ဖော်ပြထားသော package များကို ခွင့်ပြုပါ။ OmniRoute 3.8.55 က ဖော်ပြထားသော package အစုအတွက်-
+> 💡 `npm warn ERESOLVE` သို့မဟုတ် peer-dep သတိပေးချက်များကိုကြည့်ပါလား။ [သူတို့က အန္တရာယ်ကင်းတယ်](docs/guides/TROUBLESHOOTING.md#npm-install-warnings-eresolve--peer--deprecated) ။** npm 11 သို့မဟုတ် နောက်ပိုင်းတွင် အသုံးပြုနေပါသလား။** npm သည် ပက်ကေ့ခ်ျဘဝသံသရာ script များကို ခွင့်မပြုပါက ပိတ်ဆို့နိုင်သည်။ ၎င်း၏ မူရင်း runtime ဖိုင်များကို ပြင်ဆင်ရန် OmniRoute's `postinstall` (`node scripts/build/postinstall.mjs`) လိုအပ်သည်။ တစ်ကမ္ဘာလုံးတွင် ထည့်သွင်းသည့်အခါ npm ၏သတိပေးချက်တွင် အမည်ပေးထားသည့် ပက်ကေ့ဂျ်များကို ခွင့်ပြုပါ။ OmniRoute 3.8.55 ဖြင့် အစီရင်ခံထားသော ပက်ကေ့ဂျ်အတွက်-
 >
-> ```bash
-> npm install -g --allow-scripts=omniroute,keytar,onnxruntime-node,@parcel/watcher,@swc/core,protobufjs,esbuild omniroute
-> ```
+> `bash npm install -g --allow-scripts=omniroute,keytar,onnxruntime-node,@parcel/watcher,@swc/core,protobufjs,esbuild omniroute `
 >
-> နောင် global installs များအတွက် ဤ allowlist ကို ပြန်လည်အသုံးပြုရန် တစ်ကြိမ် configure လုပ်ပြီးနောက် ပုံမှန်အတိုင်း ထည့်သွင်းပါ-
+> နောင်ကမ္ဘာလုံးဆိုင်ရာ ထည့်သွင်းမှုများအတွက် ဤခွင့်ပြုစာရင်းကို ပြန်လည်အသုံးပြုရန်၊ ၎င်းကို တစ်ကြိမ်တည်းသတ်မှတ်ပါ၊ ထို့နောက် ပုံမှန်အတိုင်း ထည့်သွင်းပါ-
 >
-> ```bash
-> npm config set allow-scripts=omniroute,keytar,onnxruntime-node,@parcel/watcher,@swc/core,protobufjs,esbuild --location=user
-> npm install -g omniroute
-> ```
+> `bash npm config set allow-scripts=omniroute,keytar,onnxruntime-node,@parcel/watcher,@swc/core,protobufjs,esbuild --location=user npm install -g omniroute `
 >
-> Release တစ်ခုနှင့်တစ်ခုကြား dependency list ပြောင်းလဲနိုင်သည်။ npm က မတူညီသော list တစ်ခုကို ဖော်ပြပါက ထို warning ထဲရှိ package အမည်များကို အသုံးပြုပါ။ Package တစ်ခုကို ခွင့်ပြုခြင်းသည် ၎င်း၏ install scripts များကို run လုပ်ခွင့်ပေးခြင်း ဖြစ်သည်။
-> **Gemini Web သို့မဟုတ် အခြား web-cookie provider တစ်ခုကို အသုံးပြုနေပါသလား။** npm package တွင်
-> Playwright ပါဝင်သော်လည်း ၎င်း၏ Chromium binary မပါဝင်ပါ။ ပထမဆုံး web-provider request မပြုလုပ်မီ
-> [Playwright Chromium setup](docs/guides/TROUBLESHOOTING.md#gemini-web-and-playwright-chromium)
-> မှတ်စုကို ကြည့်ပါ။
+> မှီခိုမှုစာရင်းသည် ထုတ်ဝေမှုများကြားတွင် ပြောင်းလဲနိုင်သည်။ npm သည် အခြားစာရင်းတစ်ခုကို တိုင်ကြားပါက၊ ထိုသတိပေးချက်မှ ပက်ကေ့ခ်ျအမည်များကို အသုံးပြုပါ။ ပက်ကေ့ဂျ်တစ်ခုအား ခွင့်ပြုခြင်းသည် ၎င်း၏ထည့်သွင်းမှု scripts များကို လုပ်ဆောင်ရန် ခွင့်ပြုသည်။** Gemini Web သို့မဟုတ် အခြားဝဘ်-ကွတ်ကီးဝန်ဆောင်မှုကို အသုံးပြုနေပါသလား။** npm ပက်ကေ့ဂျ်တွင် Playwright ပါဝင်သော်လည်း ၎င်း၏ Chromium binary မဟုတ်ပါ။ ပထမဆုံး ဝဘ်-ပံ့ပိုးသူ တောင်းဆိုမှု မပြုလုပ်မီ [Playwright Chromium စနစ်ထည့်သွင်းမှု](docs/guides/TROUBLESHOOTING.md#gemini-web-and-playwright-chromium) မှတ်စုကို ကြည့်ပါ။
 
-Dashboard ကို `http://localhost:20128` တွင် · API ကို `http://localhost:20128/v1` တွင် အသုံးပြုနိုင်သည်။
+`http://localhost:20128` · API at `http://localhost:20128/v1` ရှိ ဒက်ရှ်ဘုတ်။
 
-**2) ကိုယ်ပိုင် account ဖြင့် သင့်အသုံးပြုမှုနှင့် ကိုက်ညီသော provider တစ်ခုကို ချိတ်ဆက်ပါ**
+**2) သင့်ကိုယ်ပိုင်အကောင့်ကို အသုံးပြု၍ အရည်အချင်းပြည့်မီသောဝန်ဆောင်မှုပေးသူကို ချိတ်ဆက်ပါ။**
 
-Dashboard → **Providers** → လက်ရှိစည်းမျဉ်းများနှင့် quota သည် သင့်အသုံးပြုမှုနှင့် ကိုက်ညီသော provider ကို ရွေးချယ်ပါ → ၎င်း၏ API key ကို ထည့်ပါ သို့မဟုတ် account flow ကို ပြီးဆုံးအောင် လုပ်ပါ။ Free tier များတွင် signup၊ approval သို့မဟုတ် payment method လိုအပ်နိုင်သည်။ [Free Tiers Guide](docs/getting-started/FREE-TIERS-GUIDE.md) ကို ပြန်လည်သုံးသပ်ပါ။ keyless availability ကို အာမမခံနိုင်ပါ။ `tos: avoid` ဟု အမှတ်အသားပြုထားသော provider များကို ပုံမှန်အားဖြင့် `auto` မှ ဖယ်ထုတ်ထားသည်။
+ဒက်ရှ်ဘုတ် →** ပံ့ပိုးပေးသည်။** → သင့်အသုံးပြုမှုကိစ္စတွင် → API ကိုက်ညီသည့် လက်ရှိသတ်မှတ်ချက်များနှင့် ခွဲတမ်းရှိသည့် ဝန်ဆောင်မှုပေးသူကို ရွေးချယ်ပါ သို့မဟုတ် ၎င်း၏အကောင့်စီးဆင်းမှုကို အပြီးသတ်ပါ။ အခမဲ့အဆင့်များသည် စာရင်းသွင်းခြင်း၊ အတည်ပြုချက် သို့မဟုတ် ငွေပေးချေမှုနည်းလမ်းတစ်ခု လိုအပ်နိုင်ပါသည်။ [အခမဲ့အဆင့်လမ်းညွှန်ကို](docs/getting-started/FREE-TIERS-GUIDE.md) ပြန်လည်သုံးသပ်ပါ။ သော့မဲ့ရရှိနိုင်မှုကို အာမမခံနိုင်ပါ၊ နှင့် `tos: avoid` အမှတ်အသားပြုထားသည့် ဝန်ဆောင်မှုပေးသူများကို `auto` မှ ဖယ်ထုတ်ထားသည်။
 
-**3) သင့် coding tool ကို ချိတ်ဆက်ပါ**
+**3) သင်၏ coding tool ကိုညွှန်ပါ။**
 
 ```txt
 Base URL: http://localhost:20128/v1
@@ -1074,15 +1064,15 @@ API Key:  [copy from Dashboard → Endpoints]
 Model:    auto            (routes among eligible connections — or choose provider/model)
 ```
 
-**4) အလုပ်လုပ်နေကြောင်း အတည်ပြုပါ**
+**4) ၎င်းသည်အလုပ်လုပ်ကြောင်းအတည်ပြုပါ။**
 
 ```bash
 curl http://localhost:20128/v1/models -H "Authorization: Bearer YOUR_KEY"
 ```
 
-ချိတ်ဆက်ထားသော model များကို စာရင်းပြထားသည်ကို တွေ့ရပါမည်။ 🎉 ဒါဆို အားလုံးပြီးပါပြီ — coding ကို စတင်ပါ။ OmniRoute က သင့်အတွက် auto-route နှင့် fallback ပြုလုပ်ပေးမည်။
+သင်၏ချိတ်ဆက်ထားသော မော်ဒယ်များကို စာရင်းပြုစုထားသည်ကို တွေ့မြင်ရပါမည်။ 🎉 ဒါပဲ — စပြီး coding လုပ်ပြီး OmniRoute အလိုအလျောက် လမ်းကြောင်းတွေနဲ့ မင်းအတွက် ပြန်လာမှာပါ။
 
-သင့် client က custom headers များ ပေးပို့၍မရပါက OmniRoute သည် tokenized compatibility aliases များကိုလည်း ပံ့ပိုးပေးသည်-
+သင့်ဖောက်သည်သည် စိတ်ကြိုက်ခေါင်းစီးများကို မပေးပို့နိုင်ပါက၊ OmniRoute တိုကင်ယူထားသော လိုက်ဖက်ညီသော aliases များကိုလည်း ဖော်ထုတ်သည်-
 
 ```txt
 OpenAI catalog:   http://localhost:20128/vscode/YOUR_KEY/
@@ -1093,7 +1083,7 @@ Ollama chat:      http://localhost:20128/vscode/YOUR_KEY/api/chat
 Ollama tags:      http://localhost:20128/vscode/YOUR_KEY/api/tags
 ```
 
-`Authorization: Bearer ...` ကို မထည့်သွင်းပေးပို့နိုင်သော client များအတွက်သာ ၎င်းတို့ကို အသုံးပြုပါ။ Header auth သည် ဦးစားပေးအသုံးပြုရမည့် mode အဖြစ် ဆက်လက်တည်ရှိသည်။
+`Authorization: Bearer ...` ပူးတွဲ၍မရသော ဖောက်သည်များအတွက်သာ ၎င်းတို့ကို အသုံးပြုပါ။ header auth သည် ဦးစားပေးမုဒ်အဖြစ် ကျန်ရှိနေပါသည်။
 
 <br/>
 
@@ -1830,15 +1820,15 @@ OmniRoute သည် ရှေ့ကလမ်းဖောက်ပေးခဲ့
 
 ## 📄 လိုင်စင်
 
-MIT လိုင်စင်အသေးစိတ်အတွက် [LICENSE](LICENSE) ကို ကြည့်ပါ။
+MIT လိုင်စင် - အသေးစိတ်အတွက် [LICENSE](LICENSE) ကြည့်ပါ။
 
 ---
 
 <div align="center">
 
-**[⬆ အပေါ်သို့ ပြန်သွားရန်](#-omniroute)** · အဖွင့်အရင်းအမြစ် AI အသိုင်းအဝိုင်းအတွက် ❤️ ဖြင့် တည်ဆောက်ထားသည်။
+**[⬆ အပေါ်သို့ ပြန်သွားရန်](#-omniroute)** · open-source AI အသိုင်းအဝိုင်းအတွက် ❤️ ဖြင့် တည်ဆောက်ထားသည်။
 
-<sub><a href="https://github.com/diegosouzapw">Diego Souza</a> မှ ဖန်တီးသည် · OmniRoute v3.8.55 · Node ≥22.22.2 · MIT လိုင်စင် · <a href="https://omniroute.online">omniroute.online</a></sub>
+<sub>ဖန်တီးထားသည်။ <a href="https://github.com/diegosouzapw">Diego Souza</a> · OmniRoute v3.8.55 · Node ≥ 22.22.2 · MIT လိုင်စင် · <a href="https://omniroute.online">omniroute.online</a></sub>
 
 </div>
-<!-- အသိုင်းအဝိုင်း၏ အမေးအဖြေများအတွက် GitHub Discussions ကို ဖွင့်ထားသည် -->
+<!-- GitHub Discussions enabled for community Q&A -->

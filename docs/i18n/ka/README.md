@@ -67,23 +67,23 @@
 
 <br/>
 
-## 📈 Gateway განაგრძობს ზრდას
+## 📈 კარიბჭე აგრძელებს ზრდას
 
 <div align="center">
 
-|                                    |         v3.8.50          | **v3.8.51** |      `v3.8.55+`       |
-| ---------------------------------- | :----------------------: | :---------: | :-------------------: |
-| 🌐 პროვაიდერები                    |           352            |   **358**   |          394          |
-| 🧠 ჩატის უნიკალური მოდელის ID-ები  |           1320           |  **1374**   |         1491          |
-| 🖼️ მოდალობების ხიდი                | 🆕 ხედვა + აუდიო + ვიდეო |      ✓      |           ✓           |
-| 📡 Radar-ის უფასო კატალოგი         | 🆕 ნებაყოფლობითი ჩართვა  |      ✓      |           ✓           |
-| ⚖️ კვოტის გათვალისწინებით დაგეგმვა |      🆕 Quota-Share      |      ✓      |           ✓           |
-| 📊 კვოტის ტელემეტრია               |     🆕 რეალურ დროში      |      ✓      |           ✓           |
-| 🧰 ჰედლეს რეჟიმი                   |            —             |      —      | 🆕 `serve --headless` |
-| 🛤️ LTS rail ინფრასტრუქტურა         |            —             |      —      | 🆕 გამოშვების არხები  |
-| 🔎 მოდელების აღმოჩენის API         |            —             |      —      | 🆕 `/v1/models/query` |
+|                               |          v3.8.50          | **v3.8.51** |      `v3.8.55+`       |
+| ----------------------------- | :-----------------------: | :---------: | :-------------------: |
+| 🌐 პროვაიდერები               |            352            |   **358**   |          394          |
+| 🧠 უნიკალური ჩატის მოდელი IDs |           1320            |  **1374**   |         1491          |
+| 🖼️ მოდალობის ხიდი             | 🆕 vision + აუდიო + ვიდეო |      ✓      |           ✓           |
+| 📡 Radar უფასო კატალოგი       |         🆕 ჩართვა         |      ✓      |           ✓           |
+| ⚖️ Quota-aware დაგეგმვა       |      🆕 Quota-Share       |      ✓      |           ✓           |
+| 📊 Quota ტელემეტრია           |    🆕 პირდაპირ ეთერში     |      ✓      |           ✓           |
+| 🧰 უთავო რეჟიმი               |             —             |      —      | 🆕 `serve --headless` |
+| 🛤️ LTS სარკინიგზო ინფრა       |             —             |      —      | 🆕 გამოშვების არხები  |
+| 🔎 მოდელის აღმოჩენა API       |             —             |      —      | 🆕 `/v1/models/query` |
 
-**→ [სამოქმედო გეგმა](ROADMAP.md) — `v3.9.0 LTS`-ისკენ სარკინიგზო ლიანდაგზე**
+**→ [საგზაო რუკა](ROADMAP.md) — რკინიგზაზე `v3.9.0 LTS` მდე მიმავალი**
 
 </div>
 
@@ -590,35 +590,35 @@ Radar-ში მონაწილეობა ნებაყოფლობი
 
 </div>
 
-> უახლესი მნიშვნელოვანი სიახლეები **v3.8.20 → v3.8.55** ვერსიებს შორის. სრული ისტორია იხილეთ [`CHANGELOG.md`](CHANGELOG.md)-ში.
+> ბოლოდროინდელი მაჩვენებლები** v3.8.20 → v3.8.55** . სრული ისტორია [`CHANGELOG.md`](CHANGELOG.md) ში.
 
-- **⚖️ `quota-weighted` მარშრუტიზაცია** — კომბინირებული სტრატეგიების მე-20 ვარიანტი გამოფიტულ ანგარიშებს გამოტოვებს, შემდეგ კი დანარჩენებს შორის არჩევანს აკეთებს დარჩენილი კვოტისა და მიმდინარე მოთხოვნების დატვირთვის შეფარდების პროპორციულად, ხოლო არსებულ საუბრებს იმავე ანგარიშებზე ამაგრებს. → [ავტომატური კომბინაცია](docs/routing/AUTO-COMBO.md)
-- **🧰 Headless რეჟიმი** — `omniroute serve --headless` (ან `OMNIROUTE_HEADLESS=1`) ამუშავებს მხოლოდ `/v1/*` პროქსის ძრავას და თიშავს დაფასა და მხოლოდ დაფისთვის განკუთვნილ ქვესისტემებს. → [Headless რეჟიმი](docs/guides/HEADLESS.md)
-- **🔎 მოდელების აღმოჩენა** — `/v1/models` ფილტრავს შესაძლებლობის, კონტექსტის, ტიპისა და ტექსტის მიხედვით, ხოლო `POST /v1/models/query` აბრუნებს მოკლე, დეტერმინისტულ კანდიდატთა სიას იმავე გასაღების დონის ხილვადობით. → [API-ის ცნობარი](docs/reference/API_REFERENCE.md)
-- **🔑 თითოეული გასაღებისთვის მარშრუტიზაციის კონტროლი** — API-გასაღები მიამაგრეთ ერთ მოდელზე ან კომბინაციაზე `forcedModel`-ის გამოყენებით და ატომურად დაამატეთ ან წაშალეთ გასაღების მოდელები და კომბინაციები (`/api/keys/{id}/access`). → [API-ის ცნობარი](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
-- **🛡️ PII-ის უფრო დეტალური კონტროლი** — ტიპების მიხედვით არჩევა, მაქსიმუმ 20 ვალიდირებული მორგებული დაფარვის ნიმუში და ტიპების მიხედვით აღმოჩენის მრიცხველები; თავად დაფარვა კვლავ სურვილისამებრ ირთვება. → [დამცავი წესები](docs/security/GUARDRAILS.md)
-- **🌍 67 ენა** — დაფა, დოკუმენტაციის სარკეები და CLI, ხოლო `npm run i18n:add-locale` ერთი ბრძანებით ამატებს ენას ყველგან. → [i18n-ის სახელმძღვანელო](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — შემომავალი A2A დელეგირება თქვენი აგენტების ფლოტისთვის, Conductor-ის უნარები Agent Card-ზე და დაფის პანელი Faro-ს push-to-talk ხმოვანი ჩატით. → [A2A სერვერი](docs/frameworks/A2A-SERVER.md)
-- **🛂 ადაპტური დაშვება და გადატვირთვისგან დაცვა** — მძიმე ჩატის მოთხოვნები რიგში თავსდება 503-ით დასრულების ნაცვლად, თითოეული კავშირისთვის RPM-ის მოძრავი ლიზინგების ატომური მართვით. → [მედეგობის სახელმძღვანელო](docs/architecture/RESILIENCE_GUIDE.md)
-- **🗂️ `/v1/models`-ის კანონიკური დალაგება** — თითოეულ პროვაიდერზე ერთი უწყვეტი, პროვაიდერის მიხედვით დაჯგუფებული ბლოკი (კომბინაციები პირველ ადგილზე), სტაბილურად ყველა კატალოგის წყაროში. → [API-ის ცნობარი](docs/reference/API_REFERENCE.md)
-- **🗜️ შეკუმშვის გამაგრება** — ნაგულისხმევად ჩართული გაფართოებისგან დამცავი მექანიზმი, Caveman-ის პაკეტები DE / FR / JA-სა და ჩინურისთვის (wényán), RTK-ფილტრები Gradle-ისა და .NET-ისთვის. → [შეკუმშვა](docs/compression/COMPRESSION_ENGINES.md)
-- **💸 ბრტყელი ტარიფის რეალისტური ღირებულება** — სააბონენტო / კოდირების გეგმის პროვაიდერების ღირებულების ანალიტიკაში მითითებულია **$0**; ბიუჯეტი, კვოტა და მარშრუტიზაცია შეფასებას კვლავ ახორციელებს. → [API-ის ცნობარი](docs/reference/API_REFERENCE.md)
-- **⚖️ Quota-Share მარშრუტიზაცია** — საერთო ანგარიშის კვოტას სამართლიანად ანაწილებს გაერთიანებულ გასაღებებს შორის და რესურსებს ეფექტიანად იყენებს: უმოქმედო ნაწილები დროებით გადაეცემა სხვებს. → [მედეგობის სახელმძღვანელო](docs/architecture/RESILIENCE_GUIDE.md)
-- **🤖 CLI/აგენტის ერთბრძანებიანი დაყენება** — რეგისტრირებულია 15 `setup-*` ბრძანება; `omniroute run` უშვებს 7 CLI-ს (Claude Code, Codex, Aider, Goose, OpenCode, Qwen Code, Gemini CLI); `omniroute configure` მხარს უჭერს 11 სამიზნეს ინტერაქტიული პროვაიდერისა და მოდელის ამრჩევით და თითოეული კონტექსტისთვის რჩეულებით. → [CLI ინტეგრაციები](docs/guides/CLI-INTEGRATIONS.md)
-- **🛰️ დისტანციური რეჟიმი** — მართეთ დისტანციური OmniRoute შეზღუდული მოქმედების ტოკენებით (`connect` / `contexts` / `tokens`) და გამოიყენეთ `antigravity` OAuth დამხმარე VPS-ზე დასაყენებლად. → [დისტანციური რეჟიმი](docs/guides/REMOTE-MODE.md)
-- **🧭 უფრო ჭკვიანი ავტომატური მარშრუტიზაცია** — `auto/<category>:<tier>` კომბინაციები, **Fusion** (მოდელების პანელი + მსაჯი), ამოცანაზე მორგებული მარშრუტიზაცია და თითოეული მოთხოვნისთვის მოდელის / რეჟიმის / USD-ბიუჯეტის გადაფარვა. → [ავტომატური კომბინაცია](docs/routing/AUTO-COMBO.md)
-- **🗜️ მოდულური შეკუმშვა** — 12 კომბინირებადი ძრავა და Compression Studios: LLMLingua-2, ორსაფეხურიანი Ultra, omniglyph, თითოეული ნაბიჯის სიზუსტის კარიბჭე, GCF v3.2 და გადაადგილებით დალაგების რედაქტორი. → [შეკუმშვა](docs/compression/COMPRESSION_ENGINES.md)
-- **🕵️ გამჭვირვალე MITM-გაშიფვრა (TPROXY)** — ისეთი CLI-ების ტრაფიკის დაჭერა, რომლებიც პროქსის გარემოს ცვლადებს უგულებელყოფენ, თითოეული SNI-სთვის CA-ითა და სანდო საცავის ინსტალერით. → [MITM/TPROXY](docs/security/MITM-TPROXY-DECRYPT.md)
-- **💸 ღირებულების ტელემეტრია ყველგან** — `X-OmniRoute-*` ღირებულების/გამოყენების ჰედერები ყველა endpoint-ზე, ქეშის HIT-ით მიღებული დანაზოგის ჰედერი და თითოეული გასაღებისთვის USD ხარჯვის კვოტები. → [API-ის ცნობარი](docs/reference/API_REFERENCE.md)
-- **🧠 თქვენ მიერ კონტროლირებადი მეხსიერება** — ნაგულისხმევად გამორთულია; სურვილისამებრ ჩასართავი int8 ვექტორული კვანტიზაცია და ტიპზე დამოკიდებული შესუსტება, თითოეული მოთხოვნისთვის `x-omniroute-no-memory`. → [მეხსიერება](docs/frameworks/MEMORY.md)
-- **🛡️ უსაფრთხოება** — prompt injection-ისგან დამცავი მექანიზმი ყველა LLM მარშრუტზე (red-team-ის ტესტების ნაკრებით), სურვილისამებრ ჩასართავი ავტორიზაციის მონაცემების დაფარვა (ორივე მიმართულებით გაჟონილი API-გასაღებების/საიდუმლოებების წაშლა), უფასო DuckDuckGo ვებძიება, როგორც უკანასკნელი საშუალება, და სურვილისამებრ OIDC-ით შესვლის ბარიერი დაფისთვის (პაროლით შესვლა ყოველთვის ხელმისაწვდომი რჩება). → [დამცავი წესები](docs/security/GUARDRAILS.md)
-- **🖼️ ახალი endpoint-ები** — `/v1/ocr` (Mistral OCR) და `/v1/audio/translations` (Whisper-ის სტილის) ავსებს მედიასთან დაკავშირებულ შესაძლებლობებს. → [API-ის ცნობარი](docs/reference/API_REFERENCE.md)
-- **🎨 სურათების / ვიდეოს / აუდიოს გენერაცია** — მედიისთვის ერთი API: xAI Grok Imagine და Novita AI-ის ვიდეო, ComfyUI, Magnific, Adobe Firefly, Segmind და ხმოვანი პროვაიდერები, მათ შორის ElevenLabs. → [API-ის ცნობარი](docs/reference/API_REFERENCE.md)
-- **🌍 განთავსება და ოპერაციები** — reverse-proxy-ის `basePath`, ბრაუზერის ენის ავტომატური აღმოჩენა, თითოეული გასაღების მოწყობილობის თვალყურის დევნება, root-ის გარეშე MITM-ის ნდობა და zh-TW ლოკალიზაცია. → [გარემო](docs/reference/ENVIRONMENT.md)
-- **🤝 მეტი პროვაიდერი და აგენტი** — ღრუბლოვანი აგენტები (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) ბრაუზერითა და OAuth-ით შესვლით, Ollama-ს სრულფასოვანი ბარათი, Claude Opus 5 და Sonnet 5, Kimi-ს ოფიციალური პარტნიორობა (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… და განახლებული **394-პროვაიდერიანი კატალოგი**. → [პროვაიდერები](docs/reference/PROVIDER_REFERENCE.md)
-- **📡 მარშრუტიზაციის გამჭვირვალობა** — ყოველ პასუხს ახლავს `X-OmniRoute-Decision` ჰედერი, რომელიც მიუთითებს მის მომწოდებელ სტრატეგიასა და დაყოვნებას; ახალი `cache-optimized` კომბინირებული სტრატეგია და Auto-Combo-ის `cacheAffinity` ფაქტორი განმეორებით მოთხოვნებს აბრუნებს იმ კავშირთან, რომელიც ქეშირებულ პრეფიქსს ფლობს; მხოლოდ წაკითხვადი `/v1/auto-combo/{channel}/candidates` endpoint ავლენს `auto/*` არხის კანდიდატთა აქტუალურ ნაკრებს. → [ავტომატური კომბინაცია](docs/routing/AUTO-COMBO.md)
-- **⚡ ლოკალური წარმადობა და ინფრასტრუქტურა** — ლოკალური Redis-ის გაშვება ერთი დაწკაპუნებით, Cloudflare Workers / Deno Deploy-ის relay-ის დეployერები, Bifrost და Mux — ზედამხედველობის ქვეშ მყოფი ჩაშენებული სერვისები. → [ჩაშენებული სერვისები](docs/frameworks/EMBEDDED-SERVICES.md)
-- **🧩 ასევე კომპლექტში** — პლაგინების ფრეიმვორკი და მარკეტფლეისი, Omni/Agent/GitHub-ის უნარების ფრეიმვორკები, Obsidian vault-ის ინტეგრაცია (22 MCP ინსტრუმენტი), OpenAI-თან თავსებადი Batch და Files API-ები, სემანტიკური პასუხების ქეში, გეიმიფიკაცია ლიდერბორდებით, ACP აგენტების აღმოჩენა (15 ჩაშენებული აგენტი), ჟურნალების დაგეგმილი ექსპორტი BigQuery-ში, `auto/chaos` პარალელური მრავალმოდელური fan-out, Telegram ბოტის ხიდი, აპში ჩაშენებული ვერსიების მენეჯერი და LMArena-ELO-ის უფასო პროვაიდერების რეიტინგები. → [დოკუმენტაცია](docs/README.md)
+- **⚖️ `quota-weighted` მარშრუტიზაცია** — მე-20 კომბინირებული სტრატეგია გამოტოვებს ამოწურულ ანგარიშებს, შემდეგ ანაწილებს დანარჩენებს შორის ÷ დარჩენილი კვოტის პროპორციულად ფრენის დროს და ინახავს არსებულ საუბრებს მიმაგრებული. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
+- **🧰 უთავო რეჟიმი** — `omniroute serve --headless` (ან `OMNIROUTE_HEADLESS=1`) მუშაობს მხოლოდ `/v1/*` proxy ძრავით, დაფის და მხოლოდ დაფის ქვესისტემებით გამორთული. → [უთავო რეჟიმი](docs/guides/HEADLESS.md)
+- **🔎 მოდელის აღმოჩენა** — `/v1/models` ფილტრავს შესაძლებლობების, კონტექსტის, სახის და ტექსტის მიხედვით და `POST /v1/models/query` აბრუნებს მოკლე დეტერმინისტულ მოკლე სიას თითო გასაღების იგივე ხილვადობით. → [API მითითება](docs/reference/API_REFERENCE.md)
+- **🔑 თითო გასაღების მარშრუტიზაციის კონტროლი** — ჩაამაგრეთ API გასაღები ერთ მოდელზე ან კომბინირებულზე `forcedModel` ით და დაამატეთ ან ამოიღეთ გასაღების მოდელები და კომბინაციები ატომურად (`/api/keys/{id}/access`). → [API მითითება](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
+- **🛡️ უფრო დახვეწილი PII კონტროლი** — თითო ტიპის შერჩევა, 20-მდე დადასტურებული საბაჟო ნიღბის ნიმუში და თითო ტიპის გამოვლენის მრიცხველი; შენიღბვა თავისთავად რჩება არჩევანში. → [მცველები](docs/security/GUARDRAILS.md)
+- **🌍 67 ენა** — დაფა, docs mirrors და CLI, `npm run i18n:add-locale` ით ამატებს ენას ყველგან ერთი ბრძანებით. → [i18n გზამკვლევი](docs/guides/I18N.md)
+- **🎛️ OmniConductor** — შემომავალი A2A დელეგაცია თქვენს აგენტურ ფლოტში, დირიჟორის უნარები აგენტის ბარათზე და დაფის პანელი Faro Push-to-Talk ხმოვანი ჩატით. → [A2A სერვერი](docs/frameworks/A2A-SERVER.md)
+- **🛂 ადაპტური დაშვებისა და გადატვირთვისაგან დაცვა** — მძიმეწონიანი ჩატი ითხოვს რიგს 503ing-ის ნაცვლად, ატომური RPM მოძრავი იჯარით თითო კავშირზე. → [გამძლეობის სახელმძღვანელო](docs/architecture/RESILIENCE_GUIDE.md)
+- **🗂️ კანონიკური `/v1/models` შეკვეთა** — ერთი მომიჯნავე პროვაიდერის მიერ დაჯგუფებული ბლოკი თითო პროვაიდერზე (პირველი ჩამაგრებული კომბინაციები), სტაბილური ყველა კატალოგის წყაროში. → [API მითითება](docs/reference/API_REFERENCE.md)
+- **🗜️ შეკუმშვის გამკვრივება** — ნაგულისხმევად ჩართული ინფლაციის მცველი, Caveman პაკეტები DE / FR / JA + ჩინური (wényán), RTK ფილტრები Gradle-სთვის და .NET. → [შეკუმშვა](docs/compression/COMPRESSION_ENGINES.md)
+- **💸 პატიოსანი უცვლელი ღირებულება** წაიკითხეს — გამოწერის / კოდირების გეგმის პროვაიდერები** $0** ხარჯების ანალიტიკაში; ბიუჯეტი, კვოტა და მარშრუტი განაგრძეთ შეფასებას. → [API მითითება](docs/reference/API_REFERENCE.md)
+- **⚖️ Quota-გაზიარების მარშრუტიზაცია** — ანაწილებს საერთო ანგარიშის კვოტას საკმაოდ გაერთიანებულ გასაღებებზე, რაც მუშაობს ისე, რომ უმოქმედო ფრაგმენტები გაცემულია. → [გამძლეობის სახელმძღვანელო](docs/architecture/RESILIENCE_GUIDE.md)
+- **🤖 ერთი ბრძანება CLI/agent დაყენება** — 15 რეგისტრირებული `setup-*` ბრძანება; `omniroute run` უშვებს 7 CLIs (Claude Code, Codex, Aider, Goose, OpenCode, Qwen Code, Gemini CLI); `omniroute configure` მხარს უჭერს 11 სამიზნეს ინტერაქტიული პროვაიდერის + მოდელის ამომრჩეველთან და თითო კონტექსტის ფავორიტებთან. → [CLI ინტეგრაციები](docs/guides/CLI-INTEGRATIONS.md)
+- **🛰️ დისტანციური რეჟიმი** — მართეთ დისტანციური OmniRoute მასშტაბური ნიშნებით (`connect` / `contexts` / `tokens`) + ან `antigravity` OAuth დამხმარე VPS ინსტალაციისთვის. → [დისტანციური რეჟიმი](docs/guides/REMOTE-MODE.md)
+- **🧭 უფრო ჭკვიანი ავტომატური მარშრუტიზაცია** — `auto/<category>:<tier>` კომბინაციები,** შერწყმა** (მოდელის პანელი + მოსამართლე), ამოცანების გაცნობიერებული მარშრუტიზაცია, თითო მოთხოვნის მოდელი / რეჟიმი / აშშ დოლარის ბიუჯეტის გადაჭარბება. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
+- **🗜️ დასამაგრებელი შეკუმშვა** — 12 კომპოზირებადი ძრავა + შეკუმშვის სტუდიები: LLMLingua-2, ორსაფეხურიანი Ultra, omniglyph, თითო ნაბიჯის ერთგულების კარიბჭე, GCF v3.2, გადაადგილების რედაქტორი. → [შეკუმშვა](docs/compression/COMPRESSION_ENGINES.md)
+- **🕵️ გამჭვირვალე MITM გაშიფვრა (TPROXY)** — აღბეჭდეთ CLIs, რომელიც იგნორირებას უკეთებს proxy env vars, per-SNI CA + trust-store ინსტალერით. → [MITM/TPROXY](docs/security/MITM-TPROXY-DECRYPT.md)
+- **💸 ფასიანი ტელემეტრია ყველგან** — `X-OmniRoute-*` cost/usage სათაურები ყველა ბოლო წერტილზე, cache-HIT შემნახველი სათაური, თითო გასაღები USD ხარჯვის კვოტები. → [API მითითება](docs/reference/API_REFERENCE.md)
+- **🧠 მეხსიერება თქვენ აკონტროლებთ** — გამორთულია ნაგულისხმევად, ჩართეთ int8 ვექტორული კვანტიზაცია + აკრეფილი decay, თითო მოთხოვნა `x-omniroute-no-memory`. → [მეხსიერება](docs/frameworks/MEMORY.md)
+- **🛡️ უსაფრთხოება** — სწრაფი ინექციის დამცავი ყველა LLM მარშრუტზე (წითელი გუნდის კომპლექტი), რწმუნებათა სიგელების დამცავი დამცავი რგოლი (გაჟღენთილი API keys/secrets ორივე მიმართულებით), უფასო DuckDuckGo ბოლო კურორტის ვებ ძიება და არჩევითი OIDC შესვლის კარი დაფაზე (პაროლით შესვლა ყოველთვის ხელმისაწვდომი რჩება). → [დაცვა](docs/security/GUARDRAILS.md)
+- **🖼️ ახალი ბოლო წერტილები** — `/v1/ocr` (Mistral OCR) და `/v1/audio/translations` (ჩურჩულის სტილში) ამრგვალებენ მედიის ზედაპირს. → [API მითითება](docs/reference/API_REFERENCE.md)
+- **🎨 გამოსახულების / ვიდეო / აუდიო გენერაცია** — ერთი API მედიისთვის: xAI Grok Imagine & Novita AI ვიდეო, ComfyUI, Magnific, Adobe Firefly, Segmind და მეტყველების პროვაიდერები, როგორიცაა ElevenLabs. → [API მითითება](docs/reference/API_REFERENCE.md)
+- **🌍 განლაგება და ოპერაციები** — საპირისპირო პროქსი `basePath`, ბრაუზერის ენაზე ავტომატური ამოცნობა, თითო კლავიშის მოწყობილობის თვალყურის დევნება, Root-ის გარეშე MITM ნდობა, zh-TW ლოკალიზაცია. → [გარემო](docs/reference/ENVIRONMENT.md)
+- **🤝 More providers & agents** — cloud agents (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) with browser + OAuth login, Ollama first-class card, Claude Opus 5 & Sonnet 5, Kimi official partnership (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… and a refreshed **394-provider catalog**. → [Providers](docs/reference/PROVIDER_REFERENCE.md)
+- **📡 მარშრუტის გამჭვირვალობა** — ყოველი პასუხი შეიცავს `X-OmniRoute-Decision` სათაურს, რომელიც ასახელებს strategy/provider/latency, რომელიც მას ემსახურებოდა, ახალი `cache-optimized` კომბინირებული სტრატეგია + Auto-Combo `cacheAffinity` ფაქტორის მარშრუტის გამეორება ითხოვს დაბრუნებას ქეშირებული პრეფიქსის შემცველ კავშირთან, და მხოლოდ წაკითხვადი `/v1/auto-combo/{channel}/candidates` ბოლო წერტილი გამოავლენს `auto/*` არხის ცოცხალი კანდიდატის აუზს. → [ავტომატური კომბო](docs/routing/AUTO-COMBO.md)
+- **⚡ ლოკალური შესრულება და ინფრა** — ერთი დაწკაპუნებით ადგილობრივი Redis, Cloudflare Workers / Deno Deploy სარელეო დეველოპერები, Bifrost & Mux, როგორც ზედამხედველობითი ჩაშენებული სერვისები. → [ჩაშენებული სერვისები](docs/frameworks/EMBEDDED-SERVICES.md)
+- **🧩 ასევე ყუთში** — დანამატის ჩარჩო + ბაზარი, Omni/Agent/GitHub უნარების ჩარჩოები, Obsidian vault ინტეგრაცია (22 MCP ინსტრუმენტი), OpenAI-თან თავსებადი Batch & Files APIs, სემანტიკური პასუხების ქეში, გემიფიკაცია ლიდერბორდებით, ACP აგენტის აღმოჩენა (15 ჩაშენებული აგენტი), `auto/chaos` ჟურნალის ექსპორტი BigQueryTelegram para-fan. bridge, აპლიკაციის შიდა ვერსიების მენეჯერი და LMARena-ELO უფასო პროვაიდერის რეიტინგი. → [Docs](docs/README.md)
 
 <br/>
 
@@ -936,15 +936,15 @@ claude mcp add --transport http omniroute http://localhost:20128/api/mcp/stream 
 
 <div align="center">
 
-## 🗜️ ტოკენების 15–95%-ით დაზოგვა — ავტომატურად
+## 🗜️ დაზოგე 15–95% ჟეტონები — ავტომატურად
 
 </div>
 
-### 📖 როგორ მუშაობს — pipeline, არქიტექტურა და დაზოგვის მათემატიკა
+### 📖 როგორ მუშაობს — მილსადენი, არქიტექტურა და შემნახველი მათემატიკა
 
-<img src="./docs/diagrams/compression-pipeline.svg" width="100%" alt="OmniRoute-ის compression pipeline: 10,000-ტოკენიანი კლიენტის მოთხოვნა გადის 12 კომპოზირებად engine-ზე — Session-Dedup, CCR, Lite, RTK, Responses Tool Output, Headroom, Relevance, Caveman, Aggressive, LLMLingua-2, Ultra და OmniGlyph — და დოკუმენტირებულ, ერთმანეთზე მიბმულ მაგალითში პროვაიდერამდე დაახლოებით 1,080 ტოკენით აღწევს. სტრუქტურირებული კონტენტი დაცულია preservation guard-ებითა და თითოეული ნაბიჯის fidelity gate-ებით; lossless ან experimental რეჟიმებმა შეიძლება გარდაქმნან შესაბამისი კონტენტი."/>
+<img src="./docs/diagrams/compression-pipeline.svg" width="100%" alt="OmniRoute compression pipeline: an illustrative 10,000-token client request passes through 12 composable engines — Session-Dedup, CCR, Lite, RTK, Responses Tool Output, Headroom, Relevance, Caveman, Aggressive, LLMLingua-2, Ultra and OmniGlyph — and can reach the provider at about 1,080 tokens in the documented stacked example. Structured content is protected by preservation guards and per-step fidelity gates; explicit lossy or experimental modes may transform eligible content."/>
 
-ნაგულისხმევი stacked კომბინაცია ამუშავებს `RTK → Caveman`-ს. როდესაც ორივე ერთსა და იმავე tool/context payload-ზე მოქმედებს, დაზოგვა კუმულაციურად იზრდება:
+ნაგულისხმევი დაწყობილი კომბინაცია მუშაობს `RTK → Caveman`. როდესაც ორივე მოქმედებს ერთსა და იმავე tool/context დატვირთვაზე, შემნახველი ნაერთი:
 
 ```txt
 combined = 1 − (1 − RTK) × (1 − Caveman_input)
@@ -952,74 +952,74 @@ average  = 1 − (1 − 0.80) × (1 − 0.46) = 89.2%
 range    = 78.4 – 94.6%
 ```
 
-კოდის ბლოკები, URL-ები, JSON და სტრუქტურირებული მონაცემები **ყოველთვის დაცულია** preservation engine-ის მიერ.
+კოდის ბლოკები, URLs, JSON და სტრუქტურირებული მონაცემებია** ყოველთვის დაცული** დამცავი ძრავით.
 
-> **რატომ უნდა გამოიყენოთ ბევრი ტოკენი, როცა საქმეს ცოტა ტოკენიც ართმევს თავს?** ყოველი მოთხოვნა **გამჭვირვალედ** გადის OmniRoute-ის compression pipeline-ში — კლიენტში ცვლილებები საჭირო არ არის. ახლა ეს არის **12 კომპოზირებადი engine-ის stack**, რომლებიც რიგრიგობით მუშაობენ და თითოეული routing combo-ს მიხედვით თავისუფლად კომბინირდება — [RTK](https://github.com/rtk-ai/rtk)-ის, [Caveman](https://github.com/JuliusBrussee/caveman)-ის (⭐ 90K+), [LLMLingua-2](https://github.com/microsoft/LLMLingua)-ისა და [Troglodita](https://github.com/leninejunior/troglodita)-ს (PT-BR) იდეებზე დაყრდნობით.
+> **რატომ გამოვიყენოთ ბევრი ჟეტონი, როდესაც რამდენიმე ჟეტონი აკეთებს ხრიკს?** ყველა მოთხოვნა გადის OmniRoute ს შეკუმშვის მილსადენზე** გამჭვირვალედ** — კლიენტი არ იცვლება. ახლა არის ა** 12 კომპოზიტური ძრავის დასტა** რომელიც მუშაობს თანმიმდევრობით და აერთიანებს და ემთხვევა თითო მარშრუტიზაციის კომბინაციურ — ნაგებობას [RTK](https://github.com/rtk-ai/rtk), [Caveman-ის](https://github.com/JuliusBrussee/caveman) (⭐ 90K +), [LLMLingua-2](https://github.com/microsoft/LLMLingua) და [Troglodita-ს](https://github.com/leninejunior/troglodita) (PT-BR) იდეებზე.
 
-### 🧱 12-engine-იანი stack
+### 🧱 12 ძრავიანი დასტა
 
-Engine-ები pipeline-ის თანმიმდევრობით მუშაობს; თითოეულის ჩართვა/გამორთვა და კონფიგურაცია combo-ს მიხედვით დამოუკიდებლად არის შესაძლებელი:
-
-<table>
-  <tr><th align="center">#</th><th align="left">Engine</th><th align="left">რას აკეთებს</th></tr>
-  <tr><td align="center" nowrap>1</td><td align="left" nowrap><b>Session-Dedup</b></td><td align="left">შლის turn-ებს შორის განმეორებულ კონტენტს (content-addressed, cross-turn)</td></tr>
-  <tr><td align="center" nowrap>2</td><td align="left" nowrap><b>CCR</b></td><td align="left">დიდ ბლოკებს retrieve marker-ების უკან არქივში ათავსებს და საჭიროებისას იღებს</td></tr>
-  <tr><td align="center" nowrap>3</td><td align="left" nowrap><b>Lite</b></td><td align="left">Whitespace-ისა და image-URL-ების შემცირება (დაბალი latency-ის მქონე საბაზისო ვარიანტი)</td></tr>
-  <tr><td align="center" nowrap>4</td><td align="left" nowrap><b>RTK</b></td><td align="left">Tool-result-ების ჭკვიანური გაფილტვრა, dedup და truncation (command-aware)</td></tr>
-  <tr><td align="center" nowrap>5</td><td align="left" nowrap><b>Responses Tool Output</b></td><td align="left">Lossless-first JSON + შეზღუდული diagnostic compression shell/patch/search/build შედეგებისთვის (Responses API)</td></tr>
-  <tr><td align="center" nowrap>6</td><td align="left" nowrap><b>Headroom</b></td><td align="left">JSON მასივების lossless tabular compaction (~30%) vendored <b>GCF</b> codec-ის მეშვეობით</td></tr>
-  <tr><td align="center" nowrap>7</td><td align="left" nowrap><b>Relevance</b></td><td align="left">ბოლო user query-სთან მიმართებით წინადადებების extractive scoring</td></tr>
-  <tr><td align="center" nowrap>8</td><td align="left" nowrap><b>Caveman</b></td><td align="left">წესებზე დაფუძნებული prose compression (output-ზე ~65–75%)</td></tr>
-  <tr><td align="center" nowrap>9</td><td align="left" nowrap><b>Aggressive</b></td><td align="left">ძველი turn-ების შეჯამება + progressive aging</td></tr>
-  <tr><td align="center" nowrap>10</td><td align="left" nowrap><b>LLMLingua-2</b></td><td align="left">ML semantic pruning MobileBERT ONNX-ის მეშვეობით — code-safe, async</td></tr>
-  <tr><td align="center" nowrap>11</td><td align="left" nowrap><b>Ultra</b></td><td align="left">ევრისტიკულ token pruning-ს არჩევითი small-model (SLM) tier-ით</td></tr>
-  <tr><td align="center" nowrap>12</td><td align="left" nowrap><b>OmniGlyph</b></td><td align="left">ექსპერიმენტული context-as-image encoding, რომელიც გამოიყენება პირდაპირ Anthropic wire-ზე გაზომილი Claude Fable 5-ისთვის; GPT 5.6 transformers provider receipts-ის მოლოდინში fail-closed რჩება. compression-ის ოთხი profile (ნაგულისხმევად aggressive, balanced, coding-safe, passthrough) (ყველაზე აგრესიული; opt-in)</td></tr>
-</table>
-
-კოდის ბლოკები, URL-ები და სტრუქტურირებული მონაცემები **ყოველთვის შენარჩუნებულია** byte-perfect-ად. **One-click preset-ები** engine-ებს აერთიანებს:
+ძრავები მუშაობს მილსადენის თანმიმდევრობით; თითოეული მათგანი დამოუკიდებლად ცვალებადი და კონფიგურირებადია თითო კომბინაციით:
 
 <table>
-  <tr><th align="left">რეჟიმი</th><th align="left">დაზოგვა</th><th align="left">საუკეთესო გამოყენება</th></tr>
-  <tr><td align="left" nowrap>🪶 <b>Lite</b></td><td align="left" nowrap>~15%</td><td align="left">ყოველთვის ჩართული უსაფრთხო ნაგულისხმევი ვარიანტი</td></tr>
-  <tr><td align="left" nowrap>🪨 <b>Standard (Caveman)</b></td><td align="left" nowrap>~30%</td><td align="left">ყოველდღიური კოდირება</td></tr>
-  <tr><td align="left" nowrap>⚡ <b>Aggressive</b></td><td align="left" nowrap>~50%</td><td align="left">ხანგრძლივი, tool-ებით დატვირთული სესიები</td></tr>
-  <tr><td align="left" nowrap>🔥 <b>Ultra</b></td><td align="left" nowrap>~75%</td><td align="left">მაქსიმალური დაზოგვა</td></tr>
-  <tr><td align="left" nowrap>🧰 <b>RTK</b></td><td align="left" nowrap>60–90%</td><td align="left">Shell/test/build/git output</td></tr>
-  <tr><td align="left" nowrap>🔗 <b>Stacked (RTK → Caveman)</b></td><td align="left" nowrap><b>78–95%</b></td><td align="left">შერეული prompt-ები + tool log-ები</td></tr>
+  <tr><th align="center">#</th><th align="left">ძრავი</th><th align="left">რასაც აკეთებს</th></tr>
+  <tr><td align="center" nowrap>1</td><td align="left" nowrap><b>სხდომა-გადაწყვეტა</b></td><td align="left">ტოვებს კონტენტს, რომელიც განმეორდება მონაცვლეობით (კონტენტზე მიმართული, ჯვარედინი შემობრუნება)</td></tr>
+  <tr><td align="center" nowrap>2</td><td align="left" nowrap><b>CCR</b></td><td align="left">არქივები დიდი ბლოკების მიღმა მარკერების მიღმა, მოთხოვნილი</td></tr>
+  <tr><td align="center" nowrap>3</td><td align="left" nowrap><b>ლაით</b></td><td align="left">Whitespace + image-URL-ის ამოჭრა (დაყოვნება-მსუბუქი საწყისი ხაზი)</td></tr>
+  <tr><td align="center" nowrap>4</td><td align="left" nowrap><b>RTK</b></td><td align="left">გონივრული ხელსაწყოების შედეგების ფილტრაცია, ამოღება და შეკვეცა (ბრძანების ცოდნა)</td></tr>
+  <tr><td align="center" nowrap>5</td><td align="left" nowrap><b>Responses Tool Output</b></td><td align="left">უზარმაზარ-პირველი JSON + შეზღუდული დიაგნოსტიკური შეკუმშვა shell/patch/search/build გამოსავლებისთვის (Responses API)</td></tr>
+  <tr><td align="center" nowrap>6</td><td align="left" nowrap><b>სათავე ოთახი</b></td><td align="left">JSON მასივების უდანაკარგო ტაბულური დატკეპნა (~ 30%) გამყიდველის მეშვეობით <b>GCF</b> კოდეკი</td></tr>
+  <tr><td align="center" nowrap>7</td><td align="left" nowrap><b>შესაბამისობა</b></td><td align="left">ამომღები წინადადების ქულები მომხმარებლის ბოლო შეკითხვაზე</td></tr>
+  <tr><td align="center" nowrap>8</td><td align="left" nowrap><b>Caveman</b></td><td align="left">წესებზე დაფუძნებული პროზის შეკუმშვა (~ 65–75% გამომავალზე)</td></tr>
+  <tr><td align="center" nowrap>9</td><td align="left" nowrap><b>აგრესიული</b></td><td align="left">შეჯამება + პროგრესული დაბერების ძველი მონაცვლეობით</td></tr>
+  <tr><td align="center" nowrap>10</td><td align="left" nowrap><b>LLMLingua-2</b></td><td align="left">ML სემანტიკური მორთვა MobileBERT ONNX — კოდით უსაფრთხო, ასინქრონული გზით</td></tr>
+  <tr><td align="center" nowrap>11</td><td align="left" nowrap><b>ულტრა</b></td><td align="left">ევრისტიკული ნიშნის გასხვლა არჩევითი მცირე მოდელის (SLM) იარუსით</td></tr>
+  <tr><td align="center" nowrap>12</td><td align="left" nowrap><b>OmniGlyph</b></td><td align="left">ექსპერიმენტული კონტექსტი, როგორც სურათის კოდირება გაზომილი Claude Fable 5-ისთვის პირდაპირ Anthropic მავთულზე; GPT 5.6 ტრანსფორმატორები რჩება დახურული პროვაიდერის ქვითრების მოლოდინში. შეკუმშვის ოთხი პროფილი (აგრესიული ნაგულისხმევი, დაბალანსებული, კოდირებისთვის უსაფრთხო, გამშვები) (ყველაზე აგრესიული; ჩართვა)</td></tr>
 </table>
 
-**რეალური მაგალითი — Standard რეჟიმი:**
+კოდის ბლოკები, URLs და სტრუქტურირებული მონაცემები არის** ყოველთვის შენახული** ბაიტი-სრულყოფილი.** წინასწარ დაყენებული ერთი დაწკაპუნებით** შეუთავსეთ ძრავები:
 
-> **მანამდე (69 ტოკენი):** _"თქვენი React კომპონენტის ხელახლა რენდერინგის მიზეზი, სავარაუდოდ, ის არის, რომ ყოველი render cycle-ის დროს ახალ object reference-ს ქმნით. როდესაც inline object-ს prop-ის სახით გადასცემთ, React-ის shallow comparison მას ყოველ ჯერზე განსხვავებულ object-ად აღიქვამს, რაც ხელახალ რენდერინგს იწვევს. გირჩევთ, object-ის memoize-სთვის useMemo გამოიყენოთ."_
+<table>
+  <tr><th align="left">რეჟიმი</th><th align="left">დანაზოგი</th><th align="left">საუკეთესო ამისთვის</th></tr>
+  <tr><td align="left" nowrap>🪶 <b>ლაით</b></td><td align="left" nowrap>~15%</td><td align="left">ყოველთვის ჩართული უსაფრთხო ნაგულისხმევი</td></tr>
+  <tr><td align="left" nowrap>🪨 <b>სტანდარტული (Caveman)</b></td><td align="left" nowrap>~30%</td><td align="left">ყოველდღიური კოდირება</td></tr>
+  <tr><td align="left" nowrap>⚡ <b>აგრესიული</b></td><td align="left" nowrap>~50%</td><td align="left">ხელსაწყო-მძიმე სესიები</td></tr>
+  <tr><td align="left" nowrap>🔥 <b>ულტრა</b></td><td align="left" nowrap>~75%</td><td align="left">მაქსიმალური დანაზოგი</td></tr>
+  <tr><td align="left" nowrap>🧰 <b>RTK</b></td><td align="left" nowrap>60–90%</td><td align="left">Shell/test/build/git გამომავალი</td></tr>
+  <tr><td align="left" nowrap>🔗 <b>დაწყობილი (RTK → Caveman)</b></td><td align="left" nowrap><b>78–95%</b></td><td align="left">შერეული მოთხოვნა + ინსტრუმენტის ჟურნალები</td></tr>
+</table>
+
+**რეალური მაგალითი — სტანდარტული რეჟიმი:**
+
+> **ადრე (69 ჟეტონი):** _"თქვენი React კომპონენტის ხელახალი რენდერის მიზეზი არის ის, რომ თქვენ ქმნით ახალ ობიექტს მითითებას რენდერის თითოეულ ციკლზე. როდესაც თქვენ გადასცემთ ხაზოვან ობიექტს საყრდენად, React ის ზედაპირული შედარება ყოველ ჯერზე ხედავს მას, როგორც სხვა ობიექტს, რაც იწვევს ხელახლა რენდერს. მე გირჩევთ გამოიყენოთ useMemo ობიექტის დასამახსოვრებლად."_
 >
-> **შემდეგ (19 ტოკენი):** _"ყოველ render-ზე ახალი object ref. Inline object prop = ახალი ref = ხელახალი რენდერი. მოათავსეთ useMemo-ში."_
+> **შემდეგ (19 ჟეტონი):** _"ახალი ობიექტი ასახავს თითოეულ რენდერს. Inline ობიექტის prop = ახალი ref = ხელახალი რენდერი. შეფუთვა useMemo."_
 >
-> **იგივე პასუხი. 72%-ით ნაკლები ტოკენი. სიზუსტის ნულოვანი დანაკარგი.** ✅
+> **იგივე პასუხი. 72%-ით ნაკლები ჟეტონები. ნულოვანი სიზუსტის დაკარგვა.** ✅
 
 **PT-BR მაგალითი — [Troglodita](https://github.com/leninejunior/troglodita) რეჟიმი:**
 
-> **მანამდე (42 ტოკენი):** _"პრობლემა ისაა, რომ კომპონენტი ხელახლა რენდერდება, რადგან რენდერის თითოეულ ციკლში ობიექტის ახალი რეფერენსი იქმნება. გირჩევდით useMemo-ის გამოყენებას."_
+> **ანტესი (42 ჟეტონი):** _"O problema é que o componente está re-renderizando porque uma nova referência de objeto está sendo criada em cada ciclo de renderização. Eu recomendaria usar useMemo."_
 >
-> **შემდეგ (12 ტოკენი):** _"ხელახალი რენდერი: ახალი ref ყოველ ციკლში (ინლაინ-ობიექტი თავიდან იქმნება). გამოიყენეთ `useMemo`."_
+> **დეპოისი (12 ჟეტონი):** _"ხელახლა რენდერი: ref nova cada ciclo (objeto inline recriado). Usar `useMemo`."_
 >
-> **იგივე პასუხი. ~70%-ით ნაკლები ტოკენი. ტექნიკური სიზუსტე შენარჩუნებულია.** ✅
+> **მესმის პასუხი. ~ 70% menos ჟეტონები. Precisão Técnica intacta.** ✅
 
 <br/>
 
-### 🎚️ ძრავებს მიღმა — გამოსავლის სტილები, ადაპტური რეგულატორი და მოთხოვნის მიხედვით კონტროლი
+### 🎚️ ძრავების გარდა — გამომავალი სტილის, ადაპტური ციფერბლატი და თითო მოთხოვნის კონტროლი
 
-ზემოთ აღწერილი 12 ძრავა ამცირებს იმას, რაც **შედის**. კიდევ სამი ფენა განსაზღვრავს **როგორ**, **როდის** და რა გამოდის:
+ზემოთ 12 ძრავა იკუმშება რასაც მიდის** in** . კიდევ სამი ფენის ფორმა** როგორ** ,** როცა** და რაც მოდის** გარეთ** :
 
-- **🪄 გამოსავლის სტილები** _(გამოსავლის ღერძის მართვა)_ — ამატებს დეტერმინისტულ, ქეშისთვის უსაფრთხო ინსტრუქციებს პასუხის ფორმირებისთვის; მათი კომბინირება შესაძლებელია, თითოეული კი ხელმისაწვდომია `lite` / `full` / `ultra` ინტენსივობით. სტილის დამატება რეესტრში ერთხაზიანი ჩანაწერით ხდება:
-  - **მოკლე პროზა** — ამოიღეთ შემავსებელი სიტყვები / არტიკლები / მერყევი ფორმულირებები; ტექნიკური შინაარსი ზუსტად შეინარჩუნეთ.
-  - **ნაკლები კოდი** — „ზარმაცი senior dev“-ის YAGNI: უმცირესი მოქმედი ცვლილება, მოუთხოვნელი საყრდენი კოდის გარეშე.
-  - **კუდი (ზარმაცი senior dev)** — მიჰყევით YAGNI-ის საფეხურებს, გამოასწორეთ ძირეული მიზეზი, შეიტანეთ უმცირესი მოქმედი diff.
-  - **ADHD მაქვს (ქმედება უპირველესად)** — შემდეგი ქმედება პირველივე ადგილზეა, ნაბიჯები დანომრილია, ერთი კონკრეტული შემდეგი ნაბიჯი, შესავლის გარეშე.
-  - **მოკლე CJK (文言)** — კლასიკური ჩინურის ულტრამოკლე სტილი (ლოკალით შეზღუდული `zh`-ზე).
-- **🎯 ადაპტური კონტექსტის ბიუჯეტი** _(რეგულატორი)_ — ერთი ჩართული/გამორთული ტოკენის ზღვრის ნაცვლად, ყველაზე იაფი და ნაკლებად დამაკარგვინებელი ძრავები მხოლოდ იმდენად ძლიერდება, რამდენიც საჭიროა, რათა მოთავსდეს მოდელის კონტექსტის ფანჯარაში. პოლიტიკა: `reserve-output` (ნაგულისხმევი, მოდელზე მორგებული) · `percentage` · `absolute`. რეჟიმი: `floor` (მოთავსების გარანტია) · `replace-autotrigger` (თქვენი აშკარა არჩევანი იმარჯვებს) · `off` (ძველი ზღვარი).
-- **🎛️ სად წყდება შეკუმშვის გადაწყვეტილება** _(პრიორიტეტი, მაღალი → დაბალი)_ — თითოეული მოთხოვნის `x-omniroute-compression` ჰედერი › routing-combo-ის გადაფარვა › აქტიური სახელდებული პროფილი › adaptive / auto-trigger › პანელის ნაგულისხმევი მნიშვნელობა › off. გამოყენებული გეგმა პასუხში ბრუნდება `X-OmniRoute-Compression: <mode>; source=<source>` ჰედერის სახით.
+- **🪄 გამომავალი სტილები** _(გამომავალი ღერძის გამაძლიერებელი)_ — შეჰყავს დეტერმინისტული, ქეში-უსაფრთხო პასუხის ფორმირების ინსტრუქციები; კომბინირებადი, თითოეული `lite` / `full` / `ultra` ინტენსივობით. სტილის დამატება არის ერთსტრიქონიანი რეესტრის ჩანაწერი:
+  - **მოკლე პროზა** — წვეთოვანი შემავსებელი / სტატიები / ჰეჯინგი; ზუსტი ტექნიკური ნივთის შენარჩუნება.
+  - **ნაკლები კოდი** — "ზარმაცი უფროსი დეველოვი" YAGNI: ყველაზე მცირე სამუშაო ცვლილება, არამოთხოვნილი ხარაჩოები.
+  - **Ponytail (ზარმაცი უფროსი დეველოპერი)** — აწიეთ YAGNI კიბეზე, დააფიქსირეთ ძირეული მიზეზი, ყველაზე მცირე სამუშაო განსხვავება.
+  - **მე მაქვს ADHD (მოქმედება-პირველი)** — შემდეგი ქმედება იწვევს, ნაბიჯები დანომრილია, ერთი კონკრეტული შემდეგი ნაბიჯი, პრეამბულა არ არის.
+  - **Terse CJK (文言)** — კლასიკურ-ჩინური ულტრა მკაფიო სტილი (ადგილობრივი შეზღუდვა `zh` მდე).
+- **🎯 ადაპტური კონტექსტი-ბიუჯეტი** _(აკრიფეთ)_ — ერთი on/off ნიშნის ზღურბლის ნაცვლად, გააფართოვეთ ყველაზე იაფფასიანი, ყველაზე უზარმაზარი ძრავები მხოლოდ იმდენად, რამდენადაც საჭიროა** შეესაბამება მოდელის კონტექსტურ ფანჯარას** . პოლიტიკა: `reserve-output` (ნაგულისხმევი, მოდელის ცოდნა) · `percentage` · `absolute`. რეჟიმი: `floor` (გარანტიის მორგება) · `replace-autotrigger` (თქვენი აშკარა არჩევანი იმარჯვებს) · `off` (მემკვიდრეობის ბარიერი).
+- **🎛️ სად არის გადაწყვეტილი შეკუმშვა** _(პრეცედენცია, მაღალი → დაბალი)_ — მოთხოვნით `x-omniroute-compression` სათაური › მარშრუტიზაციის კომბინირებული გადაფარვა › აქტიური დასახელებული პროფილი › ადაპტაციური / ავტოტრიგერი › პანელის ნაგულისხმევი › გამორთულია. გამოყენებული გეგმა ეხმიანება `X-OmniRoute-Compression: <mode>; source=<source>` პასუხის სათაურში.
 
-ჩართეთ ავტომატური ტრიგერი ტოკენების ზღვრის მიხედვით, გადართეთ ადაპტური რეგულატორი, მიამაგრეთ სახელდებული პროფილი, დააყენეთ ერთჯერადი მნიშვნელობა მოთხოვნისთვის ან მიანიჭეთ pipeline თითოეულ routing combo-ს — იმის მიხედვით, რაც სამუშაო დატვირთვას შეესაბამება. არჩევითი ოფლაინ **შეფასების ჰარნესი** (`npm run eval:compression`) აფასებს სიზუსტესა და დაზოგვას ფიქსირებულ კორპუსზე, სანამ ცვლილებას გაავრცელებთ.
+ავტომატური ჩართვა სიმბოლური ზღურბლით, გადაატრიალეთ ადაპტირებადი ციფერბლატი, დაამაგრეთ დასახელებული პროფილი, დააყენეთ ერთჯერადი მოთხოვნა, ან მიანიშნეთ მილსადენი მარშრუტიზაციის კომბინაციით — რომელიც შეესაბამება სამუშაო დატვირთვას. ოფლაინში ჩართვა** შეფასების აღკაზმულობა** (`npm run eval:compression`) აფასებს ერთგულებას დაზოგვის წინააღმდეგ მიმაგრებულ კორპუსზე, სანამ ცვლილებას შეუწყობთ ხელს.
 
 📖 [`COMPRESSION_GUIDE.md`](docs/compression/COMPRESSION_GUIDE.md) · [`RTK_COMPRESSION.md`](docs/compression/RTK_COMPRESSION.md) · [`COMPRESSION_ENGINES.md`](docs/compression/COMPRESSION_ENGINES.md)
 
@@ -1031,40 +1031,30 @@ Engine-ები pipeline-ის თანმიმდევრობით მ�
 
 </div>
 
-**1) ინსტალაცია და გაშვება**
+**1) დააინსტალირეთ და გაუშვით**
 
 ```bash
 npm install -g omniroute
 omniroute
 ```
 
-> 💡 ხედავთ `npm warn ERESOLVE`-ს ან peer-dep გაფრთხილებებს? [ისინი უვნებელია](docs/guides/TROUBLESHOOTING.md#npm-install-warnings-eresolve--peer--deprecated).
-> **იყენებთ npm 11-ს ან უფრო ახალ ვერსიას?** npm-მა შესაძლოა დაბლოკოს პაკეტის lifecycle სკრიპტები, თუ ისინი დაშვებული არ არის. OmniRoute-ის `postinstall` (`node scripts/build/postinstall.mjs`) საჭიროა მისი native runtime ფაილების მოსამზადებლად. გლობალურად ინსტალაციისას დაუშვით npm-ის გაფრთხილებაში დასახელებული პაკეტები. OmniRoute 3.8.55-ის მიერ მოხსენებული პაკეტებისთვის:
+> 💡 იხილეთ `npm warn ERESOLVE` ან peer-dep გაფრთხილებები? [ისინი უვნებელია](docs/guides/TROUBLESHOOTING.md#npm-install-warnings-eresolve--peer--deprecated).** იყენებთ npm 11 ან უფრო გვიან?** npm შეიძლება დაბლოკოს პაკეტის სასიცოცხლო ციკლის სკრიპტები, თუ ისინი არ არის დაშვებული. OmniRoute ის `postinstall` (`node scripts/build/postinstall.mjs`) საჭიროა მისი ძირითადი გაშვების ფაილების მოსამზადებლად. დაუშვით npm-ის გაფრთხილებაში დასახელებული პაკეტები გლობალურად ინსტალაციისას. OmniRoute 3.8.55-ის მიერ მოხსენებული პაკეტისთვის:
 >
-> ```bash
-> npm install -g --allow-scripts=omniroute,keytar,onnxruntime-node,@parcel/watcher,@swc/core,protobufjs,esbuild omniroute
-> ```
+> `bash npm install -g --allow-scripts=omniroute,keytar,onnxruntime-node,@parcel/watcher,@swc/core,protobufjs,esbuild omniroute `
 >
-> ამ allowlist-ის მომავალ გლობალურ ინსტალაციებზე ხელახლა გამოსაყენებლად, ერთხელ დააკონფიგურირეთ და შემდეგ ჩვეულებრივად დააინსტალირეთ:
+> ამ ნებადართული სიის ხელახლა გამოსაყენებლად მომავალი გლობალური ინსტალაციებისთვის, დააკონფიგურირეთ ერთხელ, შემდეგ დააინსტალირეთ ნორმალურად:
 >
-> ```bash
-> npm config set allow-scripts=omniroute,keytar,onnxruntime-node,@parcel/watcher,@swc/core,protobufjs,esbuild --location=user
-> npm install -g omniroute
-> ```
+> `bash npm config set allow-scripts=omniroute,keytar,onnxruntime-node,@parcel/watcher,@swc/core,protobufjs,esbuild --location=user npm install -g omniroute `
 >
-> დამოკიდებულებების სია რელიზებს შორის შეიძლება შეიცვალოს; თუ npm სხვა სიას გამოიტანს, გამოიყენეთ იმ გაფრთხილებაში მითითებული პაკეტების სახელები. პაკეტის დაშვება მის install სკრიპტებს გაშვების უფლებას აძლევს.
-> **იყენებთ Gemini Web-ს ან ვებ-ქუქიების სხვა პროვაიდერს?** npm პაკეტში შედის
-> Playwright, თუმცა მისი Chromium ბინარული ფაილი — არა. პირველი web-provider მოთხოვნის შესრულებამდე გაეცანით
-> [Playwright Chromium-ის დაყენების](docs/guides/TROUBLESHOOTING.md#gemini-web-and-playwright-chromium)
-> შენიშვნას.
+> დამოკიდებულების სია შეიძლება შეიცვალოს გამოშვებებს შორის; თუ npm იტყობინება სხვა სიას, გამოიყენეთ პაკეტის სახელები ამ გაფრთხილებიდან. პაკეტის დაშვება იძლევა მისი ინსტალაციის სკრიპტების გაშვებას.** იყენებთ Gemini Web-ს ან სხვა ვებ ქუქიების პროვაიდერს?** npm პაკეტში შედის Playwright, მაგრამ არა მისი Chromium ორობითი. იხილეთ [Playwright Chromium-ის დაყენების](docs/guides/TROUBLESHOOTING.md#gemini-web-and-playwright-chromium) შენიშვნა ვებ-პროვაიდერის პირველ მოთხოვნამდე.
 
-Dashboard ხელმისაწვდომია `http://localhost:20128`-ზე · API — `http://localhost:20128/v1`-ზე.
+დაფა `http://localhost:20128` ზე · API at `http://localhost:20128/v1`.
 
-**2) შესაბამისი პროვაიდერის დაკავშირება საკუთარი ანგარიშით**
+**2) დააკავშირეთ შესაბამისი პროვაიდერი თქვენი საკუთარი ანგარიშის გამოყენებით**
 
-Dashboard → **Providers** → აირჩიეთ პროვაიდერი, რომლის მიმდინარე პირობები და კვოტა თქვენს გამოყენების შემთხვევას შეესაბამება → დაამატეთ მისი API key ან გაიარეთ მისი ანგარიშის პროცესი. უფასო ტარიფებმა შეიძლება მოითხოვოს რეგისტრაცია, დამტკიცება ან გადახდის მეთოდი. გაეცანით [Free Tiers Guide-ს](docs/getting-started/FREE-TIERS-GUIDE.md); keyless ხელმისაწვდომობა გარანტირებული არ არის, ხოლო `tos: avoid` ნიშნით მონიშნული პროვაიდერები ნაგულისხმევად `auto`-დან გამორიცხულია.
+დაფა →** პროვაიდერები** → აირჩიეთ პროვაიდერი, რომლის ამჟამინდელი პირობები და კვოტა შეესაბამება თქვენს გამოყენებას → დაამატეთ მისი API გასაღები ან დაასრულეთ მისი ანგარიშის ნაკადი. უფასო საფეხურებმა შეიძლება მოითხოვონ რეგისტრაცია, დამტკიცება ან გადახდის მეთოდი. გადახედეთ [უფასო საფეხურების სახელმძღვანელოს](docs/getting-started/FREE-TIERS-GUIDE.md) ; გასაღების ხელმისაწვდომობა არ არის გარანტირებული და პროვაიდერები, რომლებიც მონიშნულია `tos: avoid` ნაგულისხმევად გამოირიცხება `auto` დან.
 
-**3) თქვენი კოდირების ხელსაწყოს მითითება**
+**3) მიუთითეთ თქვენი კოდირების ინსტრუმენტი**
 
 ```txt
 Base URL: http://localhost:20128/v1
@@ -1072,15 +1062,15 @@ API Key:  [copy from Dashboard → Endpoints]
 Model:    auto            (routes among eligible connections — or choose provider/model)
 ```
 
-**4) მუშაობის შემოწმება**
+**4) დარწმუნდით, რომ მუშაობს**
 
 ```bash
 curl http://localhost:20128/v1/models -H "Authorization: Bearer YOUR_KEY"
 ```
 
-უნდა დაინახოთ თქვენი დაკავშირებული მოდელების სია. 🎉 სულ ეს არის — დაიწყეთ კოდირება, ხოლო OmniRoute ავტომატურად შეარჩევს მარშრუტს და საჭიროების შემთხვევაში გადაერთვება ალტერნატივაზე.
+თქვენ უნდა ნახოთ თქვენი დაკავშირებული მოდელები ჩამოთვლილი. 🎉 ესე იგი — იწყებს კოდირებას და OmniRoute ავტომატურ მარშრუტებს და აბრუნებს შენთვის.
 
-თუ თქვენს კლიენტს მორგებული ჰედერების გაგზავნა არ შეუძლია, OmniRoute ასევე გთავაზობთ ტოკენიზებულ თავსებადობის ალაიასებს:
+თუ თქვენს კლიენტს არ შეუძლია გამოაგზავნოს მორგებული სათაურები, OmniRoute ასევე ავლენს ტოკენიზებულ თავსებადობის ალიასებს:
 
 ```txt
 OpenAI catalog:   http://localhost:20128/vscode/YOUR_KEY/
@@ -1091,7 +1081,7 @@ Ollama chat:      http://localhost:20128/vscode/YOUR_KEY/api/chat
 Ollama tags:      http://localhost:20128/vscode/YOUR_KEY/api/tags
 ```
 
-გამოიყენეთ ისინი მხოლოდ იმ კლიენტებისთვის, რომლებსაც `Authorization: Bearer ...`-ის მიმაგრება არ შეუძლიათ. ჰედერზე დაფუძნებული ავტორიზაცია კვლავ სასურველი რეჟიმია.
+გამოიყენეთ ეს მხოლოდ კლიენტებისთვის, რომლებსაც არ შეუძლიათ `Authorization: Bearer ...` მიმაგრება. Header auth რჩება სასურველ რეჟიმში.
 
 <br/>
 
@@ -1824,15 +1814,15 @@ OmniRoute გიგანტების მხრებზე დგას. ი
 
 ## 📄 ლიცენზია
 
-MIT ლიცენზია — დეტალებისთვის იხილეთ [LICENSE](LICENSE).
+MIT ლიცენზია - იხილეთ [LICENSE](LICENSE) დეტალებისთვის.
 
 ---
 
 <div align="center">
 
-**[⬆ თავში დაბრუნება](#-omniroute)** · შექმნილია ❤️-ით ღია კოდის AI-საზოგადოებისთვის.
+**[⬆ თავში დაბრუნება](#-omniroute)** · აშენებულია ❤️ ით ღია კოდის AI საზოგადოებისთვის.
 
-<sub>შექმნა <a href="https://github.com/diegosouzapw">Diego Souza</a>-მ · OmniRoute v3.8.55 · Node ≥22.22.2 · MIT ლიცენზია · <a href="https://omniroute.online">omniroute.online</a></sub>
+<sub>შექმნილია <a href="https://github.com/diegosouzapw">დიეგო სოუზა</a> · OmniRoute v3.8.55 · Node ≥ 22.22.2 · MIT ლიცენზია · <a href="https://omniroute.online">omniroute.online</a></sub>
 
 </div>
-<!-- GitHub Discussions ჩართულია საზოგადოების კითხვებისა და პასუხებისთვის -->
+<!-- GitHub Discussions enabled for community Q&A -->

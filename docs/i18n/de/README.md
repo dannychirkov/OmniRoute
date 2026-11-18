@@ -71,19 +71,19 @@
 
 <div align="center">
 
-|                               |          v3.8.50          | **v3.8.51** |      `v3.8.55+`       |
-| ----------------------------- | :-----------------------: | :---------: | :-------------------: |
-| 🌐 Anbieter                   |            352            |   **358**   |          394          |
-| 🧠 Eindeutige Chat-Modell-IDs |           1320            |  **1374**   |         1491          |
-| 🖼️ Modalitätsbrücke           | 🆕 Vision + Audio + Video |      ✓      |           ✓           |
-| 📡 Kostenloser Radar-Katalog  |         🆕 Opt-in         |      ✓      |           ✓           |
-| ⚖️ Quotenbewusste Planung     |      🆕 Quota-Share       |      ✓      |           ✓           |
-| 📊 Quoten-Telemetrie          |          🆕 live          |      ✓      |           ✓           |
-| 🧰 Headless-Modus             |             —             |      —      | 🆕 `serve --headless` |
-| 🛤️ LTS-Schieneninfrastruktur  |             —             |      —      |   🆕 Release-Kanäle   |
-| 🔎 API zur Modellentdeckung   |             —             |      —      | 🆕 `/v1/models/query` |
+|                                  |          v3.8.50          | **v3.8.51** |      `v3.8.55+`       |
+| -------------------------------- | :-----------------------: | :---------: | :-------------------: |
+| 🌐 Anbieter                      |            352            |   **358**   |          394          |
+| 🧠 Einzigartiges Chat-Modell IDs |           1320            |  **1374**   |         1491          |
+| 🖼️ Modalitätsbrücke              | 🆕 Vision + Audio + Video |      ✓      |           ✓           |
+| 📡 Radar kostenloser Katalog     |         🆕 Opt-in         |      ✓      |           ✓           |
+| ⚖️ Kontingentbewusste Planung    |      🆕 Quota-Share       |      ✓      |           ✓           |
+| 📊 Quotentelemetrie              |          🆕 live          |      ✓      |           ✓           |
+| 🧰 Headless-Modus                |             —             |      —      | 🆕 `serve --headless` |
+| 🛤️ LTS Schieneninfra             |             —             |      —      |   🆕 Release-Kanäle   |
+| 🔎 Modellerkennung API           |             —             |      —      | 🆕 `/v1/models/query` |
 
-**→ [Roadmap](ROADMAP.md) — auf der Schiene zu `v3.9.0 LTS`**
+**→ [Roadmap](ROADMAP.md) — mit der Schiene zu `v3.9.0 LTS`**
 
 </div>
 
@@ -595,39 +595,39 @@ zum aktuellen Katalog finden Sie unter **[radar.omniroute.online/planos](https:/
 
 <div align="center">
 
-## ✨ Neuigkeiten
+## ✨ Was ist neu?
 
 </div>
 
-> Aktuelle Highlights von **v3.8.20 → v3.8.55**. Die vollständige Historie finden Sie in [`CHANGELOG.md`](CHANGELOG.md).
+> Aktuelle Highlights von** v3.8.20 → v3.8.55** . Vollständiger Verlauf in [`CHANGELOG.md`](CHANGELOG.md).
 
-- **⚖️ `quota-weighted` routing** — die 20. Kombinationsstrategie überspringt erschöpfte Konten und wählt anschließend unter den übrigen proportional zu verbleibendem Kontingent ÷ laufender Auslastung, wobei bestehende Konversationen weiterhin an dasselbe Konto gebunden bleiben. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
-- **🧰 Headless-Modus** — `omniroute serve --headless` (oder `OMNIROUTE_HEADLESS=1`) führt ausschließlich die `/v1/*`-Proxy-Engine aus; Dashboard und ausschließlich vom Dashboard verwendete Subsysteme bleiben deaktiviert. → [Headless-Modus](docs/guides/HEADLESS.md)
-- **🔎 Modellermittlung** — `/v1/models` filtert nach Fähigkeiten, Kontext, Art und Text, und `POST /v1/models/query` gibt eine kurze deterministische Auswahlliste mit derselben schlüsselbezogenen Sichtbarkeit zurück. → [API-Referenz](docs/reference/API_REFERENCE.md)
-- **🔑 Routing-Steuerung pro Schlüssel** — binden Sie einen API-Schlüssel mit `forcedModel` an ein einzelnes Modell oder eine Kombination und fügen Sie die Modelle und Kombinationen eines Schlüssels atomar hinzu oder entfernen Sie sie (`/api/keys/{id}/access`). → [API-Referenz](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
-- **🛡️ Präzisere PII-Kontrollen** — Auswahl nach Typ, bis zu 20 validierte benutzerdefinierte Maskierungsmuster und Erkennungszähler pro Typ; die Maskierung bleibt weiterhin optional. → [Guardrails](docs/security/GUARDRAILS.md)
-- **🌍 67 Sprachen** — Dashboard, Dokumentationsspiegel und CLI, wobei `npm run i18n:add-locale` eine Sprache mit einem einzigen Befehl überall hinzufügt. → [i18n-Leitfaden](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — eingehende A2A-Delegation an Ihre Agent-Flotte, Conductor-Fähigkeiten auf der Agent Card und ein Dashboard-Panel mit Faro-Push-to-Talk-Sprachchat. → [A2A-Server](docs/frameworks/A2A-SERVER.md)
-- **🛂 Adaptive Zulassung und Überlastungsschutz** — umfangreiche Chat-Anfragen werden in eine Warteschlange eingereiht, statt mit 503 abgewiesen zu werden, mit atomaren RPM-Rolling-Leases pro Verbindung. → [Leitfaden zur Ausfallsicherheit](docs/architecture/RESILIENCE_GUIDE.md)
-- **🗂️ Kanonische Sortierung von `/v1/models`** — ein zusammenhängender, nach Anbieter gruppierter Block pro Anbieter (Kombinationen zuerst), stabil über alle Katalogquellen hinweg. → [API-Referenz](docs/reference/API_REFERENCE.md)
-- **🗜️ Härtung der Komprimierung** — standardmäßig aktivierter Aufblähungsschutz, Caveman-Pakete für DE / FR / JA plus Chinesisch (wényán), RTK-Filter für Gradle und .NET. → [Komprimierung](docs/compression/COMPRESSION_ENGINES.md)
-- **💸 Ehrliche Pauschaltarifkosten** — bei Abonnement- und Coding-Plan-Anbietern werden in der Kostenanalyse **$0** angezeigt; Budget, Kontingent und Routing liefern weiterhin Schätzungen. → [API-Referenz](docs/reference/API_REFERENCE.md)
-- **⚖️ Quota-Share-Routing** — teilt das Kontingent eines gemeinsam genutzten Kontos fair auf gebündelte Schlüssel auf und leiht ungenutzte Kontingentanteile bedarfsgerecht aus. → [Leitfaden zur Ausfallsicherheit](docs/architecture/RESILIENCE_GUIDE.md)
-- **🤖 CLI-/Agent-Einrichtung mit einem Befehl** — 15 registrierte `setup-*`-Befehle; `omniroute run` startet 7 CLIs (Claude Code, Codex, Aider, Goose, OpenCode, Qwen Code, Gemini CLI); `omniroute configure` unterstützt 11 Ziele mit einer interaktiven Anbieter- und Modellauswahl sowie Favoriten pro Kontext. → [CLI-Integrationen](docs/guides/CLI-INTEGRATIONS.md)
-- **🛰️ Remote-Modus** — steuern Sie ein entferntes OmniRoute mit bereichsbezogenen Token (`connect` / `contexts` / `tokens`) sowie einem `antigravity`-OAuth-Hilfsprogramm für VPS-Installationen. → [Remote-Modus](docs/guides/REMOTE-MODE.md)
-- **🧭 Intelligenteres Auto-Routing** — `auto/<category>:<tier>`-Kombinationen, **Fusion** (Modellpanel plus Bewertungsmodell), aufgabenbewusstes Routing, Überschreibungen für Modell, Modus und USD-Budget pro Anfrage. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
-- **🗜️ Austauschbare Komprimierung** — 12 kombinierbare Engines plus Compression Studios: LLMLingua-2, zweistufiges Ultra, omniglyph, Fidelity-Gate pro Schritt, GCF v3.2, Editor zum Ziehen und Neuanordnen. → [Komprimierung](docs/compression/COMPRESSION_ENGINES.md)
-- **🕵️ Transparente MITM-Entschlüsselung (TPROXY)** — Erfassungs-CLIs, die Proxy-Umgebungsvariablen ignorieren, mit einer CA pro SNI und einem Installer für den Truststore. → [MITM/TPROXY](docs/security/MITM-TPROXY-DECRYPT.md)
-- **💸 Kosten-Telemetrie überall** — `X-OmniRoute-*`-Kosten-/Nutzungsheader an jedem Endpunkt, Header für Einsparungen durch Cache-Treffer und USD-Ausgabenlimits pro Schlüssel. → [API-Referenz](docs/reference/API_REFERENCE.md)
-- **🧠 Speicher unter Ihrer Kontrolle** — standardmäßig deaktiviert, optional aktivierbare int8-Vektorquantisierung plus typisierter Verfall, `x-omniroute-no-memory` pro Anfrage. → [Speicher](docs/frameworks/MEMORY.md)
-- **🛡️ Sicherheit** — Schutz vor Prompt-Injection auf jeder LLM-Route (Red-Team-Suite), optionaler Schutz zur Anmeldedatenmaskierung (entfernt durchgesickerte API-Schlüssel und Geheimnisse in beide Richtungen), kostenlose Websuche über DuckDuckGo als letzter Ausweg und eine optionale OIDC-Anmeldesperre für das Dashboard (die Anmeldung per Passwort bleibt immer verfügbar). → [Guardrails](docs/security/GUARDRAILS.md)
-- **🖼️ Neue Endpunkte** — `/v1/ocr` (Mistral OCR) und `/v1/audio/translations` (im Whisper-Stil) vervollständigen die Medienfunktionen. → [API-Referenz](docs/reference/API_REFERENCE.md)
-- **🎨 Bild-, Video- und Audiogenerierung** — eine API für Medien: xAI Grok Imagine und Novita AI Video, ComfyUI, Magnific, Adobe Firefly, Segmind sowie Sprachdienste wie ElevenLabs. → [API-Referenz](docs/reference/API_REFERENCE.md)
-- **🌍 Bereitstellung und Betrieb** — Reverse-Proxy-`basePath`, automatische Erkennung der Browsersprache, Geräteverfolgung pro Schlüssel, MITM-Trust ohne Root-Rechte, zh-TW-Lokalisierung. → [Umgebung](docs/reference/ENVIRONMENT.md)
-- **🤝 Weitere Anbieter und Agents** — Cloud-Agents (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) mit Browser- und OAuth-Anmeldung, erstklassige Ollama-Karte, Claude Opus 5 und Sonnet 5, offizielle Kimi-Partnerschaft (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI … sowie ein aktualisierter **Katalog mit 394 Anbietern**. → [Anbieter](docs/reference/PROVIDER_REFERENCE.md)
-- **📡 Transparenz beim Routing** — jede Antwort enthält einen `X-OmniRoute-Decision`-Header mit Strategie, Anbieter und Latenz der Verarbeitung; eine neue `cache-optimized`-Kombinationsstrategie sowie der Auto-Combo-`cacheAffinity`-Faktor leiten wiederholte Anfragen an die Verbindung weiter, die das zwischengespeicherte Präfix enthält; und ein schreibgeschützter Endpunkt `/v1/auto-combo/{channel}/candidates` stellt den aktuellen Kandidatenpool eines `auto/*`-Kanals bereit. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
-- **⚡ Lokale Performance & Infrastruktur** — lokales Redis mit einem Klick, Relay-Deployer für Cloudflare Workers / Deno Deploy, Bifrost & Mux als überwachte eingebettete Dienste. → [Eingebettete Dienste](docs/frameworks/EMBEDDED-SERVICES.md)
-- **🧩 Ebenfalls enthalten** — Plugin-Framework + Marketplace, Omni/Agent/GitHub-Skills-Frameworks, Obsidian-Vault-Integration (22 MCP-Tools), mit OpenAI kompatible Batch- & Files-APIs, semantischer Antwort-Cache, Gamification mit Bestenlisten, ACP-Agent-Erkennung (15 integrierte Agents), geplante Log-Exporte nach BigQuery, parallele `auto/chaos`-Multi-Modell-Verteilung, eine Telegram-Bot-Brücke, ein integrierter Versionsmanager und Rankings kostenloser Anbieter auf Basis von LMArena-ELO. → [Dokumentation](docs/README.md)
+- **⚖️ `quota-weighted` Routing** Die 20. Kombinationsstrategie — überspringt erschöpfte Konten und zieht sie dann unter den Rest im Verhältnis zur verbleibenden Kontingent ÷ -Inflight-Last ab, wobei vorhandene Konversationen angeheftet bleiben. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
+- **🧰 Headless-Modus** — `omniroute serve --headless` (oder `OMNIROUTE_HEADLESS=1`) führt nur die `/v1/*` Proxy-Engine aus, wobei das Dashboard und die Nur-Dashboard-Subsysteme deaktiviert sind. → [Headless-Modus](docs/guides/HEADLESS.md)
+- **🔎 Modellerkennung** — `/v1/models` filtert nach Funktion, Kontext, Art und Text, und `POST /v1/models/query` gibt eine kurze deterministische Auswahlliste mit derselben Sichtbarkeit pro Schlüssel zurück. → [API Referenz](docs/reference/API_REFERENCE.md)
+- **🔑 Routing-Steuerung pro Taste** — pinnt einen API Schlüssel mit `forcedModel` an ein Modell oder eine Kombination und fügt die Modelle und Kombinationen eines Schlüssels atomar hinzu oder entfernt sie (`/api/keys/{id}/access`). → [API Referenz](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
+- **🛡️ Feinere PII Steuerelemente** — -Auswahl pro Typ, bis zu 20 validierte benutzerdefinierte Maskierungsmuster und Erkennungszähler pro Typ; Die Maskierung selbst bleibt Opt-in. → [Leitplanken](docs/security/GUARDRAILS.md)
+- **🌍 67 Sprachen** — Dashboard, Docs Mirrors und CLI, wobei `npm run i18n:add-locale` überall in einem Befehl eine Sprache hinzufügt. → [i18n Leitfaden](docs/guides/I18N.md)
+- **🎛️ OmniConductor** — eingehende A2A Delegation an Ihre Agentenflotte, Dirigentenfähigkeiten auf der Agentenkarte und ein Dashboard-Panel mit Faro Push-to-Talk-Voice-Chat. → [A2A Server](docs/frameworks/A2A-SERVER.md)
+- **🛂 Adaptiver Zulassungs- und Überlastschutz** — Schwergewichts-Chat-Anfragen in der Warteschlange statt 503ing, mit atomaren RPM Rolling-Leases pro Verbindung. → [Resilienz-Leitfaden](docs/architecture/RESILIENCE_GUIDE.md)
+- **🗂️ Kanonische `/v1/models` -Reihenfolge** — ein zusammenhängender, nach Anbietern gruppierter Block pro Anbieter (Kombinationen zuerst angeheftet), stabil über alle Katalogquellen hinweg. → [API Referenz](docs/reference/API_REFERENCE.md)
+- **🗜️ Druckhärten** — standardmäßig aktivierter Inflationsschutz, Caveman-Pakete für DE / FR / JA, + Chinesisch (wényán), RTK Filter für Gradle & .NET. → [-Komprimierung](docs/compression/COMPRESSION_ENGINES.md)
+- **💸 Ehrliche Kostenpauschale** — Abonnement-/Coding-Plan-Anbieter lesen** 0 $** in der Kostenanalyse; Budget, Kontingent und Routing werden ständig geschätzt. → [API Referenz](docs/reference/API_REFERENCE.md)
+- **⚖️ Quota-Share-Routing** — teilt das Kontingent eines gemeinsam genutzten Kontos gerecht auf die gepoolten Schlüssel auf und spart so Arbeit, sodass ungenutzte Slices ausgeliehen werden. → [Resilienz-Leitfaden](docs/architecture/RESILIENCE_GUIDE.md)
+- **🤖 Ein-Befehl CLI/agent Setup** — 15 registrierte `setup-*` -Befehle; `omniroute run` startet 7 CLIs (Claude Code, Codex, Aider, Goose, OpenCode, Qwen Code, Gemini CLI); `omniroute configure` unterstützt 11 Ziele mit einer interaktiven Anbieter + Modellauswahl und kontextbezogenen Favoriten. → [CLI Integrationen](docs/guides/CLI-INTEGRATIONS.md)
+- **🛰️ Remote-Modus** — steuert einen Remote- OmniRoute mit bereichsbezogenen Token (`connect` / `contexts` / `tokens`). + ist ein `antigravity` OAuth Helfer für VPS Installationen. → [Remote-Modus](docs/guides/REMOTE-MODE.md)
+- **🧭 Intelligenteres automatisches Routing** — `auto/<category>:<tier>` Combos,** Fusion** (Modellgremium + Richter), aufgabenbezogenes Routing, Modell-/Modus-/USD-Budget-Überschreibungen pro Anfrage. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
+- **🗜️ Pluggable-Komprimierung** — 12 Composable Engines + Compression Studios: LLMLingua-2, zweistufiges Ultra, Omniglyph, Per-Step Fidelity Gate, GCF v3.2, Drag-Reorder-Editor. → [-Komprimierung](docs/compression/COMPRESSION_ENGINES.md)
+- **🕵️ Transparente MITM -Entschlüsselung (TPROXY)** — erfasst CLIs, die Proxy-Umgebungsvariablen ignorieren, mit einem SNI-basierten CA + Trust-Store-Installationsprogramm. → [MITM/TPROXY](docs/security/MITM-TPROXY-DECRYPT.md)
+- **💸 Kostentelemetrie überall** — `X-OmniRoute-*` cost/usage Header auf jedem Endpunkt, Cache-HIT-Einsparungsheader, USD -Ausgabenkontingente pro Schlüssel. → [API Referenz](docs/reference/API_REFERENCE.md)
+- **🧠 Speicher, den Sie kontrollieren** — standardmäßig deaktiviert, opt-in int8 Vektorquantisierung + typisierter Zerfall, pro Anfrage `x-omniroute-no-memory`. → [Speicher](docs/frameworks/MEMORY.md)
+- **🛡️ Sicherheit** — -Prompt-Injection-Guard auf jeder LLM Route (Red-Team-Suite), Opt-in-Leitplanke für die Maskierung von Anmeldeinformationen (schwärzt durchgesickerte API keys/secrets in beide Richtungen), kostenlose DuckDuckGo Websuche als letzter Ausweg und ein optionales OIDC -Login-Gate für das Dashboard (Passwort-Login bleibt immer verfügbar). → [Leitplanken](docs/security/GUARDRAILS.md)
+- **🖼️ Neue Endpunkte** — `/v1/ocr` (Mistral OCR) und `/v1/audio/translations` (Whisper-Stil) runden die Medienoberfläche ab. → [API Referenz](docs/reference/API_REFERENCE.md)
+- **🎨 Bild-/Video-/Audio-Generierung** — one API für Medien: xAI Grok Imagine & Novita AI Video, ComfyUI, Magnific, Adobe Firefly, Segmind und Sprachanbieter wie ElevenLabs. → [API Referenz](docs/reference/API_REFERENCE.md)
+- **🌍 Bereitstellung und Betrieb** — -Reverse-Proxy `basePath`, automatische Erkennung der Browsersprache, Geräteverfolgung pro Schlüssel, root-loser MITM Vertrauen, zh-TW-Lokalisierung. → [Umgebung](docs/reference/ENVIRONMENT.md)
+- **🤝 Weitere Anbieter und Agenten** — Cloud Agents (Codex Cloud, Cursor, Devin, Jules), Grok Build (xAI) mit Browser + OAuth login, Ollama First-Class-Karte, Claude Opus 5 & Sonnet 5, Kimi offizielle Partnerschaft (Code/Web/Moonshot), Zed, Requesty, SenseNova, Yuanbao, Agnes AI… und eine Aktualisierung** 394-Anbieter-Katalog** . → [Anbieter](docs/reference/PROVIDER_REFERENCE.md)
+- **📡 Routing-Transparenz** Jede — Antwort enthält einen `X-OmniRoute-Decision` Header mit dem Namen des strategy/provider/latency, der sie bereitgestellt hat, eine neue `cache-optimized` Kombinationsstrategie, + Auto-Combo `cacheAffinity` Faktor, der wiederholte Anforderungen zurück an die Verbindung mit dem zwischengespeicherten Präfix leitet, und einen schreibgeschützten `/v1/auto-combo/{channel}/candidates` Endpunkt, der den Live-Kandidatenpool eines `auto/*` Kanals verfügbar macht. → [Auto-Combo](docs/routing/AUTO-COMBO.md)
+- **⚡ Lokale Leistung und Infrastruktur** — One-Click Local Redis, Cloudflare Workers / Deno Stellen Sie Relay-Deployer, Bifrost und Mux als überwachte eingebettete Dienste bereit. → [Embedded Services](docs/frameworks/EMBEDDED-SERVICES.md)
+- **🧩 Auch in der Box** — Plugin-Framework, + Marktplatz, Omni/Agent/GitHub Skills-Frameworks, Obsidian Vault-Integration (22 MCP Tools), OpenAI-kompatibler Batch & Files- APIs, semantischer Antwort-Cache, Gamifizierung mit Bestenlisten, ACP Agentenerkennung (15 integrierte Agenten), geplanter Protokollexport nach BigQuery, `auto/chaos` Parallel-Multi-Modell-Fanout, eine Telegram Bot-Brücke, ein In-App-Versionsmanager und ein kostenloser LMArena-ELO-Anbieter Ranglisten. → [Dokumente](docs/README.md)
 
 <br/>
 
@@ -946,15 +946,15 @@ claude mcp add --transport http omniroute http://localhost:20128/api/mcp/stream 
 
 <div align="center">
 
-## 🗜️ 15–95 % Tokens sparen — automatisch
+## 🗜️ Sparen Sie automatisch 15–95 % Token —
 
 </div>
 
-### 📖 So funktioniert es — Pipeline, Architektur & Einsparungsberechnung
+### 📖 Wie es funktioniert — -Pipeline, Architektur & Sparmathematik
 
-<img src="./docs/diagrams/compression-pipeline.svg" width="100%" alt="OmniRoute-Komprimierungspipeline: Eine illustrative Client-Anfrage mit 10.000 Tokens durchläuft 12 kombinierbare Engines — Session-Dedup, CCR, Lite, RTK, Responses Tool Output, Headroom, Relevance, Caveman, Aggressive, LLMLingua-2, Ultra und OmniGlyph — und kann den Anbieter im dokumentierten, gestapelten Beispiel mit etwa 1.080 Tokens erreichen. Strukturierte Inhalte werden durch Schutzmechanismen zur Erhaltung und Fidelity-Gates pro Schritt geschützt; explizit verlustbehaftete oder experimentelle Modi können geeignete Inhalte transformieren."/>
+<img src="./docs/diagrams/compression-pipeline.svg" width="100%" alt="OmniRoute compression pipeline: an illustrative 10,000-token client request passes through 12 composable engines — Session-Dedup, CCR, Lite, RTK, Responses Tool Output, Headroom, Relevance, Caveman, Aggressive, LLMLingua-2, Ultra and OmniGlyph — and can reach the provider at about 1,080 tokens in the documented stacked example. Structured content is protected by preservation guards and per-step fidelity gates; explicit lossy or experimental modes may transform eligible content."/>
 
-Die standardmäßige gestapelte Kombination verwendet `RTK → Caveman`. Wenn beide auf dieselbe Tool-/Kontext-Payload angewendet werden, summieren sich die Einsparungen:
+Die gestapelte Standardkombination führt `RTK → Caveman` aus. Wenn beide auf die gleiche tool/context Nutzlast einwirken, ergeben sich folgende Einsparungen:
 
 ```txt
 combined = 1 − (1 − RTK) × (1 − Caveman_input)
@@ -962,74 +962,74 @@ average  = 1 − (1 − 0.80) × (1 − 0.46) = 89.2%
 range    = 78.4 – 94.6%
 ```
 
-Codeblöcke, URLs, JSON und strukturierte Daten werden durch die Schutz-Engine zur Erhaltung **immer geschützt**.
+Codeblöcke, URLs, JSON und strukturierte Daten sind** immer geschützt** durch die Konservierungsmaschine.
 
-> **Warum viele Tokens verwenden, wenn wenige ausreichen?** Jede Anfrage durchläuft die Komprimierungspipeline von OmniRoute **transparent** — ohne Änderungen am Client. Sie besteht jetzt aus einer **Kette von 12 kombinierbaren Engines**, die in der jeweiligen Reihenfolge ausgeführt und je nach Routing-Kombination beliebig kombiniert werden — aufbauend auf Ideen aus [RTK](https://github.com/rtk-ai/rtk), [Caveman](https://github.com/JuliusBrussee/caveman) (⭐ 90K+), [LLMLingua-2](https://github.com/microsoft/LLMLingua) und [Troglodita](https://github.com/leninejunior/troglodita) (PT-BR).
+> **Warum viele Token verwenden, wenn wenige Token ausreichen?** Jede Anfrage durchläuft die Komprimierungspipeline von OmniRoute** transparent** — keine Clientänderungen. Es ist jetzt ein** Stapel von 12 zusammensetzbaren Motoren** die in der richtigen Reihenfolge ausgeführt werden und pro Routing-Combo — gemischt und angepasst werden, basierend auf Ideen von [RTK](https://github.com/rtk-ai/rtk), [Caveman](https://github.com/JuliusBrussee/caveman) (⭐ 90K +), [LLMLingua-2](https://github.com/microsoft/LLMLingua) und [Troglodita](https://github.com/leninejunior/troglodita) (PT-BR).
 
-### 🧱 Die Kette aus 12 Engines
+### 🧱 Der 12-Motoren-Stack
 
-Die Engines werden in Pipeline-Reihenfolge ausgeführt; jede kann unabhängig aktiviert und pro Kombination konfiguriert werden:
-
-<table>
-  <tr><th align="center">#</th><th align="left">Engine</th><th align="left">Funktionsweise</th></tr>
-  <tr><td align="center" nowrap>1</td><td align="left" nowrap><b>Session-Dedup</b></td><td align="left">Entfernt Inhalte, die sich über mehrere Turns wiederholen (inhaltsadressiert, Turn-übergreifend)</td></tr>
-  <tr><td align="center" nowrap>2</td><td align="left" nowrap><b>CCR</b></td><td align="left">Archiviert große Blöcke hinter Abrufmarkierungen, die bei Bedarf abgerufen werden</td></tr>
-  <tr><td align="center" nowrap>3</td><td align="left" nowrap><b>Lite</b></td><td align="left">Entfernt überflüssige Leerzeichen und kürzt Bild-URLs (latenzarme Baseline)</td></tr>
-  <tr><td align="center" nowrap>4</td><td align="left" nowrap><b>RTK</b></td><td align="left">Intelligente Filterung, Deduplizierung und Kürzung von Tool-Ergebnissen (befehlsorientiert)</td></tr>
-  <tr><td align="center" nowrap>5</td><td align="left" nowrap><b>Responses Tool Output</b></td><td align="left">Verlustfreie Verarbeitung mit Priorität auf JSON sowie begrenzte diagnostische Komprimierung für Shell-/Patch-/Such-/Build-Ausgaben (Responses API)</td></tr>
-  <tr><td align="center" nowrap>6</td><td align="left" nowrap><b>Headroom</b></td><td align="left">Verlustfreie tabellarische Komprimierung von JSON-Arrays (~30 %) über einen eingebundenen <b>GCF</b>-Codec</td></tr>
-  <tr><td align="center" nowrap>7</td><td align="left" nowrap><b>Relevance</b></td><td align="left">Extraktive Bewertung von Sätzen anhand der letzten Benutzeranfrage</td></tr>
-  <tr><td align="center" nowrap>8</td><td align="left" nowrap><b>Caveman</b></td><td align="left">Regelbasierte Komprimierung von Prosatexten (~65–75 % bei Ausgaben)</td></tr>
-  <tr><td align="center" nowrap>9</td><td align="left" nowrap><b>Aggressive</b></td><td align="left">Zusammenfassung und schrittweises Altern älterer Turns</td></tr>
-  <tr><td align="center" nowrap>10</td><td align="left" nowrap><b>LLMLingua-2</b></td><td align="left">Semantisches Pruning per ML über MobileBERT ONNX — codesicher, asynchron</td></tr>
-  <tr><td align="center" nowrap>11</td><td align="left" nowrap><b>Ultra</b></td><td align="left">Heuristisches Token-Pruning mit einer optionalen Small-Model-(SLM)-Stufe</td></tr>
-  <tr><td align="center" nowrap>12</td><td align="left" nowrap><b>OmniGlyph</b></td><td align="left">Experimentelle Kodierung des Kontexts als Bild für gemessene Claude Fable 5 über die direkte Anthropic-Leitung; GPT 5.6-Transformer bleiben bis zum Eingang von Provider-Belegen ausfallsicher deaktiviert. Vier Komprimierungsprofile (standardmäßig aggressiv, ausgewogen, coding-sicher, Durchleitung) (am aggressivsten; optional aktivierbar)</td></tr>
-</table>
-
-Codeblöcke, URLs und strukturierte Daten werden **immer** bytegenau erhalten. **Voreinstellungen mit einem Klick** kombinieren die Engines:
+Motoren laufen in Pipeline-Reihenfolge; jedes ist unabhängig umschaltbar und pro Kombination konfigurierbar:
 
 <table>
-  <tr><th align="left">Modus</th><th align="left">Einsparung</th><th align="left">Am besten geeignet für</th></tr>
-  <tr><td align="left" nowrap>🪶 <b>Lite</b></td><td align="left" nowrap>~15 %</td><td align="left">Sichere Standardeinstellung für den Dauerbetrieb</td></tr>
-  <tr><td align="left" nowrap>🪨 <b>Standard (Caveman)</b></td><td align="left" nowrap>~30 %</td><td align="left">Tägliche Programmierung</td></tr>
-  <tr><td align="left" nowrap>⚡ <b>Aggressive</b></td><td align="left" nowrap>~50 %</td><td align="left">Lange, Tool-intensive Sitzungen</td></tr>
-  <tr><td align="left" nowrap>🔥 <b>Ultra</b></td><td align="left" nowrap>~75 %</td><td align="left">Maximale Einsparung</td></tr>
-  <tr><td align="left" nowrap>🧰 <b>RTK</b></td><td align="left" nowrap>60–90 %</td><td align="left">Shell-/Test-/Build-/git-Ausgaben</td></tr>
-  <tr><td align="left" nowrap>🔗 <b>Gestapelt (RTK → Caveman)</b></td><td align="left" nowrap><b>78–95 %</b></td><td align="left">Gemischte Prompts und Tool-Logs</td></tr>
+  <tr><th align="center">#</th><th align="left">Motor</th><th align="left">Was es bewirkt</th></tr>
+  <tr><td align="center" nowrap>1</td><td align="left" nowrap><b>Session-Dedup</b></td><td align="left">Löscht Inhalte, die sich über mehrere Runden hinweg wiederholen (inhaltsadressiert, turnübergreifend)</td></tr>
+  <tr><td align="center" nowrap>2</td><td align="left" nowrap><b>CCR</b></td><td align="left">Archiviert große Blöcke hinter Abrufmarkierungen und wird bei Bedarf abgerufen</td></tr>
+  <tr><td align="center" nowrap>3</td><td align="left" nowrap><b>Lite</b></td><td align="left">Whitespace- + Bild-URL-Kürzung (Latenz-Light-Grundlinie)</td></tr>
+  <tr><td align="center" nowrap>4</td><td align="left" nowrap><b>RTK</b></td><td align="left">Intelligente Tool-Ergebnisfilterung, Deduplizierung und Kürzung (befehlsbewusst)</td></tr>
+  <tr><td align="center" nowrap>5</td><td align="left" nowrap><b>Ausgabe des Antworttools</b></td><td align="left">Lossless-first JSON + begrenzte Diagnosekomprimierung für shell/patch/search/build Ausgaben (Antworten API)</td></tr>
+  <tr><td align="center" nowrap>6</td><td align="left" nowrap><b>Kopffreiheit</b></td><td align="left">Verlustfreie tabellarische Komprimierung von JSON Arrays (~ 30 %) über einen Anbieter <b>GCF</b> Codec</td></tr>
+  <tr><td align="center" nowrap>7</td><td align="left" nowrap><b>Relevanz</b></td><td align="left">Extraktive Satzbewertung anhand der letzten Benutzerabfrage</td></tr>
+  <tr><td align="center" nowrap>8</td><td align="left" nowrap><b>Höhlenmensch</b></td><td align="left">Regelbasierte Prosakomprimierung (~ 65–75 % bei der Ausgabe)</td></tr>
+  <tr><td align="center" nowrap>9</td><td align="left" nowrap><b>Aggressiv</b></td><td align="left">Zusammenfassung + fortschreitende Alterung der alten Wendungen</td></tr>
+  <tr><td align="center" nowrap>10</td><td align="left" nowrap><b>LLMLingua-2</b></td><td align="left">semantisches Bereinigen von ML über MobileBERT ONNX — codesicher, asynchron</td></tr>
+  <tr><td align="center" nowrap>11</td><td align="left" nowrap><b>Ultra</b></td><td align="left">Heuristische Token-Bereinigung mit einer optionalen Small-Model-Stufe (SLM).</td></tr>
+  <tr><td align="center" nowrap>12</td><td align="left" nowrap><b>OmniGlyph</b></td><td align="left">Experimentelle Kontext-als-Bild-Kodierung für gemessene Claude -Fable 5 auf der direkten Anthropic -Leitung; GPT 5.6-Transformatoren bleiben bis zum Erhalt der Lieferantenbelege ausfallsicher. Vier Komprimierungsprofile (Standard aggressiv, ausgewogen, kodierungssicher, Passthrough) (am aggressivsten; Opt-in)</td></tr>
 </table>
 
-**Praxisbeispiel — Standardmodus:**
+Codeblöcke, URLs und strukturierte Daten sind** immer erhalten** Byte-perfekt.** Ein-Klick-Voreinstellungen** Kombinieren Sie die Motoren:
 
-> **Vorher (69 Tokens):** _"Der Grund dafür, dass deine React-Komponente wahrscheinlich erneut gerendert wird, ist, dass du bei jedem Render-Zyklus eine neue Objektreferenz erzeugst. Wenn du ein Inline-Objekt als Prop übergibst, erkennt Reacts flacher Vergleich jedes Mal ein anderes Objekt, wodurch ein erneutes Rendern ausgelöst wird. Ich würde empfehlen, `useMemo` zu verwenden, um das Objekt zu memoizen."_
->
-> **Nachher (19 Tokens):** _"Neue Objektreferenz bei jedem Rendern. Inline-Objekt-Prop = neue Referenz = erneutes Rendern. In `useMemo` einschließen."_
->
-> **Gleiche Antwort. 72 % weniger Tokens. Kein Genauigkeitsverlust.** ✅
+<table>
+  <tr><th align="left">Modus</th><th align="left">Ersparnisse</th><th align="left">Am besten für</th></tr>
+  <tr><td align="left" nowrap>🪶 <b>Lite</b></td><td align="left" nowrap>~15%</td><td align="left">Immer sichere Standardeinstellung</td></tr>
+  <tr><td align="left" nowrap>🪨 <b>Standard (Höhlenmensch)</b></td><td align="left" nowrap>~30%</td><td align="left">Tägliche Codierung</td></tr>
+  <tr><td align="left" nowrap>⚡ <b>Aggressiv</b></td><td align="left" nowrap>~50%</td><td align="left">Lange, werkzeuglastige Sitzungen</td></tr>
+  <tr><td align="left" nowrap>🔥 <b>Ultra</b></td><td align="left" nowrap>~75%</td><td align="left">Maximale Ersparnis</td></tr>
+  <tr><td align="left" nowrap>🧰 <b>RTK</b></td><td align="left" nowrap>60–90%</td><td align="left">Shell/test/build/git -Ausgabe</td></tr>
+  <tr><td align="left" nowrap>🔗 <b>Gestapelt (RTK → Caveman)</b></td><td align="left" nowrap><b>78–95%</b></td><td align="left">+ -Tool-Protokolle mit gemischten Eingabeaufforderungen</td></tr>
+</table>
 
-**PT-BR-Beispiel — [Troglodita](https://github.com/leninejunior/troglodita)-Modus:**
+**Reales Beispiel — Standardmodus:**
 
-> **Davor (42 Token):** _„Das Problem ist, dass die Komponente erneut gerendert wird, weil in jedem Renderzyklus eine neue Objektreferenz erstellt wird. Ich würde die Verwendung von useMemo empfehlen.“_
+> **Vorher (69 Token):** _ „Der Grund dafür, dass Ihre React Komponente erneut gerendert wird, liegt wahrscheinlich darin, dass Sie bei jedem Renderzyklus eine neue Objektreferenz erstellen. Wenn Sie ein Inline-Objekt als Requisite übergeben, erkennt der flache Vergleich von React es jedes Mal als ein anderes Objekt, was ein erneutes Rendern auslöst. Ich würde empfehlen, useMemo zu verwenden, um das Objekt auswendig zu lernen.“_
 >
-> **Danach (12 Token):** _„Erneutes Rendern: neue Referenz in jedem Zyklus (Inline-Objekt neu erstellt). `useMemo` verwenden.“_
+> **Nachher (19 Token):** _"Neue Objektreferenz bei jedem Rendern. Inline-Objektstütze = neue Referenz = rendern. In useMemo einschließen."_
 >
-> **Dieselbe Antwort. ~70 % weniger Token. Technische Genauigkeit unverändert.** ✅
+> **Gleiche Antwort. 72 % weniger Token. Kein Genauigkeitsverlust.** ✅
+
+**PT-BR-Beispiel — [den Troglodita-](https://github.com/leninejunior/troglodita) Modus:**
+
+> **Antes (42 Token):** _"Das Problem besteht darin, dass die Komponente erneut gerendert werden muss, weil eine neue Objektreferenz in jedem Renderzyklus gesendet wurde. Wir empfehlen die useMemo."_
+>
+> **Depois (12 Token):** _"Re-render: ref nova cada ciclo (objeto inline recriado). Usar `useMemo`."_
+>
+> **Mesma resposta. ~ 70 % weniger Token. Technische Präzision intakt.** ✅
 
 <br/>
 
-### 🎚️ Jenseits der Engines — Ausgabestile, der adaptive Regler & Steuerung pro Anfrage
+### 🎚️ Jenseits der — Ausgabestile der Engines, der adaptiven Wähl- und Steuerung pro Anforderung
 
-Die 12 oben genannten Engines verkleinern, was **hineingeht**. Drei weitere Ebenen bestimmen **wie**, **wann** und was **herauskommt**:
+Die 12 oben genannten Motoren schrumpfen, was möglich ist** In** . Drei weitere Schichten bilden sich** Wie** ,** Wann** , und was kommt** aus** :
 
-- **🪄 Ausgabestile** _(Steuerung der Ausgabeachse)_ — fügen deterministische, cache-sichere Anweisungen zur Formung der Antwort ein; kombinierbar, jeweils mit der Intensität `lite` / `full` / `ultra`. Das Hinzufügen eines Stils ist ein einzeiliger Registry-Eintrag:
-  - **Knappes Prosaformat** — Füllwörter / Artikel / Absicherungen entfernen; technische Substanz exakt beibehalten.
-  - **Weniger Code** — YAGNI nach dem Prinzip „fauler Senior-Entwickler“: kleinste funktionierende Änderung, kein nicht angefordertes Gerüst.
-  - **Pferdeschwanz (fauler Senior-Entwickler)** — die YAGNI-Leiter hinaufsteigen, die Grundursache beheben, kleinstmöglicher funktionierender Diff.
-  - **Ich habe ADHS (aktionsorientiert)** — nächste Aktion zuerst, Schritte nummeriert, ein konkrester nächster Schritt, keine Einleitung.
-  - **Knappes CJK (文言)** — ultraknappes klassisch-chinesisches Format (auf `zh` beschränkt).
-- **🎯 Adaptives Kontextbudget** _(der Regler)_ — statt eines einzelnen Ein-/Aus-Token-Schwellenwerts werden die günstigsten und verlustärmsten Engines nur so weit eskaliert, wie es nötig ist, damit die Eingabe in das Kontextfenster des Modells **passt**. Richtlinie: `reserve-output` (Standard, modellabhängig) · `percentage` · `absolute`. Modus: `floor` (passt garantiert) · `replace-autotrigger` (Ihre explizite Auswahl hat Vorrang) · `off` (Legacy-Schwellenwert).
-- **🎛️ Wo die Komprimierung festgelegt wird** _(Vorrang, hoch → niedrig)_ — Anfragebezogener `x-omniroute-compression`-Header › Routing-Kombinationsüberschreibung › aktives benanntes Profil › adaptiver / automatischer Trigger › Panel-Standard › deaktiviert. Der angewendete Plan wird im Antwort-Header `X-OmniRoute-Compression: <mode>; source=<source>` zurückgegeben.
+- **🪄 -Ausgabestile** _(Ausgabeachsenlenkung)_ — injiziert deterministische, Cache-sichere Antwortformungsanweisungen; kombinierbar, jeweils in der Intensität `lite` / `full` / `ultra`. Das Hinzufügen eines Stils erfolgt über einen einzeiligen Registrierungseintrag:
+  - **Knappe Prosa** — Drop Filler / Artikel / Absicherung; Halten Sie den technischen Inhalt genau.
+  - **Weniger Code** — „fauler Senior-Entwickler“ YAGNI: kleinste Arbeitsänderung, kein unaufgefordertes Gerüst.
+  - **Pferdeschwanz (fauler Senior-Entwickler)** — erklimmen die YAGNI Leiter, beheben die Grundursache, kleinstes funktionierendes Diff.
+  - **Ich habe ADHD (Action-First)** — nächste Aktion führt, Schritte nummeriert, ein konkreter nächster Schritt, keine Präambel.
+  - **Terse CJK (文言)** — Klassisch-chinesischer, ultraprägnanter Stil (Gebietsschema-Gating für `zh`).
+- **🎯 Adaptives Kontextbudget** _(das Zifferblatt)_ — statt eines on/off Token-Schwellenwerts, eskalieren die günstigsten, verlustfreisten Engines nur so weit wie nötig** Passen Sie das Kontextfenster des Modells an** . Richtlinie: `reserve-output` (Standard, modellbewusst) · `percentage` · `absolute`. Modus: `floor` (garantierte Passform) · `replace-autotrigger` (Ihre explizite Wahl gewinnt) · `off` (Legacy-Schwellenwert).
+- **🎛️ Wo die Komprimierung entschieden wird** _(Vorrang, hoch → niedrig)_ — pro Anfrage `x-omniroute-compression` Header › Routing-Combo-Override › aktives benanntes Profil › adaptiv / automatisch auslösen › Panel-Standard › aus. Der angewendete Plan wird im `X-OmniRoute-Compression: <mode>; source=<source>` -Antwortheader wiedergegeben.
 
-Automatisch anhand des Token-Schwellenwerts auslösen, den adaptiven Regler aktivieren, ein benanntes Profil festlegen, eine einmalige Einstellung pro Anfrage setzen oder eine Pipeline pro Routing-Kombination zuweisen — je nachdem, was für die Arbeitslast geeignet ist. Ein optional aktivierbares Offline-**Eval-Harness** (`npm run eval:compression`) bewertet die Genauigkeit im Verhältnis zu den Einsparungen anhand eines festgelegten Korpus, bevor Sie eine Änderung übernehmen.
+Automatische Auslösung durch Token-Schwellenwert, Aktivieren des adaptiven Wählrads, Anheften eines benannten Profils, Festlegen eines einmaligen Profils pro Anfrage oder Zuweisen einer Pipeline pro Routing-Kombination — je nachdem, was zur Arbeitslast passt. Ein Opt-in offline** Evaluierungsgeschirr** (`npm run eval:compression`) bewertet die Treue im Vergleich zu den Einsparungen auf einem angehefteten Korpus, bevor Sie eine Änderung fördern.
 
 📖 [`COMPRESSION_GUIDE.md`](docs/compression/COMPRESSION_GUIDE.md) · [`RTK_COMPRESSION.md`](docs/compression/RTK_COMPRESSION.md) · [`COMPRESSION_ENGINES.md`](docs/compression/COMPRESSION_ENGINES.md)
 
@@ -1041,56 +1041,46 @@ Automatisch anhand des Token-Schwellenwerts auslösen, den adaptiven Regler akti
 
 </div>
 
-**1) Installieren & ausführen**
+**1) Installieren und ausführen**
 
 ```bash
 npm install -g omniroute
 omniroute
 ```
 
-> 💡 Sie sehen `npm warn ERESOLVE` oder Warnungen zu Peer-Abhängigkeiten? [Sie sind harmlos](docs/guides/TROUBLESHOOTING.md#npm-install-warnings-eresolve--peer--deprecated).
-> **Verwenden Sie npm 11 oder höher?** npm blockiert möglicherweise Pakete-Lebenszyklusskripte, sofern sie nicht zugelassen sind. Das `postinstall` von OmniRoute (`node scripts/build/postinstall.mjs`) ist erforderlich, um die nativen Laufzeitdateien vorzubereiten. Erlauben Sie beim globalen Installieren die in der npm-Warnung genannten Pakete. Für den von OmniRoute 3.8.55 gemeldeten Paketsatz:
+> 💡 Siehe `npm warn ERESOLVE` oder peer-dep-Warnungen? [Sie sind harmlos](docs/guides/TROUBLESHOOTING.md#npm-install-warnings-eresolve--peer--deprecated).** Verwenden Sie npm 11 oder höher?** npm kann Paketlebenszyklusskripte blockieren, es sei denn, sie sind zulässig. OmniRoute `postinstall` (`node scripts/build/postinstall.mjs`) ist erforderlich, um seine nativen Laufzeitdateien vorzubereiten. Erlauben Sie die in der npm-Warnung genannten Pakete bei der globalen Installation. Für den von OmniRoute 3.8.55 gemeldeten Paketsatz:
 >
-> ```bash
-> npm install -g --allow-scripts=omniroute,keytar,onnxruntime-node,@parcel/watcher,@swc/core,protobufjs,esbuild omniroute
-> ```
+> `bash npm install -g --allow-scripts=omniroute,keytar,onnxruntime-node,@parcel/watcher,@swc/core,protobufjs,esbuild omniroute `
 >
-> Um diese Zulassungsliste für zukünftige globale Installationen wiederzuverwenden, konfigurieren Sie sie einmal und installieren Sie anschließend normal:
+> Um diese Zulassungsliste für zukünftige globale Installationen wiederzuverwenden, konfigurieren Sie sie einmal und installieren Sie sie dann normal:
 >
-> ```bash
-> npm config set allow-scripts=omniroute,keytar,onnxruntime-node,@parcel/watcher,@swc/core,protobufjs,esbuild --location=user
-> npm install -g omniroute
-> ```
+> `bash npm config set allow-scripts=omniroute,keytar,onnxruntime-node,@parcel/watcher,@swc/core,protobufjs,esbuild --location=user npm install -g omniroute `
 >
-> Die Abhängigkeitsliste kann sich zwischen Releases ändern. Wenn npm eine andere Liste meldet, verwenden Sie die in dieser Warnung genannten Paketnamen. Durch die Zulassung eines Pakets dürfen dessen Installationsskripte ausgeführt werden.
-> **Verwenden Sie Gemini Web oder einen anderen Web-Cookie-Anbieter?** Das npm-Paket enthält
-> Playwright, aber nicht dessen Chromium-Binärdatei. Lesen Sie den Hinweis zur
-> [Playwright-Chromium-Einrichtung](docs/guides/TROUBLESHOOTING.md#gemini-web-and-playwright-chromium),
-> bevor Sie die erste Anfrage an einen Web-Anbieter senden.
+> Die Abhängigkeitsliste kann sich zwischen den Releases ändern; Wenn npm eine andere Liste meldet, verwenden Sie die Paketnamen aus dieser Warnung. Wenn Sie ein Paket zulassen, können dessen Installationsskripte ausgeführt werden.** Nutzen Sie Gemini Web oder einen anderen Web-Cookie-Anbieter?** Das npm-Paket enthält Playwright, jedoch nicht seine Chromium-Binärdatei. Lesen Sie den [Einrichtungshinweis Playwright Chromium,](docs/guides/TROUBLESHOOTING.md#gemini-web-and-playwright-chromium) bevor Sie die erste Web-Provider-Anfrage stellen.
 
-Dashboard unter `http://localhost:20128` · API unter `http://localhost:20128/v1`.
+Dashboard bei `http://localhost:20128` · API bei `http://localhost:20128/v1`.
 
-**2) Einen geeigneten Anbieter mit Ihrem eigenen Konto verbinden**
+**2) Verbinden Sie einen berechtigten Anbieter mit Ihrem eigenen Konto**
 
-Dashboard → **Anbieter** → wählen Sie einen Anbieter, dessen aktuelle Bedingungen und Kontingent zu Ihrem Anwendungsfall passen → fügen Sie seinen API-Schlüssel hinzu oder schließen Sie den Kontovorgang ab. Kostenlose Tarife können eine Registrierung, Genehmigung oder Zahlungsmethode erfordern. Lesen Sie den [Leitfaden zu kostenlosen Tarifen](docs/getting-started/FREE-TIERS-GUIDE.md); Verfügbarkeit ohne Schlüssel ist nicht garantiert, und Anbieter mit der Markierung `tos: avoid` werden standardmäßig aus `auto` ausgeschlossen.
+Armaturenbrett →** Anbieter** Wählen Sie → einen Anbieter aus, dessen aktuelle Konditionen und Kontingente zu Ihrem Anwendungsfall passen. → fügen Sie seinen API Schlüssel hinzu oder schließen Sie seinen Kontofluss ab. Kostenlose Stufen erfordern möglicherweise eine Anmeldung, Genehmigung oder eine Zahlungsmethode. Sehen Sie sich den [Leitfaden zu kostenlosen Kontingenten](docs/getting-started/FREE-TIERS-GUIDE.md) an. Die schlüssellose Verfügbarkeit ist nicht garantiert und mit `tos: avoid` gekennzeichnete Anbieter sind standardmäßig von `auto` ausgeschlossen.
 
-**3) Ihr Coding-Tool konfigurieren**
+**3) Richten Sie Ihr Codierungstool aus**
 
 ```txt
 Base URL: http://localhost:20128/v1
-API Key:  [aus Dashboard → Endpoints kopieren]
-Model:    auto            (Routing unter geeigneten Verbindungen — oder Anbieter/Modell auswählen)
+API Key:  [copy from Dashboard → Endpoints]
+Model:    auto            (routes among eligible connections — or choose provider/model)
 ```
 
-**4) Überprüfen, ob alles funktioniert**
+**4) Überprüfen Sie, ob es funktioniert**
 
 ```bash
 curl http://localhost:20128/v1/models -H "Authorization: Bearer YOUR_KEY"
 ```
 
-Ihre verbundenen Modelle sollten aufgelistet werden. 🎉 Das war’s — beginnen Sie mit dem Programmieren, OmniRoute übernimmt automatisch Routing und Fallbacks für Sie.
+Ihre angeschlossenen Modelle sollten aufgelistet sein. 🎉 Das ist es. — beginnt mit dem Codieren, und OmniRoute leitet automatisch weiter und greift für Sie zurück.
 
-Wenn Ihr Client keine benutzerdefinierten Header senden kann, stellt OmniRoute außerdem tokenisierte Kompatibilitätsaliase bereit:
+Wenn Ihr Client keine benutzerdefinierten Header senden kann, stellt OmniRoute auch tokenisierte Kompatibilitätsaliase bereit:
 
 ```txt
 OpenAI catalog:   http://localhost:20128/vscode/YOUR_KEY/
@@ -1101,7 +1091,7 @@ Ollama chat:      http://localhost:20128/vscode/YOUR_KEY/api/chat
 Ollama tags:      http://localhost:20128/vscode/YOUR_KEY/api/tags
 ```
 
-Verwenden Sie diese nur für Clients, die `Authorization: Bearer ...` nicht anhängen können. Header-Authentifizierung bleibt der bevorzugte Modus.
+Verwenden Sie diese nur für Clients, die `Authorization: Bearer ...` nicht anhängen können. Die Header-Authentifizierung bleibt der bevorzugte Modus.
 
 <br/>
 
@@ -1835,17 +1825,17 @@ OmniRoute steht auf den Schultern von Giganten. Es begann als Fork von **[9route
   <tr><td nowrap><b><a href="https://github.com/steipete/CodexBar">CodexBar</a></b></td><td align="center">22,955</td><td>Identifizierte die Kontingent-Oberfläche von Grok Build; OmniRoute überprüfte und korrigierte anschließend unabhängig das Format der Live-Drahtübertragung.</td></tr>
 </table>
 
-## 📄 Lizenz
+## 📄 -Lizenz
 
-MIT-Lizenz – siehe [LICENSE](LICENSE) für weitere Informationen.
+MIT Lizenz – Einzelheiten finden Sie unter [LICENSE](LICENSE).
 
 ---
 
 <div align="center">
 
-**[⬆ Zurück zum Anfang](#-omniroute)** · Mit ❤️ für die Open-Source-KI-Community entwickelt.
+**[⬆ Zurück nach oben](#-omniroute)** · Entwickelt mit ❤️ für die Open-Source AI Community.
 
-<sub>Erstellt von <a href="https://github.com/diegosouzapw">Diego Souza</a> · OmniRoute v3.8.55 · Node ≥22.22.2 · MIT-Lizenz · <a href="https://omniroute.online">omniroute.online</a></sub>
+<sub>Erstellt von <a href="https://github.com/diegosouzapw">Diego Souza</a> · OmniRoute v3.8.55 · Knoten ≥ 22.22.2 · MIT -Lizenz · <a href="https://omniroute.online">omniroute.online</a></sub>
 
 </div>
-<!-- GitHub Discussions für Community-Fragen und -Antworten aktiviert -->
+<!-- GitHub Discussions enabled for community Q&A -->

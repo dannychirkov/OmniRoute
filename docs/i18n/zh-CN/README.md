@@ -67,23 +67,23 @@
 
 <br/>
 
-## 📈 网关持续增长
+## 📈网关不断发展
 
 <div align="center">
 
-|                     |        v3.8.50        | **v3.8.51** |      `v3.8.55+`       |
-| ------------------- | :-------------------: | :---------: | :-------------------: |
-| 🌐 提供者           |          352          |   **358**   |          394          |
-| 🧠 唯一聊天模型 ID  |         1320          |  **1374**   |         1491          |
-| 🖼️ 模态桥接         | 🆕 视觉 + 音频 + 视频 |      ✓      |           ✓           |
-| 📡 Radar 免费目录   |      🆕 可选加入      |      ✓      |           ✓           |
-| ⚖️ 配额感知调度     |    🆕 Quota-Share     |      ✓      |           ✓           |
-| 📊 配额遥测         |        🆕 实时        |      ✓      |           ✓           |
-| 🧰 无头模式         |           —           |      —      | 🆕 `serve --headless` |
-| 🛤️ LTS 轨道基础设施 |           —           |      —      |      🆕 发布渠道      |
-| 🔎 模型发现 API     |           —           |      —      | 🆕 `/v1/models/query` |
+|                     |     v3.8.50      | **v3.8.51** |      `v3.8.55+`       |
+| ------------------- | :--------------: | :---------: | :-------------------: |
+| 🌐提供者            |       352        |   **358**   |          394          |
+| 🧠独特的聊天模式IDs |       1320       |  **1374**   |         1491          |
+| 🖼️模态桥            | 🆕视觉+音频+视频 |      ✓      |           ✓           |
+| 📡雷达免费目录      |    🆕选择加入    |      ✓      |           ✓           |
+| ⚖️配额感知调度      |    🆕配额分享    |      ✓      |           ✓           |
+| 📊配额遥测          |      🆕直播      |      ✓      |           ✓           |
+| 🧰无头模式          |        —         |      —      | 🆕 `serve --headless` |
+| 🛤️ LTS铁路基础设施  |        —         |      —      |      🆕发布渠道       |
+| 🔎模型发现API       |        —         |      —      | 🆕 `/v1/models/query` |
 
-**→ [路线图](ROADMAP.md) — 沿轨道驶向 `v3.9.0 LTS`**
+**→[路线图](ROADMAP.md)—乘火车前往`v3.9.0 LTS`**
 
 </div>
 
@@ -586,39 +586,39 @@ Radar 需主动选择启用，且仅使用 GET 请求。OmniRoute 客户端不�
 
 <div align="center">
 
-## ✨ 最新动态
+## ✨最新消息
 
 </div>
 
-> **v3.8.20 → v3.8.55** 的近期亮点。完整历史记录请参阅 [`CHANGELOG.md`](CHANGELOG.md)。
+> 最近的亮点来自**v3.8.20 → v3.8.55** 。 [`CHANGELOG.md`](CHANGELOG.md)的完整历史记录。
 
-- **⚖️ `quota-weighted` 路由** — 第 20 种组合策略会跳过已耗尽的账户，然后按剩余配额 ÷ 进行中负载的比例从其余账户中抽取，同时保持现有会话固定在原账户上。→ [自动组合](docs/routing/AUTO-COMBO.md)
-- **🧰 无头模式** — `omniroute serve --headless`（或 `OMNIROUTE_HEADLESS=1`）仅运行 `/v1/*` 代理引擎，关闭仪表板及仅供仪表板使用的子系统。→ [无头模式](docs/guides/HEADLESS.md)
-- **🔎 模型发现** — `/v1/models` 支持按能力、上下文、类型和文本进行筛选，`POST /v1/models/query` 会依据相同的逐密钥可见性返回简短且确定性的候选列表。→ [API 参考](docs/reference/API_REFERENCE.md)
-- **🔑 逐密钥路由控制** — 使用 `forcedModel` 将 API 密钥固定到某个模型或组合，并以原子方式添加或移除某个密钥的模型和组合（`/api/keys/{id}/access`）。→ [API 参考](docs/reference/API_REFERENCE.md) · [OpenAPI](docs/openapi.yaml)
-- **🛡️ 更细粒度的 PII 控制** — 支持按类型选择、最多 20 个经过验证的自定义屏蔽模式，以及按类型统计检测次数；屏蔽功能本身仍需选择启用。→ [防护措施](docs/security/GUARDRAILS.md)
-- **🌍 67 种语言** — 覆盖仪表板、文档镜像和 CLI，使用 `npm run i18n:add-locale` 即可通过一条命令在所有位置添加一种语言。→ [i18n 指南](docs/guides/I18N.md)
-- **🎛️ OmniConductor** — 向你的智能体集群执行入站 A2A 委派，在 Agent Card 上提供 Conductor 技能，并通过 Faro 推送通话功能在仪表板中进行语音聊天。→ [A2A 服务器](docs/frameworks/A2A-SERVER.md)
-- **🛂 自适应准入与过载保护** — 高负载聊天请求会进入队列而不是返回 503，并为每个连接提供原子化的 RPM 滚动租约。→ [弹性指南](docs/architecture/RESILIENCE_GUIDE.md)
-- **🗂️ 规范化的 `/v1/models` 排序** — 每个提供者对应一个连续的分组区块（组合项优先），无论目录来源为何都保持稳定。→ [API 参考](docs/reference/API_REFERENCE.md)
-- **🗜️ 压缩加固** — 默认启用膨胀防护，提供 DE / FR / JA + 中文（文言文）的 Caveman 压缩包，以及适用于 Gradle 和 .NET 的 RTK 过滤器。→ [压缩](docs/compression/COMPRESSION_ENGINES.md)
-- **💸 真实的统一费率成本** — 订阅型 / coding-plan 提供者在成本分析中按 **$0** 计费；预算、配额和路由仍会进行估算。→ [API 参考](docs/reference/API_REFERENCE.md)
-- **⚖️ Quota-Share 路由** — 将共享账户的配额公平地分配给池中的密钥，并采用充分利用策略，将空闲份额借给其他密钥。→ [弹性指南](docs/architecture/RESILIENCE_GUIDE.md)
-- **🤖 一条命令完成 CLI/智能体设置** — 注册了 15 个 `setup-*` 命令；`omniroute run` 可启动 7 个 CLI（Claude Code、Codex、Aider、Goose、OpenCode、Qwen Code、Gemini CLI）；`omniroute configure` 支持 11 个目标，并提供交互式提供者+模型选择器及按上下文设置的收藏项。→ [CLI 集成](docs/guides/CLI-INTEGRATIONS.md)
-- **🛰️ 远程模式** — 使用限定范围的令牌（`connect` / `contexts` / `tokens`）驱动远程 OmniRoute，并通过 `antigravity` OAuth 助手完成 VPS 安装。→ [远程模式](docs/guides/REMOTE-MODE.md)
-- **🧭 更智能的自动路由** — 支持 `auto/<category>:<tier>` 组合、**Fusion**（模型面板 + 评判器）、任务感知路由，以及逐请求的模型 / 模式 / USD 预算覆盖。→ [自动组合](docs/routing/AUTO-COMBO.md)
-- **🗜️ 可插拔压缩** — 提供 12 个可组合引擎和 Compression Studios：LLMLingua-2、两级 Ultra、omniglyph、逐步保真度门控、GCF v3.2，以及支持拖拽排序的编辑器。→ [压缩](docs/compression/COMPRESSION_ENGINES.md)
-- **🕵️ 透明 MITM 解密（TPROXY）** — 捕获会忽略代理环境变量的 CLI，并提供按 SNI 配置 CA 及安装信任存储的功能。→ [MITM/TPROXY](docs/security/MITM-TPROXY-DECRYPT.md)
-- **💸 全面覆盖的成本遥测** — 每个端点都提供 `X-OmniRoute-*` 成本/用量标头、缓存命中节省标头，以及逐密钥 USD 支出配额。→ [API 参考](docs/reference/API_REFERENCE.md)
-- **🧠 由你控制的记忆** — 默认关闭，可选择启用 int8 向量量化和类型化衰减，并支持逐请求使用 `x-omniroute-no-memory`。→ [记忆](docs/frameworks/MEMORY.md)
-- **🛡️ 安全性** — 每条 LLM 路由都配备提示词注入防护（红队测试套件）；可选的凭据屏蔽防护会在双向通信中隐藏泄露的 API 密钥/机密；提供免费的 DuckDuckGo 最后手段网页搜索；仪表板还支持可选的 OIDC 登录门禁（密码登录始终可用）。→ [防护措施](docs/security/GUARDRAILS.md)
-- **🖼️ 新端点** — `/v1/ocr`（Mistral OCR）和 `/v1/audio/translations`（Whisper 风格）完善了媒体功能。→ [API 参考](docs/reference/API_REFERENCE.md)
-- **🎨 图像 / 视频 / 音频生成** — 通过一个 API 处理媒体：xAI Grok Imagine 和 Novita AI 视频、ComfyUI、Magnific、Adobe Firefly、Segmind，以及 ElevenLabs 等语音提供者。→ [API 参考](docs/reference/API_REFERENCE.md)
-- **🌍 部署与运维** — 反向代理 `basePath`、浏览器语言自动检测、逐密钥设备跟踪、无 root 权限的 MITM 信任，以及 zh-TW 本地化。→ [环境变量](docs/reference/ENVIRONMENT.md)
-- **🤝 更多提供者与智能体** — 云端智能体（Codex Cloud、Cursor、Devin、Jules）、支持浏览器 + OAuth 登录的 Grok Build（xAI）、一等支持的 Ollama 卡片、Claude Opus 5 和 Sonnet 5、Kimi 官方合作伙伴（Code/Web/Moonshot）、Zed、Requesty、SenseNova、Yuanbao、Agnes AI……以及焕新的 **394 个提供者目录**。→ [提供者](docs/reference/PROVIDER_REFERENCE.md)
-- **📡 路由透明度** — 每个响应都携带 `X-OmniRoute-Decision` 标头，标明为其提供服务的策略/提供者/延迟；新增的 `cache-optimized` 组合策略，以及 Auto-Combo 的 `cacheAffinity` 因子，会将重复请求路由回持有缓存前缀的连接；只读端点 `/v1/auto-combo/{channel}/candidates` 会公开某个 `auto/*` 通道的实时候选池。→ [自动组合](docs/routing/AUTO-COMBO.md)。
-- **⚡ 本地性能与基础设施** — 一键式本地 Redis、Cloudflare Workers / Deno Deploy 中继部署器，以及作为受监管嵌入式服务运行的 Bifrost 和 Mux。→ [嵌入式服务](docs/frameworks/EMBEDDED-SERVICES.md)
-- **🧩 同样开箱即用** — 插件框架与市场、Omni/Agent/GitHub 技能框架、Obsidian vault 集成（22 个 MCP 工具）、兼容 OpenAI 的 Batch 与 Files API、语义响应缓存、带排行榜的游戏化功能、ACP 代理发现（15 个内置代理）、定时将日志导出到 BigQuery、`auto/chaos` 并行多模型扇出、Telegram 机器人桥接、应用内版本管理器，以及 LMArena-ELO 免费提供者排名。→ [文档](docs/README.md)
+- **⚖️ `quota-weighted`路由**—第 20 个组合策略会跳过耗尽的帐户，然后按照剩余配额÷飞行负载的比例抽取其余帐户，从而保持现有对话的固定。 →[自动组合](docs/routing/AUTO-COMBO.md)
+- **🧰无头模式**— `omniroute serve --headless` （或`OMNIROUTE_HEADLESS=1`）仅运行`/v1/*`代理引擎，仪表板和仅仪表板子系统关闭。 →[无头模式](docs/guides/HEADLESS.md)
+- **🔎模型发现**— `/v1/models`按功能、上下文、种类和文本进行过滤， `POST /v1/models/query`返回具有相同每个键可见性的简短确定性候选列表。 → [API参考](docs/reference/API_REFERENCE.md)
+- **🔑每键路由控制**—将API密钥与`forcedModel`固定到一个模型或组合，并自动添加或删除密钥的模型和组合 (`/api/keys/{id}/access`)。 → [API参考](docs/reference/API_REFERENCE.md)· [OpenAPI](docs/openapi.yaml)
+- **🛡️精细的PII控制**—每个类型选择，最多 20 个经过验证的自定义掩码模式和每个类型检测计数器；屏蔽本身保持选择加入状态。 →[护栏](docs/security/GUARDRAILS.md)
+- **🌍 67种语言**—仪表板、文档镜像和CLI，其中`npm run i18n:add-locale`在一个命令中的任何位置添加一种语言。 → [i18n 指南](docs/guides/I18N.md)
+- **🎛️ OmniConductor** —入站A2A委派给您的座席车队、座席卡上的指挥技能以及带有 Faro 一键通语音聊天功能的仪表板面板。 → [A2A服务器](docs/frameworks/A2A-SERVER.md)
+- **🛂自适应准入和过载保护**—重量级聊天请求队列而不是 503ing，每个连接具有原子RPM滚动租约。 →[弹性指南](docs/architecture/RESILIENCE_GUIDE.md)
+- **🗂️规范`/v1/models`排序**—每个提供者一个连续的提供者分组块（首先固定的组合），在每个目录源中保持稳定。 → [API参考](docs/reference/API_REFERENCE.md)
+- **🗜️压缩硬化**—默认开启通胀保护，Caveman 包适用于DE / FR / JA +中文 (wényán)， RTK过滤器适用于 Gradle 和 .NET. →[压缩](docs/compression/COMPRESSION_ENGINES.md)
+- **💸诚实的统一费率成本**—订阅/编码计划提供者阅读**$0**成本分析；预算、配额和路线不断估算。 → [API参考](docs/reference/API_REFERENCE.md)
+- **⚖️配额共享路由**—在池化密钥之间公平地分配共享帐户的配额，从而节省工作，因此闲置的切片会被借出。 →[弹性指南](docs/architecture/RESILIENCE_GUIDE.md)
+- **🤖一命令CLI/agent设置**— 15 注册`setup-*`命令； `omniroute run`推出 7 个CLIs （Claude Code、 Codex、Aider、Goose、 OpenCode、 Qwen Code、 Gemini CLI）； `omniroute configure`通过交互式提供者+模型选择器和每个上下文的收藏夹支持 11 个目标。 → [CLI集成](docs/guides/CLI-INTEGRATIONS.md)
+- **🛰️远程模式**—使用范围令牌 (`connect` / `contexts` / `tokens`) 驱动远程OmniRoute +用于VPS安装的`antigravity` OAuth帮助程序。 →[远程模式](docs/guides/REMOTE-MODE.md)
+- **🧭更智能的自动路由**— `auto/<category>:<tier>`组合，**融合**（模型面板+判断），任务感知路由，每个请求模型/模式/美元预算覆盖。 →[自动组合](docs/routing/AUTO-COMBO.md)
+- **🗜️可插拔压缩**— 12 个可组合引擎+ Compression Studios： LLMLingua-2、两层 Ultra、omniglyph、每步保真度门、 GCF v3.2、拖动重新排序编辑器。 →[压缩](docs/compression/COMPRESSION_ENGINES.md)
+- **🕵️透明MITM解密 (TPROXY)** —使用每个 SNI CA +信任库安装程序捕获忽略代理环境变量的CLIs 。 → [MITM/TPROXY](docs/security/MITM-TPROXY-DECRYPT.md)
+- **💸成本遥测无处不在**每个端点上的— `X-OmniRoute-*` cost/usage标头、缓存命中节省标头、每键USD支出配额。 → [API参考](docs/reference/API_REFERENCE.md)
+- **🧠你控制的内存**—默认关闭，选择 int8 矢量量化+类型衰减，每个请求`x-omniroute-no-memory`。 →[内存](docs/frameworks/MEMORY.md)
+- **🛡️安全**每个LLM路线上的—提示注入防护（红队套件）、选择加入凭证屏蔽护栏（在两个方向上编辑泄露的API keys/secrets ）、免费的DuckDuckGo最后手段网络搜索以及仪表板的可选OIDC登录门（密码登录始终保持可用）。 →[护栏](docs/security/GUARDRAILS.md)
+- **🖼️新端点**— `/v1/ocr` (Mistral OCR) 和`/v1/audio/translations` (Whisper-style) 使介质表面更加圆润。 → [API参考](docs/reference/API_REFERENCE.md)
+- **🎨图像/视频/音频生成**— 1 API用于媒体： xAI Grok Imagine & Novita AI video、 ComfyUI、Magnific、Adobe Firefly、Segmind 以及ElevenLabs等语音提供者。 → [API参考](docs/reference/API_REFERENCE.md)
+- **🌍部署和操作**—反向代理`basePath`、浏览器语言自动检测、每键设备跟踪、无根MITM信任、zh-TW 本地化。 →[环境](docs/reference/ENVIRONMENT.md)
+- **🤝更多供应商和代理商**—云代理（Codex Cloud， Cursor， Devin， Jules）， Grok构建（xAI）使用浏览器+ OAuth登录， Ollama一流卡， Claude Opus 5＆Sonnet 5， Kimi官方合作伙伴（Code/Web/Moonshot）， Zed，Requesty， SenseNova，元宝，Agnes AI......以及刷新**394-提供者目录**。 →[提供者](docs/reference/PROVIDER_REFERENCE.md)
+- **📡路由透明**—每个响应都携带一个`X-OmniRoute-Decision`标头，命名为其提供服务的strategy/provider/latency ，新的`cache-optimized`组合策略+自动组合`cacheAffinity`因子将重复请求路由回保存缓存前缀的连接，只读`/v1/auto-combo/{channel}/candidates`端点公开`auto/*`通道的实时候选池。 →[自动组合](docs/routing/AUTO-COMBO.md)
+- **⚡本地性能和基础设施**—一键本地Redis、 Cloudflare Workers / Deno 部署中继部署器、Bifrost 和 Mux 作为受监督的嵌入式服务。 →[嵌入式服务](docs/frameworks/EMBEDDED-SERVICES.md)
+- **🧩盒子里还有**—插件框架+市场、 Omni/Agent/GitHub技能框架、 Obsidian库集成（22 个MCP工具）、OpenAI 兼容的批处理和文件APIs、语义响应缓存、排行榜游戏化、 ACP代理发现（15 个内置代理）、计划日志导出到BigQuery、 `auto/chaos`并行多模型扇出、 Telegram机器人桥、应用内版本管理器和 LMArena-ELO 免费提供者排名。 →[文档](docs/README.md)
 
 <br/>
 
@@ -935,15 +935,15 @@ claude mcp add --transport http omniroute http://localhost:20128/api/mcp/stream 
 
 <div align="center">
 
-## 🗜️ 自动节省 15–95% Token
+## 🗜️自动节省 15–95% 代币—
 
 </div>
 
-### 📖 工作原理 — 流程、架构与节省计算
+### 📖工作原理—管道、架构和储蓄数学
 
-<img src="./docs/diagrams/compression-pipeline.svg" width="100%" alt="OmniRoute 压缩流程：一个包含 10,000 个 token 的客户端请求经过 12 个可组合引擎 — Session-Dedup、CCR、Lite、RTK、Responses Tool Output、Headroom、Relevance、Caveman、Aggressive、LLMLingua-2、Ultra 和 OmniGlyph — 在文档所述的堆叠示例中，最终可按约 1,080 个 token 到达提供者。结构化内容受保留保护机制和逐步保真度门控保护；明确的有损或实验模式可能会转换符合条件的内容。"/>
+<img src="./docs/diagrams/compression-pipeline.svg" width="100%" alt="OmniRoute compression pipeline: an illustrative 10,000-token client request passes through 12 composable engines — Session-Dedup, CCR, Lite, RTK, Responses Tool Output, Headroom, Relevance, Caveman, Aggressive, LLMLingua-2, Ultra and OmniGlyph — and can reach the provider at about 1,080 tokens in the documented stacked example. Structured content is protected by preservation guards and per-step fidelity gates; explicit lossy or experimental modes may transform eligible content."/>
 
-默认的堆叠组合运行 `RTK → Caveman`。当两者同时作用于同一个工具/上下文负载时，节省效果会叠加：
+默认堆叠组合运行`RTK → Caveman`。当两者作用于相同的tool/context有效负载时，节省的成本会增加：
 
 ```txt
 combined = 1 − (1 − RTK) × (1 − Caveman_input)
@@ -951,74 +951,74 @@ average  = 1 − (1 − 0.80) × (1 − 0.46) = 89.2%
 range    = 78.4 – 94.6%
 ```
 
-代码块、URL、JSON 和结构化数据始终受到保留引擎的保护。
+代码块、 URLs、 JSON和结构化数据是**始终受到保护**由保存引擎。
 
-> **能用少量 token 完成，为什么要用那么多？** 每个请求都会**透明地**经过 OmniRoute 的压缩流程 — 无需修改客户端。现在它已经成为一组按顺序运行的 **12 个可组合引擎**，可根据路由组合进行混合搭配 — 基于 [RTK](https://github.com/rtk-ai/rtk)、[Caveman](https://github.com/JuliusBrussee/caveman)（⭐ 90K+）、[LLMLingua-2](https://github.com/microsoft/LLMLingua) 和 [Troglodita](https://github.com/leninejunior/troglodita)（PT-BR）中的理念构建。
+> **当很少的令牌就可以达到目的时，为什么要使用很多令牌呢？**每个请求都会经过OmniRoute的压缩管道**透明地**—没有客户端变化。现在是一个**12 个可组合引擎的堆栈**按顺序运行，并根据路由组合—进行混合和匹配，该组合基于[RTK](https://github.com/rtk-ai/rtk) 、 [Caveman](https://github.com/JuliusBrussee/caveman) (⭐ 90K +)、 [LLMLingua-2](https://github.com/microsoft/LLMLingua)和[Troglodita](https://github.com/leninejunior/troglodita) (PT-BR) 的想法。
 
 ### 🧱 12 引擎堆栈
 
-引擎按流程顺序运行；每个引擎都可以独立切换，并可针对每个组合进行配置：
+发动机按管道顺序运行；每个组合都可以独立切换和配置：
 
 <table>
-  <tr><th align="center">#</th><th align="left">引擎</th><th align="left">功能</th></tr>
-  <tr><td align="center" nowrap>1</td><td align="left" nowrap><b>Session-Dedup</b></td><td align="left">删除跨轮次重复的内容（基于内容寻址，跨轮次）</td></tr>
-  <tr><td align="center" nowrap>2</td><td align="left" nowrap><b>CCR</b></td><td align="left">将大型块归档到检索标记之后，按需获取</td></tr>
-  <tr><td align="center" nowrap>3</td><td align="left" nowrap><b>Lite</b></td><td align="left">空白字符 + 图片 URL 裁剪（低延迟基线）</td></tr>
-  <tr><td align="center" nowrap>4</td><td align="left" nowrap><b>RTK</b></td><td align="left">智能工具结果过滤、去重和截断（感知命令）</td></tr>
-  <tr><td align="center" nowrap>5</td><td align="left" nowrap><b>Responses Tool Output</b></td><td align="left">针对 shell/补丁/搜索/构建输出的优先无损 JSON + 有界诊断压缩（Responses API）</td></tr>
-  <tr><td align="center" nowrap>6</td><td align="left" nowrap><b>Headroom</b></td><td align="left">通过内置的 <b>GCF</b> 编解码器对 JSON 数组进行无损表格压缩（约 30%）</td></tr>
-  <tr><td align="center" nowrap>7</td><td align="left" nowrap><b>Relevance</b></td><td align="left">根据最后一条用户查询进行抽取式句子评分</td></tr>
-  <tr><td align="center" nowrap>8</td><td align="left" nowrap><b>Caveman</b></td><td align="left">基于规则的文本压缩（输出约 65–75%）</td></tr>
-  <tr><td align="center" nowrap>9</td><td align="left" nowrap><b>Aggressive</b></td><td align="left">对旧轮次进行摘要和渐进式老化</td></tr>
-  <tr><td align="center" nowrap>10</td><td align="left" nowrap><b>LLMLingua-2</b></td><td align="left">通过 MobileBERT ONNX 进行机器学习语义裁剪 — 保证代码安全，异步运行</td></tr>
-  <tr><td align="center" nowrap>11</td><td align="left" nowrap><b>Ultra</b></td><td align="left">基于启发式的 token 裁剪，可选用小模型（SLM）层</td></tr>
-  <tr><td align="center" nowrap>12</td><td align="left" nowrap><b>OmniGlyph</b></td><td align="left">实验性的上下文转图像编码，用于直连 Anthropic 通道上经过测量的 Claude Fable 5；GPT 5.6 transformer 在获得提供者回执前仍保持故障闭锁。提供四种压缩配置（默认激进、平衡、编码安全、直通）（最激进；选择启用）</td></tr>
+  <tr><th align="center">#</th><th align="left">引擎</th><th align="left">它的作用</th></tr>
+  <tr><td align="center" nowrap>1</td><td align="left" nowrap><b>会话重复数据删除</b></td><td align="left">丢弃跨回合重复的内容（内容寻址、跨回合）</td></tr>
+  <tr><td align="center" nowrap>2</td><td align="left" nowrap><b>CCR</b></td><td align="left">将大块归档在检索标记后面，按需获取</td></tr>
+  <tr><td align="center" nowrap>3</td><td align="left" nowrap><b>精简版</b></td><td align="left">空白+图像 URL 修剪（延迟光基线）</td></tr>
+  <tr><td align="center" nowrap>4</td><td align="left" nowrap><b>RTK</b></td><td align="left">智能工具结果过滤、重复数据删除和截断（命令感知）</td></tr>
+  <tr><td align="center" nowrap>5</td><td align="left" nowrap><b>响应工具输出</b></td><td align="left">shell/patch/search/build输出的无损优先JSON +有界诊断压缩（响应API）</td></tr>
+  <tr><td align="center" nowrap>6</td><td align="left" nowrap><b>净空</b></td><td align="left">通过供应商对JSON数组（~ 30%）进行无损表格压缩 <b>GCF</b> 编解码器</td></tr>
+  <tr><td align="center" nowrap>7</td><td align="left" nowrap><b>关联</b></td><td align="left">针对上次用户查询的提取句子评分</td></tr>
+  <tr><td align="center" nowrap>8</td><td align="left" nowrap><b>穴居人</b></td><td align="left">基于规则的散文压缩（输出~ 65–75%）</td></tr>
+  <tr><td align="center" nowrap>9</td><td align="left" nowrap><b>挑衅的</b></td><td align="left">总结+渐进老化老转</td></tr>
+  <tr><td align="center" nowrap>10</td><td align="left" nowrap><b>LLMLingua-2</b></td><td align="left">通过MobileBERT ONNX —代码安全、异步ML语义修剪</td></tr>
+  <tr><td align="center" nowrap>11</td><td align="left" nowrap><b>极端主义者</b></td><td align="left">使用可选的小模型 (SLM) 层进行启发式令牌修剪</td></tr>
+  <tr><td align="center" nowrap>12</td><td align="left" nowrap><b>OmniGlyph</b></td><td align="left">在直接Anthropic线路上对测量的Claude Fable 5 进行实验性上下文即图像编码； GPT 5.6 变压器仍处于故障关闭状态，等待提供者收据。四种压缩配置文件（激进默认、平衡、编码安全、直通）（最激进；选择加入）</td></tr>
 </table>
 
-代码块、URL 和结构化数据始终按字节精准保留。**一键预设**会组合这些引擎：
+代码块、 URLs和结构化数据**始终保存**字节完美。**一键预设**组合引擎：
 
 <table>
-  <tr><th align="left">模式</th><th align="left">节省量</th><th align="left">最适合</th></tr>
-  <tr><td align="left" nowrap>🪶 <b>Lite</b></td><td align="left" nowrap>~15%</td><td align="left">始终启用的安全默认模式</td></tr>
-  <tr><td align="left" nowrap>🪨 <b>Standard (Caveman)</b></td><td align="left" nowrap>~30%</td><td align="left">日常编码</td></tr>
-  <tr><td align="left" nowrap>⚡ <b>Aggressive</b></td><td align="left" nowrap>~50%</td><td align="left">长时间、工具密集型会话</td></tr>
-  <tr><td align="left" nowrap>🔥 <b>Ultra</b></td><td align="left" nowrap>~75%</td><td align="left">最大节省量</td></tr>
-  <tr><td align="left" nowrap>🧰 <b>RTK</b></td><td align="left" nowrap>60–90%</td><td align="left">Shell/测试/构建/git 输出</td></tr>
-  <tr><td align="left" nowrap>🔗 <b>Stacked (RTK → Caveman)</b></td><td align="left" nowrap><b>78–95%</b></td><td align="left">混合提示词 + 工具日志</td></tr>
+  <tr><th align="left">模式</th><th align="left">储蓄</th><th align="left">最适合</th></tr>
+  <tr><td align="left" nowrap>🪶 <b>精简版</b></td><td align="left" nowrap>~15%</td><td align="left">始终开启安全默认设置</td></tr>
+  <tr><td align="left" nowrap>🪨 <b>标准（穴居人）</b></td><td align="left" nowrap>~30%</td><td align="left">日常编码</td></tr>
+  <tr><td align="left" nowrap>⚡ <b>挑衅的</b></td><td align="left" nowrap>~50%</td><td align="left">长时间使用工具的会话</td></tr>
+  <tr><td align="left" nowrap>🔥 <b>极端主义者</b></td><td align="left" nowrap>~75%</td><td align="left">最大节省</td></tr>
+  <tr><td align="left" nowrap>🧰 <b>RTK</b></td><td align="left" nowrap>60–90%</td><td align="left">Shell/test/build/git输出</td></tr>
+  <tr><td align="left" nowrap>🔗 <b>堆叠（RTK →穴居人）</b></td><td align="left" nowrap><b>78–95%</b></td><td align="left">+工具日志混合提示</td></tr>
 </table>
 
-**真实示例 — Standard 模式：**
+**实例—标准模式：**
 
-> **之前（69 个 token）：** _"你的 React 组件之所以重新渲染，很可能是因为你在每个渲染周期中都创建了一个新的对象引用。当你将内联对象作为 prop 传递时，React 的浅比较每次都会将其视为不同的对象，从而触发重新渲染。我建议使用 useMemo 对该对象进行记忆化处理。"_
+> **之前（69 个代币）：** _“您的React组件重新渲染的原因可能是因为您在每个渲染周期创建一个新的对象引用。当您将内联对象作为道具传递时， React的浅比较每次都会将其视为不同的对象，从而触发重新渲染。我建议使用useMemo来记忆该对象。”_
 >
-> **之后（19 个 token）：** _"每次渲染都会产生新的对象引用。内联对象 prop = 新引用 = 重新渲染。使用 useMemo 包装。"_
+> **之后（19 个令牌）：** _“每次渲染新对象引用。内联对象 prop =新引用=重新渲染。包裹在useMemo中。”_
 >
-> **答案相同。token 减少 72%。准确性零损失。** ✅
+> **同样的答案。代币减少 72%。零精度损失。** ✅
 
-**PT-BR 示例 — [Troglodita](https://github.com/leninejunior/troglodita) 模式：**
+**PT-BR 示例— [Troglodita](https://github.com/leninejunior/troglodita)模式：**
 
-> **之前（42 个 token）：** _“问题在于，该组件会重新渲染，因为每个渲染周期都会创建一个新的对象引用。我建议使用 useMemo。”_
+> **底注（42 个代币）：** _“O Problema é que o componente está re-renderizando porque uma nova Referência de object está sendo criada em cada ciclo de renderização.Eur recomendaria usar useMemo.”_
 >
-> **之后（12 个 token）：** _“重新渲染：每个周期都有新引用（内联对象被重新创建）。使用 `useMemo`。”_
+> **Depois（12 个代币）：** _“重新渲染：ref nova cada ciclo（objeto inline recriado）。Usar `useMemo`。”_
 >
-> **相同的回答。Token 减少约 70%。技术准确性保持不变。** ✅
+> **梅斯玛回复。 ~ 70% menos 代币。完整的技术概要。** ✅
 
 <br/>
 
-### 🎚️ 超越引擎 — 输出样式、自适应旋钮与单请求控制
+### 🎚️除了引擎—输出样式之外，自适应拨号和按请求控制
 
-上述 12 个引擎压缩了**输入**。另外三层决定了**如何**、**何时**以及最终**输出什么**：
+上述 12 个引擎缩小了运行范围**在**。另外三层形状**如何**,**什么时候**，以及会发生什么**出去**:
 
-- **🪄 输出样式** _（输出轴引导）_ — 注入确定性、缓存安全的响应塑形指令；支持组合，每种样式都有 `lite` / `full` / `ultra` 三种强度。添加样式只需注册一行：
-  - **简洁文本** — 删除填充词、冠词和模糊措辞；准确保留技术内容。
-  - **少写代码** — “懒惰的资深开发者”YAGNI：只做最小可行改动，不添加未请求的脚手架。
-  - **马尾（懒惰的资深开发者）** — 沿 YAGNI 阶梯逐步深入，修复根本原因，生成最小可行差异。
-  - **我有 ADHD（行动优先）** — 先给出下一步行动，步骤编号，只提供一个具体的下一步，不写前言。
-  - **简洁 CJK（文言）** — 古典中文超简洁风格（仅限 `zh` 区域）。
-- **🎯 自适应上下文预算** _（旋钮）_ — 不再使用单一的开关式 token 阈值，而是仅在需要时逐步启用成本最低且信息损失最小的引擎，以**适配模型的上下文窗口**。策略：`reserve-output`（默认，感知模型）· `percentage` · `absolute`。模式：`floor`（保证适配）· `replace-autotrigger`（以你的显式选择为准）· `off`（旧版阈值）。
-- **🎛️ 压缩决策位置** _（优先级，从高到低）_ — 每请求的 `x-omniroute-compression` header › 路由组合覆盖项 › 当前活动的命名配置 › 自适应 / 自动触发 › 面板默认设置 › off。应用的计划会通过 `X-OmniRoute-Compression: <mode>; source=<source>` 响应 header 返回。
+- **🪄输出样式**_（输出轴转向）_ —注入确定性、缓存安全的响应整形指令；可组合，每个强度为`lite` / `full` / `ultra` 。添加样式是一行注册表项：
+  - **简洁的散文**—滴灌/物品/套期保值；保持技术实质准确。
+  - **更少的代码**— “懒惰的高级开发人员” YAGNI：最小的工作变化，没有未经请求的脚手架。
+  - **马尾辫（懒惰的高级开发人员）** —爬上YAGNI阶梯，修复根本原因，最小的工作差异。
+  - **我有ADHD （行动第一）** —下一步行动引导，步骤编号，一个具体的下一步，没有序言。
+  - **简洁的CJK （文言）** —古典中文超简洁风格（区域设置为`zh`）。
+- **🎯自适应上下文预算**_(the dial)_ —而不是一个on/off令牌阈值，仅根据需要升级最便宜、最无损的引擎**适合模型的上下文窗口**。策略： `reserve-output` （默认，模型感知） · `percentage` · `absolute`。模式： `floor` （保证适合）· `replace-autotrigger` （您的明确选择获胜）· `off` （传统阈值）。
+- **🎛️决定压缩的地方**_（优先级，高→低）_ —每个请求`x-omniroute-compression`标头 › 路由组合覆盖 › 活动命名配置文件 › 自适应/自动触发 › 面板默认设置 › 关闭。所应用的计划会在`X-OmniRoute-Compression: <mode>; source=<source>`响应标头中回显。
 
-你可以按 token 阈值自动触发、拨动自适应旋钮、固定一个命名配置、为单个请求设置一次性选项，或为每个路由组合分配一个流水线 — 选择最适合工作负载的方式即可。可选的离线**评估工具**（`npm run eval:compression`）会在你推广变更前，基于固定语料库评估保真度与节省量。
+按令牌阈值自动触发、打开自适应拨号盘、固定命名配置文件、为每个请求设置一次性，或为每个路由组合—分配一个管道（以适合工作负载的方式为准）。离线选择加入**评估安全带**(`npm run eval:compression`) 在推动更改之前对固定语料库的保真度与节省进行评分。
 
 📖 [`COMPRESSION_GUIDE.md`](docs/compression/COMPRESSION_GUIDE.md) · [`RTK_COMPRESSION.md`](docs/compression/RTK_COMPRESSION.md) · [`COMPRESSION_ENGINES.md`](docs/compression/COMPRESSION_ENGINES.md)
 
@@ -1026,7 +1026,7 @@ range    = 78.4 – 94.6%
 
 <div align="center">
 
-# ⚡ 快速开始
+# ⚡快速入门
 
 </div>
 
@@ -1037,60 +1037,50 @@ npm install -g omniroute
 omniroute
 ```
 
-> 💡 看到 `npm warn ERESOLVE` 或 peer 依赖警告？[这些警告无害](docs/guides/TROUBLESHOOTING.md#npm-install-warnings-eresolve--peer--deprecated)。
-> **正在使用 npm 11 或更高版本？** npm 可能会阻止软件包生命周期脚本运行，除非明确允许这些脚本。OmniRoute 的 `postinstall`（`node scripts/build/postinstall.mjs`）是准备其原生运行时文件所必需的。全局安装时，请允许 npm 警告中列出的软件包。对于 OmniRoute 3.8.55 报告的软件包集合：
+> 💡看到`npm warn ERESOLVE`或同行部门警告吗？[它们是无害的](docs/guides/TROUBLESHOOTING.md#npm-install-warnings-eresolve--peer--deprecated)。**使用 npm 11 或更高版本？**除非允许，否则 npm 可能会阻止包生命周期脚本。 OmniRoute的`postinstall` (`node scripts/build/postinstall.mjs`) 需要准备其本机运行时文件。全局安装时允许使用 npm 警告中指定的包。对于OmniRoute 3.8.55 报告的包集：
 >
-> ```bash
-> npm install -g --allow-scripts=omniroute,keytar,onnxruntime-node,@parcel/watcher,@swc/core,protobufjs,esbuild omniroute
-> ```
+> `bash npm install -g --allow-scripts=omniroute,keytar,onnxruntime-node,@parcel/watcher,@swc/core,protobufjs,esbuild omniroute `
 >
-> 若要在今后的全局安装中重复使用此允许列表，请配置一次，然后正常安装：
+> 要在将来的全局安装中重用此允许列表，请配置一次，然后正常安装：
 >
-> ```bash
-> npm config set allow-scripts=omniroute,keytar,onnxruntime-node,@parcel/watcher,@swc/core,protobufjs,esbuild --location=user
-> npm install -g omniroute
-> ```
+> `bash npm config set allow-scripts=omniroute,keytar,onnxruntime-node,@parcel/watcher,@swc/core,protobufjs,esbuild --location=user npm install -g omniroute `
 >
-> 依赖列表可能会随版本发布而变化；如果 npm 报告了不同的列表，请使用该警告中的软件包名称。允许某个软件包后，其安装脚本即可运行。
-> **正在使用 Gemini Web 或其他基于 Web Cookie 的提供者？** npm 软件包包含
-> Playwright，但不包含其 Chromium 二进制文件。首次发起 Web 提供者请求前，请参阅
-> [Playwright Chromium 设置](docs/guides/TROUBLESHOOTING.md#gemini-web-and-playwright-chromium)
-> 说明。
+> 依赖项列表可能会在版本之间发生变化；如果 npm 报告不同的列表，请使用该警告中的包名称。允许包允许其安装脚本运行。**使用Gemini Web 或其他网络 cookie 提供者？** npm 包包含Playwright ，但不包含其 Chromium 二进制文件。在发出第一个 Web 提供者请求之前，请参阅[Playwright Chromium 设置](docs/guides/TROUBLESHOOTING.md#gemini-web-and-playwright-chromium)说明。
 
-控制面板：`http://localhost:20128` · API：`http://localhost:20128/v1`。
+仪表板位于`http://localhost:20128` · API位于`http://localhost:20128/v1`。
 
-**2）使用你自己的账户连接符合条件的提供者**
+**2) 使用您自己的帐户连接符合条件的提供者**
 
-控制面板 → **Providers** → 选择当前条款和配额符合你使用场景的提供者 → 添加其 API 密钥或完成账户流程。免费层级可能要求注册、审批或付款方式。请查看[免费层级指南](docs/getting-started/FREE-TIERS-GUIDE.md)；无法保证无需密钥即可使用，并且标记为 `tos: avoid` 的提供者默认会从 `auto` 中排除。
+仪表板→**供应商**→选择当前条款和配额适合您的用例的提供者→添加其API密钥或完成其帐户流程。免费套餐可能需要注册、批准或付款方式。查看[免费套餐指南](docs/getting-started/FREE-TIERS-GUIDE.md)；不保证无密钥可用性，并且默认情况下，标记为`tos: avoid`提供者将排除在`auto`之外。
 
-**3）配置你的编码工具**
+**3) 指出你的编码工具**
 
 ```txt
-基础 URL： http://localhost:20128/v1
-API 密钥： [从控制面板 → Endpoints 复制]
-模型：     auto            （在符合条件的连接之间进行路由 — 或选择提供者/模型）
+Base URL: http://localhost:20128/v1
+API Key:  [copy from Dashboard → Endpoints]
+Model:    auto            (routes among eligible connections — or choose provider/model)
 ```
 
-**4）验证是否正常工作**
+**4) 验证其是否正常工作**
 
 ```bash
 curl http://localhost:20128/v1/models -H "Authorization: Bearer YOUR_KEY"
 ```
 
-你应该会看到已连接的模型列表。🎉 就这么简单 — OmniRoute 会自动为你进行路由并在失败时进行回退。
+您应该会看到列出的已连接型号。 🎉这就是—开始编码， OmniRoute自动路由和回退给你。
 
-如果你的客户端无法发送自定义 header，OmniRoute 还提供了带 token 的兼容别名：
+如果您的客户端无法发送自定义标头， OmniRoute还会公开标记化的兼容性别名：
 
 ```txt
-OpenAI 目录：   http://localhost:20128/vscode/YOUR_KEY/
-OpenAI 模型：   http://localhost:20128/vscode/YOUR_KEY/models
-OpenAI 聊天：   http://localhost:20128/vscode/YOUR_KEY/chat/completions
-OpenAI 响应：   http://localhost:20128/vscode/YOUR_KEY/responses
-Ollama 聊天：   http://localhost:20128/vscode/YOUR_KEY/api/chat
-Ollama 标签：   http://localhost:20128/vscode/YOUR_KEY/api/tags
+OpenAI catalog:   http://localhost:20128/vscode/YOUR_KEY/
+OpenAI models:    http://localhost:20128/vscode/YOUR_KEY/models
+OpenAI chat:      http://localhost:20128/vscode/YOUR_KEY/chat/completions
+OpenAI responses: http://localhost:20128/vscode/YOUR_KEY/responses
+Ollama chat:      http://localhost:20128/vscode/YOUR_KEY/api/chat
+Ollama tags:      http://localhost:20128/vscode/YOUR_KEY/api/tags
 ```
 
-仅当客户端无法附加 `Authorization: Bearer ...` 时使用这些别名。header 身份验证仍是首选模式。
+仅将这些用于无法附加`Authorization: Bearer ...`客户端。标头身份验证仍然是首选模式。
 
 <br/>
 
@@ -1815,17 +1805,17 @@ OmniRoute 站在巨人的肩膀上。它最初是 **[9router](https://github.com
   <tr><td nowrap><b><a href="https://github.com/steipete/CodexBar">CodexBar</a></b></td><td align="center">22,955</td><td>发现了 Grok Build 配额接口；随后 OmniRoute 独立验证并修正了实际的线路格式。</td></tr>
 </table>
 
-## 📄 许可证
+## 📄许可证
 
-MIT 许可证 - 详情请参阅 [LICENSE](LICENSE)。
+MIT许可证 - 有关详细信息，请参阅[LICENSE](LICENSE) 。
 
 ---
 
 <div align="center">
 
-**[⬆ 返回顶部](#-omniroute)** · 为开源 AI 社区倾心打造。
+**[⬆回到顶部](#-omniroute)**· 使用❤️为开源AI社区构建。
 
-<sub>由 <a href="https://github.com/diegosouzapw">Diego Souza</a> 创建 · OmniRoute v3.8.55 · Node ≥22.22.2 · MIT 许可证 · <a href="https://omniroute.online">omniroute.online</a></sub>
+<sub>创建者： <a href="https://github.com/diegosouzapw">迭戈·苏萨</a> · OmniRoute v3.8.55 · 节点≥ 22.22.2 · MIT许可证 · <a href="https://omniroute.online">全方位在线</a></sub>
 
 </div>
-<!-- 已启用 GitHub Discussions，供社区问答使用 -->
+<!-- GitHub Discussions enabled for community Q&A -->
